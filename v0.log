@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.22)  26 OCT 2019 12:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.22)  13 NOV 2019 12:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -46,12 +46,24 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 27.
  [3]
-Overfull \hbox (69.75099pt too wide) in paragraph at lines 60--61
+Overfull \hbox (0.68121pt too wide) in paragraph at lines 38--39
+[]\OT1/cmr/m/n/10 Given the si-mul-ta-ne-ous pro-duc-tion of gamma-rays with ne
+u-tri-nos in hadronic
+ []
+
+
+Overfull \hbox (1.05614pt too wide) in paragraph at lines 40--41
+[]\OT1/cmr/m/n/10 However, this in-ter-pre-ta-tion was chal-lenged by the ob-se
+r-va-tion of IC170922A,
+ []
+
+[4]
+Overfull \hbox (69.75099pt too wide) in paragraph at lines 66--67
 \OT1/cmr/m/n/10 these cal-cu-la-tions by [https://www.nature.com/nature/journal
 /v333/n6173/abs/333523a0.html
  []
 
-[4] [5] [6] (./v0.aux) ) 
+[5] [6] [7] (./v0.aux) ) 
 Here is how much of TeX's memory you used:
  211 strings out of 492616
  2245 string characters out of 6129481
@@ -71,10 +83,10 @@ cm/cmr5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cms
 y10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 7.pfb>
-Output written on v0.pdf (6 pages, 130494 bytes).
+Output written on v0.pdf (7 pages, 132835 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
+ 68 PDF objects out of 1000 (max. 8388607)
+ 48 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
