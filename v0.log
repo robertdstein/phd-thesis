@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.22)  13 NOV 2019 14:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.22)  24 NOV 2019 18:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -146,36 +146,42 @@ File: txs_logic.pdf Graphic file (type pdf)
 <use txs_logic.pdf>
 Package pdftex.def Info: txs_logic.pdf  used on input line 49.
 (pdftex.def)             Requested size: 310.4979pt x 232.87727pt.
- [5 <./txs_logic.pdf>]
-Overfull \hbox (69.75099pt too wide) in paragraph at lines 79--80
+ [5 <./txs_logic.pdf>] [6]
+<figures/sn_zoo-1.png, id=54, 560.0925pt x 737.75626pt>
+File: figures/sn_zoo-1.png Graphic file (type png)
+<use figures/sn_zoo-1.png>
+Package pdftex.def Info: figures/sn_zoo-1.png  used on input line 75.
+(pdftex.def)             Requested size: 310.4979pt x 409.00928pt.
+ [7] [8 <./figures/sn_zoo-1.png>]
+Overfull \hbox (69.75099pt too wide) in paragraph at lines 101--102
 \OT1/cmr/m/n/10 these cal-cu-la-tions by [https://www.nature.com/nature/journal
 /v333/n6173/abs/333523a0.html
  []
 
-[6] [7] [8] (./v0.aux) ) 
+[9] [10] [11] (./v0.aux) ) 
 Here is how much of TeX's memory you used:
- 1417 strings out of 492616
- 20599 string characters out of 6129481
- 87254 words of memory out of 5000000
- 5354 multiletter control sequences out of 15000+600000
+ 1425 strings out of 492616
+ 20733 string characters out of 6129481
+ 87262 words of memory out of 5000000
+ 5359 multiletter control sequences out of 15000+600000
  5158 words of font info for 19 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,6n,25p,1579b,216s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2019/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmi7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-7.pfb>
-Output written on v0.pdf (8 pages, 251376 bytes).
+ 41i,6n,25p,1579b,222s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2019/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy7.pfb>
+Output written on v0.pdf (11 pages, 289176 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
- 71 compressed objects within 1 object stream
+ 112 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
