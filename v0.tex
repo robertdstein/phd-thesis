@@ -1,4 +1,6 @@
 \documentclass[]{article}
+\usepackage{graphicx}
+\graphicspath{{./}{figures/}}
 \begin{document}
 \section{Introduction}
 \section{Neutrino Theory}
@@ -37,11 +39,22 @@ It is now known that blazar emission dominates the high-energy gamma-ray sky. Mo
 
  Given the simultaneous production of gamma-rays with neutrinos in hadronic interactions, it is natural to suspect that bright gamma-ray sources, namely blazars, may additionally be neutrino sources. This hypothesis has been tested repeatedly by IceCube, and under the assumption of a linear proportionality, the contribution of all blazars has been constrained to less than 6\% of the astrophysical neutrino flux. This limit additionally accounts for the contribution of unresolved blazars, as well as those in the 3FGL? catalogue that were tested. A more agnostic search on 3FHL blazars constrained their contribution to be less than 20-30\%, without limiting the contribution of unresolved blazars. In both cases, it must be pointed out that this limit is dependent on assumed spectral index. These constraints generally disfavoured blazars as neutrino sources, with fine-tuned models required to generate neutrinos from lower-luminosity unresolved blazars without violating constraints on the brighter resolved blazars. 
  
- However, this interpretation was challenged by the observation of IC170922A, a high-energy neutrino that arrived in spatial and temporal coincidence with a bright gamma-ray flare from blazar TXS 0506+056. A likelihood analysis correlating high-energy neutrinos with the monthly gamma-ray lightcurves of Fermi blazars led to the disfavouring of a chance coincidence at the level of $3 \sigma$. This result implied that, rather than the average gamma-ray flux, high-energy neutrinos might instead be correlated with instantaneous gamma-ray flux. Prompted by this observation, the IceCube collaboration conducted a search for archival neutrino emission from the direction of TXS 0506+056
+ \subsubsection[TXS]{TXS 0506+056}
+ 
+ However, this interpretation was challenged by the observation of IC170922A, a high-energy neutrino that arrived in spatial and temporal coincidence with a bright gamma-ray flare from blazar TXS 0506+056. A likelihood analysis correlating high-energy neutrinos with the monthly gamma-ray lightcurves of Fermi blazars led to the disfavouring of a chance coincidence at the level of $3 \sigma$. This result implied that, rather than the average gamma-ray flux, high-energy neutrinos might instead be correlated with instantaneous gamma-ray flux. Prompted by this observation, the IceCube collaboration conducted a time-dependent search for archival neutrino emission from the direction of TXS 0506+056, and identified a signal-like neutrino cluster in 2014-15 with a significance of $3.5 \sigma$. Surprisingly, this neutrino cluster was not accompanied by any significant contemporaneous gamma-ray activity CITESIM. TXS 0506+056 thus presented a somewhat contradictory picture, with both pieces of evidence challenging to interpret in a unified framework. Theoretical attempts to model the arrival of IC170922A were generally successful, particularly when accounting for the likely Eddington Bias in any flux estimation . However, attempts to model the arrival of the neutrino cluster were significantly more challenging as the implied neutrino flux was much greater than the measured gamma-ray flux. Despite relatively poor observational constraints for the 2014-15 period, there have been no successful models describing all claimed neutrino emission from TXS 0506+056.
+ 
+ In general, how to resolve the apparent incoherence of these observations remains an open question. Additionally, it remains unclear whether or how TXS 0506+056 is, in some way, "special". If it were simply one of many neutrino blazars emitting proportionally to its gamma-ray flux, we would have expected the stacking analysis to identify a correlation with higher significance.  On the other hand, if the source is in some way unique, then the observed behaviour would be more coherently understandable. One study promptly identified that the hitherto-accepted classification of TXS 0506+056 as a BL-Lac was incorrect, and it was in fact an FSRQ. As a member of the rare subclass of 'masquerading BL-Lacs', it had a specific properties which in some models would indicate enhanced neutrino emission. There has been some recent evidence that TXS 0506+056 has a unique jet geometry, citeBRITZEN, but there is to date there is no model which has attempted to connect this geometry to observations of neutrino emission. A search for additional neutrino clusters from blazars in 4FGL did not reveal any significant excess correlation with either FSRQs or BL-LACs.
+ 
+ \begin{figure}[!ht]
+ 	\centering \includegraphics[width=0.9\textwidth]{txs_logic}
+ 	\caption{The challenge of coherently understanding the scenarios for neutrino emission from blazars, given the two pieces of evidence from TXS 0506+056, as well as the constraints from IceCube stacking analyses, general point-source searches and generic time-dependent cluster searches. To date, no model has resolved all three observations coherently.}
+ 	\label{fig:DiscTime}
+ \end{figure}
 \subsection{Gamma-Ray Bursts}
 
 LLGRBs+multiplets
 
+Prompt vs afterglow (HESE)
 \subsection{Tidal Disruption Events (TDEs)}
 == Roche Limit==
 The tidal radius can best be understood by comparison to the more straightforward concept of the Roche Limit, otherwise known as the Roche Radius. The Roche Radius is defined as the distance at which the self-gravitiational force acting on the outer surface of a body are exactly equal to the gravitational pull of a second body on that same mass element. If a star moves closer than its Roche Radius for an SMBH, there will be a net force on mass elements on the star surface towards the SMBH, and the star will disintegrate.
