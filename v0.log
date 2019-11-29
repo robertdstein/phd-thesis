@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.22)  24 NOV 2019 18:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.22)  29 NOV 2019 12:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -126,34 +126,34 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 8.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 8.
+
 [1
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 29.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 29.
- [3]
-Overfull \hbox (0.68121pt too wide) in paragraph at lines 40--41
+[2] [3]
+Overfull \hbox (0.68121pt too wide) in paragraph at lines 43--44
 []\OT1/cmr/m/n/10 Given the si-mul-ta-ne-ous pro-duc-tion of gamma-rays with ne
 u-tri-nos in hadronic
  []
 
 [4]
-<txs_logic.pdf, id=19, 1027.84pt x 770.88pt>
+<txs_logic.pdf, id=20, 1027.84pt x 770.88pt>
 File: txs_logic.pdf Graphic file (type pdf)
 <use txs_logic.pdf>
-Package pdftex.def Info: txs_logic.pdf  used on input line 49.
+Package pdftex.def Info: txs_logic.pdf  used on input line 52.
 (pdftex.def)             Requested size: 310.4979pt x 232.87727pt.
- [5 <./txs_logic.pdf>] [6]
-<figures/sn_zoo-1.png, id=54, 560.0925pt x 737.75626pt>
+ [5] [6 <./txs_logic.pdf>]
+<figures/sn_zoo-1.png, id=55, 560.0925pt x 737.75626pt>
 File: figures/sn_zoo-1.png Graphic file (type png)
 <use figures/sn_zoo-1.png>
-Package pdftex.def Info: figures/sn_zoo-1.png  used on input line 75.
+Package pdftex.def Info: figures/sn_zoo-1.png  used on input line 78.
 (pdftex.def)             Requested size: 310.4979pt x 409.00928pt.
  [7] [8 <./figures/sn_zoo-1.png>]
-Overfull \hbox (69.75099pt too wide) in paragraph at lines 101--102
+Overfull \hbox (69.75099pt too wide) in paragraph at lines 104--105
 \OT1/cmr/m/n/10 these cal-cu-la-tions by [https://www.nature.com/nature/journal
 /v333/n6173/abs/333523a0.html
  []
@@ -162,7 +162,7 @@ Overfull \hbox (69.75099pt too wide) in paragraph at lines 101--102
 Here is how much of TeX's memory you used:
  1425 strings out of 492616
  20733 string characters out of 6129481
- 87262 words of memory out of 5000000
+ 88262 words of memory out of 5000000
  5359 multiletter control sequences out of 15000+600000
  5158 words of font info for 19 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -178,7 +178,7 @@ s/cm/cmr5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmr7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy10.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 sy7.pfb>
-Output written on v0.pdf (11 pages, 289176 bytes).
+Output written on v0.pdf (11 pages, 289904 bytes).
 PDF statistics:
  112 PDF objects out of 1000 (max. 8388607)
  78 compressed objects within 1 object stream
