@@ -1,0 +1,123 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.0 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{Visscher2008}{article}{}
+      \name{author}{3}{}{%
+        {{hash=d5ce32204ec6f41d2698be960fbf332a}{%
+           family={Visscher},
+           familyi={V\bibinitperiod},
+           given={Peter\bibnamedelima M},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=3c7d8fa96ecc42be051f077455d1e127}{%
+           family={Hill},
+           familyi={H\bibinitperiod},
+           given={William\bibnamedelima G},
+           giveni={W\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=601ade67fef12883b9e486989c24ef70}{%
+           family={Wray},
+           familyi={W\bibinitperiod},
+           given={Naomi\bibnamedelima R},
+           giveni={N\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{d0ba450df579621e044362f25a4ed314}
+      \strng{fullhash}{d0ba450df579621e044362f25a4ed314}
+      \strng{bibnamehash}{d0ba450df579621e044362f25a4ed314}
+      \strng{authorbibnamehash}{d0ba450df579621e044362f25a4ed314}
+      \strng{authornamehash}{d0ba450df579621e044362f25a4ed314}
+      \strng{authorfullhash}{d0ba450df579621e044362f25a4ed314}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Heritability allows a comparison of the relative importance of genes and environment to the variation of traits within and across populations. The concept of heritability and its definition as an estimable, dimensionless population parameter was introduced by Sewall Wright and Ronald Fisher nearly a century ago. Despite continuous misunderstandings and controversies over its use and application, heritability remains key to the response to selection in evolutionary biology and agriculture, and to the prediction of disease risk in medicine. Recent reports of substantial heritability for gene expression and new estimation methods using marker data highlight the relevance of heritability in the genomics era.}
+      \field{eprinttype}{arXiv}
+      \field{issn}{1471-0064}
+      \field{journaltitle}{Nat. Rev. Genet.}
+      \field{number}{4}
+      \field{title}{{Heritability in the genomics era--concepts and misconceptions.}}
+      \field{volume}{9}
+      \field{year}{2008}
+      \field{pages}{255\bibrangedash 266}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1038/nrg2322
+      \endverb
+      \verb{eprint}
+      \verb arXiv:1011.1669v3
+      \endverb
+    \endentry
+    \entry{James2013}{book}{}
+      \name{author}{4}{}{%
+        {{hash=df184c5fa522ac8a515ec4de13aef234}{%
+           family={James},
+           familyi={J\bibinitperiod},
+           given={Gareth},
+           giveni={G\bibinitperiod}}}%
+        {{hash=1ab16961e0de50711fa6bd9425f9b4a6}{%
+           family={Witten},
+           familyi={W\bibinitperiod},
+           given={Daniela},
+           giveni={D\bibinitperiod}}}%
+        {{hash=0cb8fe4210baa81c4b0e67913b4d2768}{%
+           family={Hastie},
+           familyi={H\bibinitperiod},
+           given={Trevor},
+           giveni={T\bibinitperiod}}}%
+        {{hash=88eea600247d798f8b2ce0b2dc614492}{%
+           family={Tibshirani},
+           familyi={T\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{f8f737f83d9e451c1afaa13cdc120516}
+      \strng{fullhash}{da61646157a6be769f34984f5cb603b0}
+      \strng{bibnamehash}{f8f737f83d9e451c1afaa13cdc120516}
+      \strng{authorbibnamehash}{f8f737f83d9e451c1afaa13cdc120516}
+      \strng{authornamehash}{f8f737f83d9e451c1afaa13cdc120516}
+      \strng{authorfullhash}{da61646157a6be769f34984f5cb603b0}
+      \field{sortinit}{1}
+      \field{sortinithash}{2174f786c6195e7fe2ee1c229b416e29}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{... But ESL is intended for individuals with ad- vanced training in the mathematical sciences. An Introduction to Statistical Learning (ISL) arose from the perceived need for a broader and less tech- nical treatment of these topics. ... $\backslash$n}
+      \field{booktitle}{An Introd. to Stat. Learn.}
+      \field{eprinttype}{arXiv}
+      \field{isbn}{978-1-4614-7137-0}
+      \field{issn}{01621459}
+      \field{title}{{An Introduction to Statistical Learning}}
+      \field{year}{2013}
+      \verb{doi}
+      \verb 10.1007/978-1-4614-7138-7
+      \endverb
+      \verb{eprint}
+      \verb arXiv:1011.1669v3
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/content/pdf/10.1007/978-1-4614-7138-7.pdf{\%}5Cnhttp://link.springer.com/10.1007/978-1-4614-7138-7
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/content/pdf/10.1007/978-1-4614-7138-7.pdf%7B%5C%%7D5Cnhttp://link.springer.com/10.1007/978-1-4614-7138-7
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

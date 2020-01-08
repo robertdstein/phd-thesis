@@ -1,0 +1,59 @@
+\setchapterimage[6.5cm]{icecube}
+\setchapterpreamble[u]{\margintoc}
+\chapter{IceCube Neutrino Observatory}
+\labch{options}
+\begin{fquote}[Edmund Hillary][][1957] I am hell-bent for the South Pole — God willing and crevasses permitting.
+\end{fquote}
+The IceCube Neutrino Observatory is the world's largest neutrino telescope, located at the geographic south pole. It was built as a successor to the AMANDA experiment, which had pioneered the detection of neutrinos in ice. AMANDA served as a proof of concept for the detection of neutrinos, but with a volume of just nkm$^{3}$, it only had sufficient effective area to measure atmospheric neutrinos. 
+
+IceCube, on the other hand, was envisioned as a much larger detector capable of measuring astrophysical neutrinos. It was constructed in phases from 2006 to 2011, eventually reaching a total volume of one cubic kilometer. 
+
+\section{The IceCube Detector}
+
+IceCuibe is composed of 86 strings arranged in a hexagonal grid. Each string is 2.5 km long, and carries regularly-spaced Digital Optical Modules (DOMs) containing Photo-Multiplier Tubes (PMTs). With a hot-water drill, holes were drilled into the glacier ice to a depth of 2.5 km. After string deployment, the liquid-filled holes refroze, fixing the DOMs in place. In total, there are 5160 DOMs deployed in IceCube, all at depths greater than 1km. The Antartic ice itself thus provides the detection medium for neutrinos, with the Earth acting as a shield against atmospheric muons.
+
+The design of IceCube is an optimisation trading DOM-density against effective area for fixed cost. A minimal DOM density is needed to identify and reconstruct an event, and this threshold decreases as neutrino energy increases. Thus, while IceCube is generally optimised for detecting high-energy neutrinos in the astrophysical regime, it is far too sparse to effectively measure lower-energy (1-100 GeV) neutrinos. However, in addition to the regular grid of strings, IceCube contains a denser in-fill array known as \textit{Deepcore}. This array consists of 7 strings and n DOMs, and typically uses the outer IceCube detector as a veto against muons?. \textit{Deepcore} measures low-energy neutrinos which form the basis of neutrino oscillation studies, but can also be used for neutrino astronomy at lower energy scales.
+
+IceCube also contains a surface array of instrumented ice tanks known as IceTop, which are used to measure surface air showers arising from cosmic rays and photon interactions. IceTop can be used as a veto against muons from air showers, but only for a small fraction of events which are almost-vertically down-going. However, IceTop also functions in its own right as a Cosmic-Ray detector, and contributes competitive measurements of the cosmic ray flux and composition.
+
+While most event selections for GeV and TeV-PeV neutrinos require multiple DOM hits to reject thermal-noise background, a separate detection channel exists for MeV neutrinos that are typically produced in both stellar fusion and supernova collapse. These neutrinos form an irreducible background for the IceCbe detector, with extremely short track lengths that are only detectable by single DOMs. A dedicated SuperNova Data Aquistion System (SNDAQ) is installed to measure the rate of these single-DOM detections, and identify any significant deviation from expected rates. As demonstrated by SN1987a, any nearby supernova will produce a significant flux of MeV neutrinos during core collapse, and this will be manifested in a significant uptick in trigger rate that will evolve as a function of time. It is predicted that IceCube will be able to clearly measure the temporal evolution of MeV neutrinos from any supernova in the galaxy or Magellanic Clouds, similar to Figure NNNN. IceCube sends any mid-significance deviations from trigger rate to the SuperNova Early Warning System (SNEWS), where they are cross-correlated with other sensitive neutrino detectors such as SNO and Super-K. In the event of a multi-detector trigger, observatories around the world will be alerted to the upcoming optical counterpart of a galactic supernova, which can be localised in the case of a strong signal by combining directional information from individual detectors and time-delays between detectors in differing geographical locations. 
+
+
+
+MeV neutrinos for supernovae.
+
+\section{Proposed Improvements to the IceCube detector}
+
+There are several planned or proposed extensions to IceCube that would substantially improve the detector performance. Beginning in 2023, deployment will start for the IceCube Upgrade, a Deepcore-like dense infill array. The string spacing will be even tigher than deepcore, with a higher density of DOMs. In combination with hardware improvements from multi-PMT DOMs, the Upgrade should push IceCube's lower energy threshold from a few GeV, and potentially to below one GeV. This opens up an entirely new regime for both oscillation studies and lower-energy neutrino astronomy relative to competitor neutrino detectors such as SuperK. In addition to the gains from DOMs, many new calibration devices will be deployed to more accurately constrain sources of systematic uncertainties, in particular the ice scattering and absorption length. With these calibration measurements, archival neutrino data can be reprocessed, providing more accurate reconstructed parameters. Improvement should be expected for all neutrino sources analyses, which all suffer to lesser or greater degree from these systematic errors. 
+
+Beyond the IceCube Upgrade, a more comprehensive improvement is planned to extend the higher-energy capability of IceCube. IceCube-Gen2 is a proposed extension instrumenting 10 km$^{3}$ of ice, with a sparser string footprint than the existing detector. While multi-PMT DOMs should partially compensate the lower density, Gen2 represents a transition in focus to higher-energy neutrinos at 10TeV-100PeV range, at the cost of poorer resolution for lower-energy neutrinos with few DOM hits. Given the tenfold increase in instrumented volume, IceCube Gen2 will substantially increase sensitivity to both steady and time-dependent neutrino sources.
+
+A further radio-based extension is proposed to complement the DOM-based Gen2 component. The detection of radio-based air shower detection has been demonstrated by the Pierre Auger Observatory, and its use in ice was pioneered by the ARA and ARIANNA collaborations. A pilot array for neutrino detection is currently being depolyed in Greenland. Radio-based observatories are cheap, and given the possibility of single-station shower detection, an extremely sparse array can be deployed to substantially boost effective area. The proposed radio-based component for Gen2, covering n000 stations, would significantly improve sensitivity at the higher energies beyond nPeV, and could additionally probe the cosmogenic neutrino flux produced by interactions of UHECRs and CMB photons.
+
+IceAct?
+
+\section{Detecting interactions in IceCube}
+
+Neutrinos are indirectly detected in IceCube via charged secondary particles produced through interactions in the ice. These daughter particles, arising from both CC and NC interactions, emit via the Cherenkov effect when travelling faster than the local speed of light in ice. The light is emitted at a characteristic Cherenkov Angle, $\theta_{c}$, determined by the refractive index in ice and the particle velocity:
+
+\[\theta_{c} = \frac{1}{\eta \beta}\]
+
+These Cherenkov photons travel through the ice, and can then be detected by one or more DOMs. During propagation, these photons can be both scattered or absorbed by the ice, which is somewhat inhomogeneous. In particular, there is a substantial layer of dust spanning the central depth range of the detector, and scattering is consequently elevated in this region.
+
+Basic Triggers
+
+Waveform saving
+
+Digitisation
+
+\section{Event Signatures}
+
+There are two standard event topologies that IceCube sees, namely Tracks and Cascades. Charged-current muon-neutrino interactions produce muons, which then typically traverses the detector while ionising the ice, result is a track-like event. These tracks typically have well-reconstructed positions, because the kilometer-scale lever arm can typically constrain the direction well. However, by virtue of the outgoing muon leaving the detector, these events typically have poor energy resolution. 
+
+Charged-current electron-neutrino interactions, as well as neutral-current interactions of all flavours, instead produce cascade-like particle showers in the detector. In these cases, light propogates approximately-spherically from the interaction vertex, resulting in a poor angular resolution of order 10 degrees. However, as the light is typically contained by the detector, IceCube can act as a calorimeter and constrain the neutrino energy with a resolution of n\%. 
+
+Charged-current tau-neutrino interactions lead to the production of a tau with various possible signatures. In 17\% of interactions, a track-like signature will be created through a XXX. Additionally, a tau neutrino can produce a unique Double-Bang signature. Here one cascade is produced alongside a tau, which then propagates through the ice before decaying to an electron and producing a second cascade. The separation between these cascades, $L_{DC}$ will vary depending on the degree of length contraction experienced for the tau before decay, and is thus roughly proportional to energy:
+
+\[L_{DC}  \approx \frac{E_{\nu}}{1 PeV} \times 1 m\]
+
+Given the DOM spacing in IceCube, a minimal tau energy of approximately n00TeV is required for such events to be identified. The vast majority of tau-neutrino interactions will be indistinguishable from cascades for IceCube's resolution. The three topologies are illustrated in Figure N.

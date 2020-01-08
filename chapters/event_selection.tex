@@ -1,0 +1,82 @@
+\setchapterimage[6.5cm]{Grid_FullView_Logo}
+\setchapterpreamble[u]{\margintoc}
+\chapter{Event Selection and Reconstruction}
+\labch{options}
+\begin{fquote}[Rick Sanchez][Rick and Morty][20xx] Sometimes science is more art than science
+\end{fquote}
+The geometry of the IceCube detector is non-isotropic, and this leads to a zenith-dependence in both effective area and background. As a consequence of IceCube's location at the South Pole, zenith can be linearly mapped to declination, leading to a significantly declination-dependent sensitivity for all neutrino fluxes. In addition, for higher energies above nTeV, Earth absorption increasingly suppresses upgpoing neutrino events. 
+
+\section{Background Rejection}
+Atmospheric air showers provide the dominant source of background events in the detector, with air-shower muons frequently having sufficiently-high energies to penetrate the 1km ice overburden and reach the IceCube detector. However, this background only produces so-called downgoing events. Although the incident cosmic ray flux is roughly isotropic across the surface of the globe, horizontal and upward-going events are effectively suppressed by muon-shielding from the Earth. On the other hand, atmospheric air showers also produce a flux of atmospheric neutrinos, which is not shielded by the Earth. There is thus an isotropic atmospheric neutrino background, and an additional atmospheric muon background for southern declinations of the sky. 
+
+To reject the overwhelming muon background, southern-sky searches typically require strict energy cuts to reject atmospheric muons below approximately 10TeV. Above these energies, indivudual muons of atmospheric origin are unlikely. However, multiple daughter muons can travel as so-called muon bundles, which within the resolution of IceCube might appear to be one single high-energy muon. Often cascade-based southern-sky searches have superior sensitivity to muon-track based ones as a result of the improved energy resolution and suppressed muon-bundle background, as energy-based discrimination is the most effective separation method.
+
+Northern-sky samples can typically probe lower-energies as a result of the reduced muon background, but  upgoing fluxes with a large chord length through the Earth are suppressed. Consequently IceCube has peak sensitivity for horizontal events which benefit from both high background rejection and low earth absorption. It is in this region that track-like events at $>$200 TeV are typically found, including the high-energy neutrino event IC170922A which led to the identification of the first likely astrophysical neutrino source, TXS 0506+056.
+
+For sufficiently high-energies, the low opacity to muons from air showers means that any atmospheric background event is very likely to be accompanied by additional and near-simultaneous muons from the same air shower. By rejecting so-called coincident events with multiple particles inside the detector, the so-called \textbf{self veto} becomes an effective method to reject southern-sky background at energies beyond nTeV. This significantly extends the air-shower rejection from the IceTop detector, which is only effective for near-vertical downgoing events.
+
+One effective method to rejection background muons is to focus solely on so-called starting events, namely those for which the interaction vertex lies within the detector. Using outer detector layers as a veto reduces effective volume, but for such cases, almost all atmospheric muon backgrounds are rejected. Contained and partially-contained cascade events are similarly useful. Such a technique was employed to develop the High-Energy Starting Events (HESE) sample, with which the astrophysical neutrino flux was first discovered CITESCIENCE. A more flexible veto has been employed to enhance sensitivity to lower-energy neutrinos citeESTRES.
+
+The muon and muon-bundle background is typically much more complicated to simulate realistically, since entire air-shower events are needed. As a consequence, while northern-sky samples have comprehensive Monte-Carlo-based background modelling, all-sky or southern-sky samples rely on data-based background models under the assumption that datasets are background-dominated.
+\section{Muon Track Reconstruction}
+Traditional IceCube reconstructions have relied of both algorithms and likelihood-based reconstructions. In the standard reconstruction chain, robust but simplistic algorithms are employed in order to generate a seed for likelihood-based reconstructions. The seeding approach ensures stability and speed. 
+
+\subsection{LineFit}
+The LineFit Algorithm is the most simplistic approach to reconstructing a muon track, based on the assumption of a uniform cylinder of light traversing the detector at a constant speed. The arrival time of photons at each DOM is calculated, and the residual deviation from signal hypothesis is evaluated.
+
+A $\chi^{2}$ minimisation is then performed to match the model as closely as possible to observations. The result is a cylindrical pseudo-muon moving through the detector. Because of scattering and absorption, and the fact that the light is actually emitted in a conical shape, this direction only approximately follows that of the true muon direction. Nonetheless, it is extremely robust as a result of this simplicity, and thus forms the basis of most more-advanced reconstructions. An illustration of this algorithm is shown in Figure N.
+
+WHAT PHOTON DATA?
+NO HIT INFO in data
+\subsection{SPE}
+
+One step beyond a $\chi^{2}$ minimisation is to perform a full likelihood minimisation. In this case, if PDFs are constructed which accurately describe the physics in question, a more precise solution can be determined. The most simplistic model used in IceCube is the so-called \textbf{Single Photon Estimation} (SPE) likelihood. In this case, it is assumed that the first photon to arrive at a DOM is the one that is least scattered. This photon arrival time thus gives us the best indicator of the geometric distance the emitting muon. 
+
+A PDF in constructed, across all DOMs, comparing the arrival of this first DOM to those expected from photon propagation:
+
+\[ L = stuff \]
+
+First photon is least scattered.
+\subsection{SplineMPE}
+Assumption continuous energy losses
+\subsection{SegmentedSplineMPE}
+Stochastic energy losses
+\subsection{Millipede}
+Cascades
+
+Can fit with differing resolution
+\subsection{DNN/RNN}
+
+ 
+Azimuthal asymmetry in southern sky
+
+Dust layer
+\section{Topological Classification}
+\section{Energy Reconstruction}
+\subsection{MuEx}
+\subsection{Truncated Energy}
+\section{Pull Corrections}
+In general, track reconstructions rely on reconstructing patterns of light emission from a muon traversing or exiting the detector. In that sense, they are more precisely muon track reconstruction algorithms. However, for the purposes of neutrino astronomy, we are instead interested in the neutrino direction. 
+
+For neutrino interactions, the direction of the outgoing daughter lepton is random in the center-of-mass frame. Viewed from the detector frame, the leptons are preferentially emitted in the direction of the incoming neutrino, with a spread depending on interaction opening angle. This \textbf{Kinematic Angle} between the neutrino and lepton is thus energy-dependent, with lower-energy neutrinos having on average larger opening angles. The Kinematic Angle $\theta_{k} $ can be approximately described as:
+
+\[ \theta_{k} \approx 1 ^{\deg} \times \frac{E_{\nu}}{TeV} \]
+
+Given the poor cascade resolution, the Kinematic Angle is thus primarily relevant for muon tracks where the muon energy is below 10TeV. This is however the parameter region in which the majority of the IceCube tracks fall, and is thus important to consider. The Kinematic Angle spread must be convoluted with the muon Point-Spread Function (PSF) in order to correctly model the expected distribution of tracks for a given neutrino source.
+
+In an ideal case, this convolution would be done exactly. However, as discussed above, the neutrino energy for a given event can only be approximately determined. In practice, a correction must be performed based on the expected distribution of true neutrino energies corresponding to a given energy proxy value. Typically, this correction, known as a \textbf{Pull Correction} is performed using weighted Monte Carlo events under the assumption a particular true energy neutrino distribution. In IceCube, it is traditional to assume an $E^{-2}$  spectrum. In any case, this step introduces a fundamental energy-dependence to the neutrino PSF, which will unavoidably be present for any neutrino telescope in this energy regime. 
+
+
+\section{Event Selection}
+\subsection{Cascade rejection}
+\section{Systematic Errors}
+\subsection{Ice Models}
+One dominant source of systematic uncertainty in the IceCube detector is the ice itself, which is an inhomogeneous detector medium. Photon propagation is in
+\subsection{Detector Geometry}
+\subsection{Atmospheric Flux Uncertainties}
+\subsection{Pre-Pulses and After-Pulses}
+\subsection{Jitter}
+\subsection{DOM Efficiency}
+\subsection{HiveSplitter + Coincidence}
+\subsection{DOM Acceptance + Flasher Data}
+\subsection{Spline Tables/Resolution etc.}
