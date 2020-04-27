@@ -1,0 +1,75 @@
+\setchapterpreamble[u]{\margintoc}
+\chapter{ZTF Follow-up Pipeline}
+\labch{ztf_too}
+
+The motivation for all real-time analysis and prompt follow-up observations of external triggers is to obtain contemporaneous data. Put another way, these observations are designed to identify time-dependent transient or variable activity which would be resolved with serendipitous survey coverage.  In the case of GW and short GRB follow-up, searches are targeted towards identifying kilonovae (KNe), of which GW170817/AT2017gfo was a spectacular well-documented first example. These KNe are inherently fast-evolving transients which will by definition not be present before the extrenal trigger. For neutrinos, there are a proliferation of possible optical transients (e.g GRBs, TDEs, SNe) and variable objects (primarily blazars) which could be identified in an optical follow-up observations. In both cases, a handful of potentially interesting extragalactic objects will need to be selected against a vast background of spurious detections, and unrelated galactic or solar-system objects. 
+
+\section{ZTF Multi-messenger Pipeline}
+Given the similar challenge, a single flexible analysis pipeline can be adapted to 
+
+ZTF routinely images the visible Northern Sky once every three nights to a median depth of $20.5^{m}$, as part of a public survey \sidecite{Cenko:2011ys} \sidecite{2019PASP..131g8001G, 2019PASP..131a8002B}. For our neutrino follow-up program, this wide-field cadence is supplemented by dedicated Target-of-Opportunity (ToO) observations scheduled through the GROWTH ToO Marshal\cite{2019PASP..131d8001C}. 
+
+Each neutrino localisation region can typically be covered by one or two ZTF observation fields. Multiple observations are scheduled for each field, with both $g$ and $r$ filters, and a separation of at least 15 minutes between images. These observations typically last for 300~s, with a typical limiting magnitude of $21.0^{m}$.  ToO observations are typically conducted on the first two nights following a neutrino alert, before swapping to serendipitous coverage as part of the public survey. Following observations, images are processed by IPAC\cite{2019PASP..131a8003M}, and alert packets are generated for significant detections from difference images\cite{2019PASP..131a8001P}.
+
+This alert stream of significant is then filtered by our follow-up pipeline built within the AMPEL framework, a platform for realtime analysis of multi-messenger astronomy data\cite{2019A&A...631A.147N}. Our selection is based on an algorithm for identifying extragalactic transients\cite{2019A&A...631A.147N}. We search ZTF data both preceding and following the arrival of the neutrino. In order to identify candidate counterparts to the neutrino, we apply the following cuts to ToO and survey data:
+
+\begin{itemize}
+	\item We reject likely subtraction artifacts using machine learning classification and morphology cuts\cite{2019PASP..131c8002M}.
+	\item We reject moving objects through matches to known nearby solar system objects\cite{2019PASP..131a8003M}. We further reject moving objects by requiring multiple  detections for each candidate (i.e, at the same location) separated temporally by at least 15 minutes.
+	\item We remove stellar sources by rejecting detections cross-matched\cite{2018PASP..130g5002S} to objects with measured parallax in \textit{GAIA} DR2 data\cite{2018A&A...616A...1G}, defined as non-zero parallax with a significance of at least 3$\sigma$. We further reject likely stars with machine learning classifications\cite{2018PASP..130l8001T}, based on sources detected by Pan-STARRS1\cite{2016arXiv161205560C}, removing those objects with an estimated stellar probability greater than 80\%.
+	\item We identify likely AGN by cross-matching to the WISE survey and applying IR color cuts\cite{2010AJ....140.1868W}. We reject detections consistent with low-level AGN variability. 
+	\item We require that objects lie within the reported 90\% error region to ensure spatial coincidence, and that they are detected at least once following the neutrino arrival time to ensure temporal coincidence.
+\end{itemize}
+
+These cuts typically yield $\sim$0.2 candidates per square degree of sky. Promising candidates are prioritised for spectroscopic classification, to confirm or rule out a possible association with a given neutrino. 
+
+\section{Neutrino Follow-up}
+ZTF has since its inception had a dedicated program to identify sources of high-energy astrophysical neutrinos, through targeted follow-up observations.
+
+With ZTF, we have followed up eight neutrinos in the period from survey start on 2018 March 20 to 2020 March 31, out of a total of 31 neutrino alerts published by IceCube. Table \ref{tab:nu_alerts} summarises each neutrino alert that has been observed by ZTF. From 2019 June 17, IceCube published neutrino alerts with improved selection criteria to provide an elevated alert rate\cite{2019ICRC...36.1021B}. In addition to 1 of the 12 alerts under the old selection, ZTF  followed up 7 of the 19 alerts published under the new selection. In general, we aim to follow all well-localised neutrinos of likely astrophysical origin reported by IceCube which are visible to ZTF and can be observed promptly. Those alerts not observed by ZTF are summarised in Table \ref{tab:nu_non_observed}. Of those 23 alerts not followed up by ZTF, the primary reasons were proximity to the Sun (8/23), alerts with poor localisation and low astrophysical probability (6/23) and alert retraction (4/23). For events which were reported with estimates of astrophysical probability\footnote{This value was not reported for high-energy starting events (HESE) under the old IceCube alert selection, nor for one recent alert, IC200107A, that was identified outside of the standard alert criteria\cite{stein:gcn26655}.}, we chose not to follow up those that had both low astrophysical probability ($<$ 50\%) and large localisation regions ($>$ 10 sq.\,deg.).
+
+\begin{table*}
+	\centering
+	\begin{tabular}{||c c c c c c c ||} 
+		\hline
+		\textbf{Event} & \textbf{R.A. (J2000)} & \textbf{Dec (J2000)} & \textbf{90\% area} & \textbf{ZTF obs} &~ \textbf{Signalness}& \textbf{Ref}\\
+		& \textbf{(deg)}&\textbf{(deg)}& \textbf{(sq. deg.)}& \textbf{(sq. deg.)} &&\\
+		\hline
+		IC190503A & 120.28 & +6.35 & 1.94& 1.37 & 36\%&\cite{blaufuss:gcn24378,2019ATel12730....1S}\\
+		IC190619A & 343.26 & +10.73 & 27.16& 21.57 & 55\%&\cite{blaufuss:gcn24910, 2019ATel12879....1S}\\
+		IC190730A & 225.79 & +10.47 & 5.41& 4.52 & 67\%&\cite{stein:gcn25225,2019ATel12974....1S}\\
+		IC190922B & 5.76 & -1.57 & 4.48 & 4.09 & 51\%&\cite{blaufuss:gcn25806,2019ATel13125....1S, stein:gcn25824}\\
+		\textbf{IC191001A} & \textbf{314.08} & \textbf{+12.94} & \textbf{25.53} & \textbf{20.56} & \textbf{59\%}& \textbf{\cite{stein:gcn25913,2019ATel13160....1S, stein:gcn25929}}\\
+		IC200107A & 148.18 & +35.46 & 7.62 & 6.22 & - &\cite{stein:gcn26655,stein:gcn26667}\\
+		IC200109A & 164.49 & +11.87 & 22.52 & 20.06 & 77\%&\cite{stein:gcn26696,reusch:gcn26747}\\
+		IC200117A & 116.24 & +29.14 & 2.86 &  2.66 & 38\%&\cite{lagunas:gcn26802,reusch:gcn26813, reusch:gcn26816}\\
+		\hline
+	\end{tabular}
+	\caption{Summary of the eight neutrino alerts followed up by ZTF, with IC191001A highlighted in bold. The 90\% area column indicates the region of sky observed at least twice by ZTF, within the reported 90\% localisation, and accounting for chip gaps. The \textit{signalness} describes the probability that each neutrino is of astrophysical origin, rather than arising from atmospheric backgrounds. One alert, IC200107A, was reported without a signalness estimate.}
+	\label{tab:nu_alerts}
+\end{table*}
+
+\begin{table*}
+	\centering
+	\begin{tabular}{||c c ||} 
+		\hline
+		\textbf{Cause} & \textbf{Events} \\
+		\hline
+		\textbf{Alert Retraction} & IC180423A\cite{IC180423A}, IC181031A\cite{IC181031A}, IC190205A\cite{IC190205A}, IC190529A\cite{IC190529A}\\
+		\hline
+		\textbf{Proximity to Sun} &IC180908A\cite{IC180908A}, IC181014A\cite{IC181014A}, IC190124A\cite{IC190124A}, IC190704A\cite{IC190704A}\\
+		& IC190712A\cite{IC190712A}, IC190819A\cite{IC190819A}, IC191119A\cite{IC191119A}, IC200227A\cite{IC200227A}\\
+		\textbf{Low Altitude} & IC191215A\cite{IC191215A}\\
+		\textbf{Southern Sky} & IC190331A\cite{IC190331A}, IC190504A\cite{IC190504A}\\
+		\hline
+		\textbf{Poor Signalness \& Localisation} &
+		IC190221A\cite{IC190221A}, IC190629A\cite{IC190629A}, IC190922A\cite{IC190922A}\\
+		& IC191122A\cite{IC191122A}, IC191204A\cite{IC191204A}, IC191231A\cite{IC191231A}\\
+		\hline
+		\textbf{Bad Weather} & IC200120A\cite{IC200120A,IC200120A_2}\\
+		\textbf{Telescope Maintenance} & IC181023A\cite{IC181023A}\\
+		\hline
+	\end{tabular}
+	\caption{Summary of the 23 neutrino alerts that were not followed up by ZTF since survey start on 2018 March 20. Of these, 4/23 were retracted, 11/23 were inaccessible to ZTF for various reasons, 6/23 were deemed alerts of poor quality, while just 2/23 were alerts that were missed although they passed our criteria.}
+	\label{tab:nu_non_observed}
+\end{table*}
