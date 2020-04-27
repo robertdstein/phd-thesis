@@ -194,9 +194,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\nonumberline IC191001A - The "Bran Stark Neutrino"}{56}{section*.43}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\nonumberline Cluster searches}{56}{section*.44}% 
+\contentsline {subsection}{\nonumberline IC200107A - The "Flaring Extreme Blazar neutrino"}{56}{section*.44}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\nonumberline OFU and GFU}{56}{section*.45}% 
+\contentsline {subsection}{\nonumberline Cluster searches}{56}{section*.45}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\nonumberline OFU and GFU}{56}{section*.46}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {12}Overflow}{57}{chapter.12}% 
 \defcounter {refsection}{0}\relax 
@@ -210,9 +212,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {12.4}Event Selection}{58}{section.12.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\nonumberline Event Reconstruction}{58}{section*.46}% 
+\contentsline {subsection}{\nonumberline Event Reconstruction}{58}{section*.47}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\nonumberline Angular Errors}{58}{section*.47}% 
+\contentsline {subsection}{\nonumberline Angular Errors}{58}{section*.48}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {12.5}Unbinned Likelihood Analysis Formalism}{58}{section.12.5}% 
 \defcounter {refsection}{0}\relax 
@@ -222,48 +224,48 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {12.8}Neutrinos from Optical Transients}{58}{section.12.8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\nonumberline The Plot}{58}{section*.48}% 
+\contentsline {subsection}{\nonumberline The Plot}{58}{section*.49}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {12.9}Realtime Multi-Messenger Analysis}{59}{section.12.9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\nonumberline The IceCube Realtime System}{59}{section*.49}% 
+\contentsline {subsection}{\nonumberline The IceCube Realtime System}{59}{section*.50}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\nonumberline Optical Follow-Up of Neutrinos}{59}{section*.50}% 
+\contentsline {subsection}{\nonumberline Optical Follow-Up of Neutrinos}{59}{section*.51}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\nonumberline Optical Follow-Up of Gravitational Waves}{59}{section*.51}% 
+\contentsline {subsection}{\nonumberline Optical Follow-Up of Gravitational Waves}{59}{section*.52}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {12.10}Summary and Future Outlook}{59}{section.12.10}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{\nonumberline Appendix}{61}{part*.53}% 
+\contentsline {part}{\nonumberline Appendix}{61}{part*.54}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {A}Heading on Level\xspace 0 (chapter)}{63}{appendix.A}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {A.1}Heading on Level\xspace 1 (section)}{63}{section.A.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\nonumberline Heading on Level\xspace 2 (subsection)}{63}{section*.54}% 
+\contentsline {subsection}{\nonumberline Heading on Level\xspace 2 (subsection)}{63}{section*.55}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Heading on Level\xspace 3 (subsubsection)}{63}{section*.55}% 
+\contentsline {subsubsection}{\nonumberline Heading on Level\xspace 3 (subsubsection)}{63}{section*.56}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Heading on Level\xspace 4 (paragraph)}{64}{section*.56}% 
+\contentsline {paragraph}{\nonumberline Heading on Level\xspace 4 (paragraph)}{64}{section*.57}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {A.2}Lists}{64}{section.A.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\nonumberline Example for list\xspace (itemize)}{64}{section*.57}% 
+\contentsline {subsection}{\nonumberline Example for list\xspace (itemize)}{64}{section*.58}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Example for list\xspace (4*itemize)}{64}{section*.58}% 
+\contentsline {subsubsection}{\nonumberline Example for list\xspace (4*itemize)}{64}{section*.59}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\nonumberline Example for list\xspace (enumerate)}{64}{section*.59}% 
+\contentsline {subsection}{\nonumberline Example for list\xspace (enumerate)}{64}{section*.60}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Example for list\xspace (4*enumerate)}{65}{section*.60}% 
+\contentsline {subsubsection}{\nonumberline Example for list\xspace (4*enumerate)}{65}{section*.61}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\nonumberline Example for list\xspace (description)}{65}{section*.61}% 
+\contentsline {subsection}{\nonumberline Example for list\xspace (description)}{65}{section*.62}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Example for list\xspace (4*description)}{65}{section*.62}% 
+\contentsline {subsubsection}{\nonumberline Example for list\xspace (4*description)}{65}{section*.63}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{67}{chapter*.63}% 
+\contentsline {chapter}{\nonumberline Bibliography}{67}{chapter*.64}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Notation}{69}{chapter*.64}% 
+\contentsline {chapter}{\nonumberline Notation}{69}{chapter*.65}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Terms}{71}{section*.65}% 
+\contentsline {chapter}{List of Terms}{71}{section*.66}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Alphabetical Index}{73}{section*.67}% 
+\contentsline {chapter}{Alphabetical Index}{73}{section*.68}% 
