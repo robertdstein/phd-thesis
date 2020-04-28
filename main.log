@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.22)  27 APR 2020 17:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.8.22)  28 APR 2020 16:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2255,7 +2255,7 @@ Package zref Info: New property: mdf@pagevalue on input line 895.
 Package tocbasic Info: setting babel extension for `loi' on input line 106.
 Package biblatex Info: Redefining '\fullcite' on input line 119.
 )
-(./styles/mdftheorems.sty
+(./aas_macros.sty) (./styles/mdftheorems.sty
 Package: styles/mdftheorems 
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amscls/amsthm.sty
@@ -2354,11 +2354,11 @@ Writing index file main.idx
 \glo@main@file=\write7
 \openout7 = `main.glo'.
 
-Package glossaries Info: Writing glossary file main.glo on input line 56.
+Package glossaries Info: Writing glossary file main.glo on input line 59.
 \@nomenclaturefile=\write8
 \openout8 = `main.nlo'.
 
-Package nomencl Info: Writing nomenclature file main.nlo on input line 58.
+Package nomencl Info: Writing nomenclature file main.nlo on input line 61.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
 
@@ -2390,63 +2390,60 @@ LaTeX Warning: Label `ch:options' multiply defined.
 
 LaTeX Warning: Label `ch:options' multiply defined.
 
-
-LaTeX Warning: Label `ch:options' multiply defined.
-
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 112.
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 115.
 LaTeX Font Info:    Try loading font information for OML+ntxmi on input line 11
-2.
+5.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/newtx/omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 112.
-LaTeX Font Info:    Try loading font information for U+ntxexa on input line 112
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 115.
+LaTeX Font Info:    Try loading font information for U+ntxexa on input line 115
 .
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 112.
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 115.
 LaTeX Font Info:    Try loading font information for LMS+ntxsy on input line 11
-2.
+5.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 112.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 115.
 LaTeX Font Info:    Try loading font information for LMX+ntxexx on input line 1
-12.
+15.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 112.
-LaTeX Font Info:    Try loading font information for T1+ppl on input line 112.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Try loading font information for T1+ppl on input line 115.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 112.
-LaTeX Info: Redefining \microtypecontext on input line 112.
+LaTeX Info: Redefining \selectfont on input line 115.
+LaTeX Info: Redefining \microtypecontext on input line 115.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -2491,7 +2488,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box121
-Package hyperref Info: Link coloring ON on input line 112.
+Package hyperref Info: Link coloring ON on input line 115.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -2502,12 +2499,12 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 \c@section@level=\count560
 LaTeX Info: Redefining \Ref on input line 515.
 )
-LaTeX Info: Redefining \ref on input line 112.
-LaTeX Info: Redefining \pageref on input line 112.
-LaTeX Info: Redefining \nameref on input line 112.
-LaTeX Info: Redefining \Ref on input line 112.
+LaTeX Info: Redefining \ref on input line 115.
+LaTeX Info: Redefining \pageref on input line 115.
+LaTeX Info: Redefining \nameref on input line 115.
+LaTeX Info: Redefining \Ref on input line 115.
 Package snotez Info: All sidenotes are now using \marginnote
- instead of \marginpar on input line 112.
+ instead of \marginpar on input line 115.
 
 ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
@@ -2539,8 +2536,8 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
 
 (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 112.
-Package biblatex Info: Reference segment=0 on input line 112.
+Package biblatex Info: Reference section=0 on input line 115.
+Package biblatex Info: Reference segment=0 on input line 115.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/oberdiek/pdflscape.sty
 Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
@@ -2560,7 +2557,7 @@ Package scrhack Info: \landscape patched to make \textheight change optional on
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
 \c@lstlisting=\count562
-Package scrhack Info: undefining \float@addtolists on input line 112.
+Package scrhack Info: undefining \float@addtolists on input line 115.
 
 (./main.glsdefs)
 *geometry* driver: auto-detecting
@@ -2597,10 +2594,10 @@ Package scrhack Info: undefining \float@addtolists on input line 112.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package scrbase Info: activating english \contentsname on input line 112.
-Package scrbase Info: activating english \listfigurename on input line 112.
-Package scrbase Info: activating english \listtablename on input line 112.
-Package scrbase Info: activating english \listtheoremname on input line 112.
+Package scrbase Info: activating english \contentsname on input line 115.
+Package scrbase Info: activating english \listfigurename on input line 115.
+Package scrbase Info: activating english \listtablename on input line 115.
+Package scrbase Info: activating english \listtheoremname on input line 115.
 \overflowingheadlen=\skip288
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
@@ -2650,53 +2647,53 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 10.0pt
 (typearea)              \footskip       = 46.20026pt
 (typearea)              \baselineskip   = 13.20007pt
-(typearea)              on input line 204.
+(typearea)              on input line 207.
 Package typearea Info: Using dirty hack to recalculate internal output
-(typearea)             dimensions of LaTeX on input line 204.
-LaTeX Font Info:    Try loading font information for T1+fvm on input line 206.
+(typearea)             dimensions of LaTeX on input line 207.
+LaTeX Font Info:    Try loading font information for T1+fvm on input line 209.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/bera/t1fvm.fd
 File: t1fvm.fd 2004/09/07 scalable font definitions for T1/fvm.
 )
 LaTeX Font Info:    Font shape `T1/fvm/m/n' will be
-(Font)              scaled to size 8.50006pt on input line 206.
+(Font)              scaled to size 8.50006pt on input line 209.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `fvm' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 206.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 209.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 206.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 206.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 209.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 209.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 206.
+(Font)              scaled to size 9.49997pt on input line 209.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 206.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 209.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 9.49997pt on input line 206.
+(Font)              scaled to size 9.49997pt on input line 209.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 206.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 209.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 19.70294pt on input line 206.
+(Font)              scaled to size 19.70294pt on input line 209.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 206.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 209.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 11.39996pt on input line 206.
-LaTeX Font Info:    Try loading font information for OT1+ppl on input line 206.
+(Font)              scaled to size 11.39996pt on input line 209.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 209.
 
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 206
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 209
 .
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/ot1zplm.fd
@@ -2706,44 +2703,44 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `zplm' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for U+ntxmia on input line 206
+LaTeX Font Info:    Try loading font information for U+ntxmia on input line 209
 .
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsym on input line 206
+LaTeX Font Info:    Try loading font information for U+ntxsym on input line 209
 .
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 206
+LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 209
 .
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 15.0049pt on input line 206.
+(Font)              scaled to size 15.0049pt on input line 209.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.94107pt on input line 206.
+(Font)              scaled to size 10.94107pt on input line 209.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.23184pt on input line 206.
+(Font)              scaled to size 8.23184pt on input line 209.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 15.0049pt on input line 206.
+(Font)              scaled to size 15.0049pt on input line 209.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.94107pt on input line 206.
+(Font)              scaled to size 10.94107pt on input line 209.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.23184pt on input line 206.
+(Font)              scaled to size 8.23184pt on input line 209.
  [1
 
 \openout6 = `main.xdy'.
@@ -2757,19 +2754,19 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `U/ccicons/m/n' will be
-(Font)              scaled to size 10.0pt on input line 206.
+(Font)              scaled to size 10.0pt on input line 209.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 206.
+(Font)              scaled to size 10.42007pt on input line 209.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.60664pt on input line 206.
+(Font)              scaled to size 7.60664pt on input line 209.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.73103pt on input line 206.
+(Font)              scaled to size 5.73103pt on input line 209.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 206.
+(Font)              scaled to size 10.42007pt on input line 209.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.60664pt on input line 206.
+(Font)              scaled to size 7.60664pt on input line 209.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.73103pt on input line 206.
+(Font)              scaled to size 5.73103pt on input line 209.
  [2
 
 ] [3
@@ -2794,9 +2791,9 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 10.0pt
 (typearea)              \footskip       = 46.20026pt
 (typearea)              \baselineskip   = 13.20007pt
-(typearea)              on input line 206.
+(typearea)              on input line 209.
 Package typearea Info: Using dirty hack to recalculate internal output
-(typearea)             dimensions of LaTeX on input line 206.
+(typearea)             dimensions of LaTeX on input line 209.
 
 (./chapters/preface.tex
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
@@ -2828,22 +2825,22 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 
 ]
 Package tocbasic Info: character protrusion at toc deactivated on input line 23
-0.
+3.
 LaTeX Font Info:    Font shape `T1/ppl/bx/sc' in size <12> not available
-(Font)              Font shape `T1/ppl/b/sc' tried instead on input line 230.
+(Font)              Font shape `T1/ppl/b/sc' tried instead on input line 233.
  [6
 
 
 ]
 [7] [8]
 Package tocbasic Info: character protrusion at lof deactivated on input line 23
-1.
+4.
  (./main.lof)
 \tf@lof=\write10
 \openout10 = `main.lof'.
 
-Package tocbasic Info: character protrusion at lot deactivated on input line 23
-7.
+Package tocbasic Info: character protrusion at lot deactivated on input line 24
+0.
  (./main.lot)
 \tf@lot=\write11
 \openout11 = `main.lot'.
@@ -2947,7 +2944,7 @@ kmatter
 Package marginnote Info: Margin note 12.2 is on absolute page 12 on input line 
 79.
 Package marginnote Info: xpos seems to be 354.34917pt on input line 79.
-<images/monalisa.jpg, id=534, 403.5075pt x 601.24625pt>
+<images/monalisa.jpg, id=528, 403.5075pt x 601.24625pt>
 File: images/monalisa.jpg Graphic file (type jpg)
 <use images/monalisa.jpg>
 Package pdftex.def Info: images/monalisa.jpg  used on input line 100.
@@ -3024,11 +3021,11 @@ Overfull \hbox (156.52655pt too wide) has occurred while \output is active
 ]
 part without number
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 250.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 253.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 23.63593pt on input line 250.
+(Font)              scaled to size 23.63593pt on input line 253.
 LaTeX Font Info:    Font shape `T1/ppl/bx/sc' in size <24.88> not available
-(Font)              Font shape `T1/ppl/b/sc' tried instead on input line 250.
+(Font)              Font shape `T1/ppl/b/sc' tried instead on input line 253.
 [5] [6]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
@@ -3187,7 +3184,7 @@ Package marginnote Info: xpos seems to be 222.50056pt on input line 106.
 )
 (./chapters/figsntabs.tex [12]
 chapter 4.
-<images/seaside.jpeg, id=654, 1283.79625pt x 553.06625pt>
+<images/seaside.jpeg, id=648, 1283.79625pt x 553.06625pt>
 File: images/seaside.jpeg Graphic file (type jpg)
 <use images/seaside.jpeg>
 Package pdftex.def Info: images/seaside.jpeg  used on input line 3.
@@ -3563,7 +3560,7 @@ Overfull \hbox (156.52655pt too wide) has occurred while \output is active
 
 ]
 chapter 8.
-<figures/icecube.jpg, id=942, 5187.38pt x 2011.515pt>
+<figures/icecube.jpg, id=936, 5187.38pt x 2011.515pt>
 File: figures/icecube.jpg Graphic file (type jpg)
 <use figures/icecube.jpg>
 Package pdftex.def Info: figures/icecube.jpg  used on input line 3.
@@ -3594,7 +3591,7 @@ pogates approximately-
 
 ) (./chapters/event_selection.tex [34]
 chapter 9.
-<figures/Grid_FullView_Logo.jpg, id=976, 2823.54875pt x 1041.8925pt>
+<figures/Grid_FullView_Logo.jpg, id=970, 2823.54875pt x 1041.8925pt>
 File: figures/Grid_FullView_Logo.jpg Graphic file (type jpg)
 <use figures/Grid_FullView_Logo.jpg>
 Package pdftex.def Info: figures/Grid_FullView_Logo.jpg  used on input line 3.
@@ -3649,7 +3646,7 @@ Overfull \hbox (156.52655pt too wide) has occurred while \output is active
 
 ]
 chapter 10.
-<figures/desy_blazar.png, id=1063, 401.5pt x 284.06125pt>
+<figures/desy_blazar.png, id=1057, 401.5pt x 284.06125pt>
 File: figures/desy_blazar.png Graphic file (type png)
 <use figures/desy_blazar.png>
 Package pdftex.def Info: figures/desy_blazar.png  used on input line 3.
@@ -3681,13 +3678,13 @@ Overfull \hbox (156.52655pt too wide) has occurred while \output is active
  []
 
 [45]
-<txs_logic.pdf, id=1117, 1027.84pt x 770.88pt>
+<txs_logic.pdf, id=1111, 1027.84pt x 770.88pt>
 File: txs_logic.pdf Graphic file (type pdf)
 <use txs_logic.pdf>
 Package pdftex.def Info: txs_logic.pdf  used on input line 53.
 (pdftex.def)             Requested size: 304.44917pt x 228.33688pt.
  [46 <./txs_logic.pdf>]
-<figures/sn_zoo-1.png, id=1151, 560.0925pt x 737.75626pt>
+<figures/sn_zoo-1.png, id=1145, 560.0925pt x 737.75626pt>
 File: figures/sn_zoo-1.png Graphic file (type png)
 <use figures/sn_zoo-1.png>
 Package pdftex.def Info: figures/sn_zoo-1.png  used on input line 72.
@@ -3744,7 +3741,7 @@ LaTeX Warning: Reference `Neutrino Sources' on page 54 undefined on input line
 24.
 
 [54]
-<figures/pks_followup.png, id=1222, 927.465pt x 451.6875pt>
+<figures/pks_followup.png, id=1216, 927.465pt x 451.6875pt>
 File: figures/pks_followup.png Graphic file (type png)
 <use figures/pks_followup.png>
 Package pdftex.def Info: figures/pks_followup.png  used on input line 38.
@@ -3762,108 +3759,45 @@ Package marginnote Info: Margin note 67.1 is on absolute page 67 on input line
 Package marginnote Info: xpos seems to be 70.56284pt on input line 2.
 
 Underfull \hbox (badness 10000) in paragraph at lines 2--2
-[][] [][]\T1/ppl/b/n/9 ZTF Multi-messenger
+[][] [][]\T1/ppl/b/n/9 ZTF Multi-Messenger
  []
-
-
-LaTeX Warning: Citation 'Cenko:2011ys' on page 57 undefined on input line 10.
 
 Package marginnote Info: Margin note 67.2 is on absolute page 67 on input line 
-10.
-Package marginnote Info: xpos seems to be 70.56284pt on input line 10.
+8.
+Package marginnote Info: xpos seems to be 349.41127pt on input line 8.
 
-LaTeX Warning: Citation 'Cenko:2011ys' on page 57 undefined on input line 10.
-
-
-LaTeX Warning: Citation 'Cenko:2011ys' on page 57 undefined on input line 10.
-
-
-LaTeX Warning: Citation 'Cenko:2011ys' on page 57 undefined on input line 10.
-
-
-LaTeX Warning: Citation 'Cenko:2011ys' on page 57 undefined on input line 10.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--10
-[]| \T1/ppl/m/n/8 (+20) [[]]: []
+Underfull \hbox (badness 2469) in paragraph at lines 8--8
+\T1/ppl/m/n/8 (+20) Tran-sient Fa-cil-ity: Sys-tem Overview,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--10
+Underfull \hbox (badness 10000) in paragraph at lines 8--8
 
  []
-
-
-LaTeX Warning: Citation '2019PASP..131g8001G' on page 57 undefined on input lin
-e 10.
-
-
-LaTeX Warning: Citation '2019PASP..131a8002B' on page 57 undefined on input lin
-e 10.
 
 Package marginnote Info: Margin note 67.3 is on absolute page 67 on input line 
+8.
+Package marginnote Info: xpos seems to be 193.75194pt on input line 8.
+
+Underfull \hbox (badness 2913) in paragraph at lines 8--8
+\T1/ppl/m/n/8 (+20) 180523B with the Zwicky Tran-sient
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--8
+
+ []
+
+Package marginnote Info: Margin note 67.4 is on absolute page 68 on input line 
 10.
-Package marginnote Info: xpos seems to be 277.06102pt on input line 10.
-
-LaTeX Warning: Citation '2019PASP..131g8001G' on page 57 undefined on input lin
-e 10.
-
-
-LaTeX Warning: Citation '2019PASP..131g8001G' on page 57 undefined on input lin
-e 10.
-
-
-LaTeX Warning: Citation '2019PASP..131g8001G' on page 57 undefined on input lin
-e 10.
-
-
-LaTeX Warning: Citation '2019PASP..131g8001G' on page 57 undefined on input lin
-e 10.
-
-
-LaTeX Warning: Citation '2019PASP..131a8002B' on page 57 undefined on input lin
-e 10.
-
-
-LaTeX Warning: Citation '2019PASP..131a8002B' on page 57 undefined on input lin
-e 10.
-
-
-LaTeX Warning: Citation '2019PASP..131a8002B' on page 57 undefined on input lin
-e 10.
-
-
-LaTeX Warning: Citation '2019PASP..131a8002B' on page 57 undefined on input lin
-e 10.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 10--10
-[]| \T1/ppl/m/n/8 (+20) [[]]:
+\T1/ppl/m/n/8 (+20) Tran-sient Fa-cil-ity: Data Pro-cess-ing,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--10
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--10
-\T1/ppl/m/n/8 (+20) ([]),
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--10
-\T1/ppl/m/n/8 (+20) [[]]:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--10
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--10
-\T1/ppl/m/n/8 (+20) ([]),
+Underfull \hbox (badness 3849) in paragraph at lines 10--10
+\T1/ppl/m/n/8 (+20) Tran-sient Fa-cil-ity Alert Dis-tri-bu-tion
  []
 
 
@@ -3871,268 +3805,117 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--10
 
  []
 
-
-LaTeX Warning: Citation '2019PASP..131d8001C' on page 57 undefined on input lin
-e 10.
-
-
-Overfull \hbox (8.62862pt too wide) in paragraph at lines 10--11
-|[]\T1/ppl/m/n/10 (-20) [[], []] |[]. For our neu-trino follow-
- []
-
-
-Overfull \hbox (22.27481pt too wide) in paragraph at lines 10--11
-\T1/ppl/m/n/10 (-20) Target-of-Opportunity (ToO) ob-ser-va-tions sched-uled thr
-ough the GROWTH
- []
-
-
-LaTeX Warning: Citation '2019PASP..131a8003M' on page 57 undefined on input lin
-e 12.
-
-
-LaTeX Warning: Citation '2019PASP..131a8001P' on page 57 undefined on input lin
-e 12.
-
-
-Overfull \hbox (22.47441pt too wide) in paragraph at lines 12--13
-\T1/ppl/m/n/10 (-20) low-ing ob-ser-va-tions, im-ages are pro-cessed by IPAC[[]
-],
- []
-
+Package marginnote Info: xpos seems to be 495.46272pt on input line 10.
 [57
 
 
 ]
+Package marginnote Info: Margin note 68.1 is on absolute page 68 on input line 
+12.
 
-LaTeX Warning: Citation '2019A&A...631A.147N' on page 58 undefined on input lin
-e 14.
-
-
-LaTeX Warning: Citation '2019A&A...631A.147N' on page 58 undefined on input lin
-e 14.
-
-
-Overfull \hbox (91.10306pt too wide) in paragraph at lines 14--15
-\T1/ppl/m/n/10 (-20) tion is based on an al-go-rithm for iden-ti-fy-ing ex-tra-
-galac-tic transients[[]].
+Underfull \hbox (badness 2662) in paragraph at lines 12--12
+[]| \T1/ppl/m/n/8 (+20) [[][][]8[][]]: []Nordin et al. ([]2019), []`  Tran-sien
+t
  []
 
 
-LaTeX Warning: Citation '2019PASP..131c8002M' on page 58 undefined on input lin
-e 17.
-
-
-LaTeX Warning: Citation '2019PASP..131a8003M' on page 58 undefined on input lin
-e 18.
-
-
-LaTeX Warning: Citation '2018PASP..130g5002S' on page 58 undefined on input lin
-e 19.
-
-
-LaTeX Warning: Citation '2018A&A...616A...1G' on page 58 undefined on input lin
-e 19.
-
-
-LaTeX Warning: Citation '2018PASP..130l8001T' on page 58 undefined on input lin
-e 19.
-
-
-LaTeX Warning: Citation '2016arXiv161205560C' on page 58 undefined on input lin
-e 19.
-
-
-Overfull \hbox (95.57095pt too wide) in paragraph at lines 19--20
-[]\T1/ppl/m/n/10 (-20) We re-move stel-lar sources by re-ject-ing de-tec-tions 
-cross-matched[[]]
+Underfull \hbox (badness 3199) in paragraph at lines 12--12
+\T1/ppl/m/n/8 (+20) alert man-age-ment, pho-tom-e-try, and
  []
 
 
-Overfull \hbox (45.37326pt too wide) in paragraph at lines 19--20
-\T1/ppl/m/n/10 (-20) to ob-jects with mea-sured par-al-lax in \T1/ppl/m/it/10 (
--20) GAIA \T1/ppl/m/n/10 (-20) DR2 data[[]],
+Underfull \hbox (badness 10000) in paragraph at lines 12--12
+
+ []
+
+Package marginnote Info: xpos seems to be 419.96823pt on input line 12.
+Package marginnote Info: Margin note 68.2 is on absolute page 68 on input line 
+15.
+
+Underfull \hbox (badness 1577) in paragraph at lines 15--15
+[]| \T1/ppl/m/n/8 (+20) [[][][]9[][]]: []Ma-ha-bal et al. ([]2019), []`  Ma-chi
+ne
  []
 
 
-Overfull \hbox (86.01566pt too wide) in paragraph at lines 19--20
-\T1/ppl/m/n/10 (-20) fur-ther re-ject likely stars with ma-chine learn-ing clas
-sifications[[]],
+Underfull \hbox (badness 4779) in paragraph at lines 15--15
+\T1/ppl/m/n/8 (+20) Learn-ing for the Zwicky Tran-sient
  []
 
 
-Overfull \hbox (11.59613pt too wide) in paragraph at lines 19--20
-\T1/ppl/m/n/10 (-20) based on sources de-tected by Pan-STARRS1[[]],
+Underfull \hbox (badness 10000) in paragraph at lines 15--15
+
+ []
+
+Package marginnote Info: xpos seems to be 401.66888pt on input line 15.
+Package marginnote Info: Margin note 68.3 is on absolute page 68 on input line 
+17.
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+
+ []
+
+Package marginnote Info: xpos seems to be 386.70016pt on input line 17.
+Package marginnote Info: Margin note 68.4 is on absolute page 68 on input line 
+17.
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+\T1/ppl/m/n/8 (+20) Un-re-solved PanSTARRS1 Sources:
  []
 
 
-LaTeX Warning: Citation '2010AJ....140.1868W' on page 58 undefined on input lin
-e 20.
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+\T1/ppl/m/n/8 (+20) Ap-pli-ca-tion in the ZTF Real-time
+ []
 
 
-LaTeX Warning: Citation '2019ICRC...36.1021B' on page 58 undefined on input lin
-e 29.
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+
+ []
+
+Package marginnote Info: xpos seems to be 420.51228pt on input line 17.
+Package marginnote Info: Margin note 68.5 is on absolute page 68 on input line 
+18.
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+\T1/ppl/m/n/8 (+20) In-frared Sur-vey Ex-plorer (WISE):
+ []
 
 
-LaTeX Warning: Citation 'stein:gcn26655' on page 58 undefined on input line 29.
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
 
+ []
+
+Package marginnote Info: xpos seems to be 369.79951pt on input line 18.
+Package marginnote Info: Margin note 68.6 is on absolute page 68 on input line 
+23.
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+\T1/ppl/m/n/8 (+20) Gen-er-a-tion of Ice-Cube Real-time
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+
+ []
+
+Package marginnote Info: xpos seems to be 333.79074pt on input line 23.
+Package marginnote Info: Margin note 68.7 is on absolute page 69 on input line 
+23.
+Package marginnote Info: xpos seems to be 192.0286pt on input line 23.
+
+Underfull \hbox (badness 2744) in paragraph at lines 23--23
+[]| \T1/ppl/m/n/8 (+20) [[][][]16[][]]: []Stein ([]2020), []`  IceCube-200107A:
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+
+ []
 
 [58]
-
-LaTeX Warning: Citation 'blaufuss:gcn24378' on page 59 undefined on input line 
-38.
-
-
-LaTeX Warning: Citation '2019ATel12730....1S' on page 59 undefined on input lin
-e 38.
-
-
-LaTeX Warning: Citation 'blaufuss:gcn24910' on page 59 undefined on input line 
-39.
-
-
-LaTeX Warning: Citation '2019ATel12879....1S' on page 59 undefined on input lin
-e 39.
-
-
-LaTeX Warning: Citation 'stein:gcn25225' on page 59 undefined on input line 40.
-
-
-
-LaTeX Warning: Citation '2019ATel12974....1S' on page 59 undefined on input lin
-e 40.
-
-
-LaTeX Warning: Citation 'blaufuss:gcn25806' on page 59 undefined on input line 
-41.
-
-
-LaTeX Warning: Citation '2019ATel13125....1S' on page 59 undefined on input lin
-e 41.
-
-
-LaTeX Warning: Citation 'stein:gcn25824' on page 59 undefined on input line 41.
-
-
-
-LaTeX Warning: Citation 'stein:gcn25913' on page 59 undefined on input line 42.
-
-
-
-LaTeX Warning: Citation '2019ATel13160....1S' on page 59 undefined on input lin
-e 42.
-
-
-LaTeX Warning: Citation 'stein:gcn25929' on page 59 undefined on input line 42.
-
-
-
-LaTeX Warning: Citation 'stein:gcn26655' on page 59 undefined on input line 43.
-
-
-
-LaTeX Warning: Citation 'stein:gcn26667' on page 59 undefined on input line 43.
-
-
-
-LaTeX Warning: Citation 'stein:gcn26696' on page 59 undefined on input line 44.
-
-
-
-LaTeX Warning: Citation 'reusch:gcn26747' on page 59 undefined on input line 44
-.
-
-
-LaTeX Warning: Citation 'lagunas:gcn26802' on page 59 undefined on input line 4
-5.
-
-
-LaTeX Warning: Citation 'reusch:gcn26813' on page 59 undefined on input line 45
-.
-
-
-LaTeX Warning: Citation 'reusch:gcn26816' on page 59 undefined on input line 45
-.
-
-
-Overfull \hbox (161.99501pt too wide) in paragraph at lines 33--48
- [][] 
- []
-
-
-LaTeX Warning: Citation 'IC180423A' on page 59 undefined on input line 58.
-
-
-LaTeX Warning: Citation 'IC181031A' on page 59 undefined on input line 58.
-
-
-LaTeX Warning: Citation 'IC190205A' on page 59 undefined on input line 58.
-
-
-LaTeX Warning: Citation 'IC190529A' on page 59 undefined on input line 58.
-
-
-LaTeX Warning: Citation 'IC180908A' on page 59 undefined on input line 60.
-
-
-LaTeX Warning: Citation 'IC181014A' on page 59 undefined on input line 60.
-
-
-LaTeX Warning: Citation 'IC190124A' on page 59 undefined on input line 60.
-
-
-LaTeX Warning: Citation 'IC190704A' on page 59 undefined on input line 60.
-
-
-LaTeX Warning: Citation 'IC190712A' on page 59 undefined on input line 61.
-
-
-LaTeX Warning: Citation 'IC190819A' on page 59 undefined on input line 61.
-
-
-LaTeX Warning: Citation 'IC191119A' on page 59 undefined on input line 61.
-
-
-LaTeX Warning: Citation 'IC200227A' on page 59 undefined on input line 61.
-
-
-LaTeX Warning: Citation 'IC191215A' on page 59 undefined on input line 62.
-
-
-LaTeX Warning: Citation 'IC190331A' on page 59 undefined on input line 63.
-
-
-LaTeX Warning: Citation 'IC190504A' on page 59 undefined on input line 63.
-
-
-LaTeX Warning: Citation 'IC190221A' on page 59 undefined on input line 66.
-
-
-LaTeX Warning: Citation 'IC190629A' on page 59 undefined on input line 66.
-
-
-LaTeX Warning: Citation 'IC190922A' on page 59 undefined on input line 66.
-
-
-LaTeX Warning: Citation 'IC191122A' on page 59 undefined on input line 67.
-
-
-LaTeX Warning: Citation 'IC191204A' on page 59 undefined on input line 67.
-
-
-LaTeX Warning: Citation 'IC191231A' on page 59 undefined on input line 67.
-
-
-LaTeX Warning: Citation 'IC200120A' on page 59 undefined on input line 69.
-
-
-LaTeX Warning: Citation 'IC200120A_2' on page 59 undefined on input line 69.
-
-
-LaTeX Warning: Citation 'IC181023A' on page 59 undefined on input line 70.
-
-
-Overfull \hbox (131.74472pt too wide) in paragraph at lines 54--73
+Overfull \hbox (2.774pt too wide) in paragraph at lines 48--76
  [][] 
  []
 
@@ -4141,10 +3924,7 @@ Overfull \hbox (156.52655pt too wide) has occurred while \output is active
 [][][] 
  []
 
-[59] [60
-
-
-]
+[59] [60]
 chapter 13.
 Package marginnote Info: Margin note 71.1 is on absolute page 71 on input line 
 2.
@@ -4164,7 +3944,10 @@ Underfull \hbox (badness 7064) in paragraph at lines 2--2
 [][] [][]\T1/ppl/b/n/9 Sum-mary and Fu-ture Out-
  []
 
-[61] [62])
+[61
+
+
+] [62])
 Overfull \hbox (156.52655pt too wide) has occurred while \output is active
 [][][] 
  []
@@ -4308,42 +4091,37 @@ Overfull \hbox (156.52655pt too wide) has occurred while \output is active
 
 
 chapter without number
-(./main.nls [71
+[71
 
 
 
-] [72
+] [72]
+No file main.nls.
 
-
-])
-Underfull \hbox (badness 10000) in paragraph at lines 316--317
+Underfull \hbox (badness 10000) in paragraph at lines 319--320
 
  []
 
+[73]
 \@gls@deffile=\write12
 \openout12 = `main.glsdefs'.
 
-(./main.gls [73] [74
 
-
-]) [75
-
-
-] [76
-
-
-]
+No file main.gls.
+[74]
 runsystem(makeindex main.idx)...executed safely (allowed).
 
- (./main.ind) [77
+ (./main.ind) [75
+
+
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 380.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 380.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 383.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 383.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 380.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 380.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 383.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 383.
 
 
 LaTeX Warning: There were undefined references.
@@ -4351,51 +4129,55 @@ LaTeX Warning: There were undefined references.
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 59694 strings out of 492616
- 1104979 string characters out of 6129481
- 1901918 words of memory out of 5000000
- 61813 multiletter control sequences out of 15000+600000
- 686424 words of font info for 506 fonts, out of 8000000 for 9000
+ 60096 strings out of 492616
+ 1115902 string characters out of 6129481
+ 2008086 words of memory out of 5000000
+ 62134 multiletter control sequences out of 15000+600000
+ 688084 words of font info for 527 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  110i,20n,105p,9084b,2226s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2019/texmf-dist/fonts/type1/public/ccicons/ccicons.pfb></usr/local/texli
-ve/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
-e/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/
-2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/20
-19/texmf-dist/fonts/type1/public/bera/fvmb8a.pfb></usr/local/texlive/2019/texmf
--dist/fonts/type1/public/bera/fvmr8a.pfb></usr/local/texlive/2019/texmf-dist/fo
-nts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2019/texmf-dis
-t/fonts/type1/public/newtx/rntxmi.pfb></usr/local/texlive/2019/texmf-dist/fonts
-/type1/public/newtx/rntxmi5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1
-/public/newtx/rntxmi7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/publi
-c/txfonts/rtxmi.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/newt
-x/rtxmi7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/txfonts/rtx
-r.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/newtx/txexs.pfb></
-usr/local/texlive/2019/texmf-dist/fonts/type1/public/txfonts/txmia.pfb></usr/lo
-cal/texlive/2019/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/local/texl
-ive/2019/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/201
-9/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2019/texmf
--dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2019/texmf-dist/f
-onts/type1/urw/palatino/uplbi8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/t
-ype1/urw/palatino/uplr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/ur
-w/palatino/uplr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/palat
-ino/uplri8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmri
-8a.pfb>
-Output written on main.pdf (86 pages, 3432704 bytes).
+pdfTeX warning (dest): name{glo:tocLabel} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:fpsLabel} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{glo:computer} has been referenced but does not exis
+t, replaced by a fixed one
+
+{/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
+live/2019/texmf-dist/fonts/type1/public/ccicons/ccicons.pfb></usr/local/texlive
+/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
+2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/20
+19/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2019
+/texmf-dist/fonts/type1/public/bera/fvmb8a.pfb></usr/local/texlive/2019/texmf-d
+ist/fonts/type1/public/bera/fvmr8a.pfb></usr/local/texlive/2019/texmf-dist/font
+s/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2019/texmf-dist/
+fonts/type1/public/newtx/rntxmi.pfb></usr/local/texlive/2019/texmf-dist/fonts/t
+ype1/public/newtx/rntxmi5.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/p
+ublic/newtx/rntxmi7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/
+txfonts/rtxmi.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/newtx/
+rtxmi7.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/txfonts/rtxr.
+pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/newtx/txexs.pfb></us
+r/local/texlive/2019/texmf-dist/fonts/type1/public/txfonts/txmia.pfb></usr/loca
+l/texlive/2019/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/local/texliv
+e/2019/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2019/
+texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2019/texmf-d
+ist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2019/texmf-dist/fon
+ts/type1/urw/palatino/uplbi8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/typ
+e1/urw/palatino/uplr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/
+palatino/uplr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/palatin
+o/uplri8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmri8a
+.pfb>
+Output written on main.pdf (84 pages, 3448223 bytes).
 PDF statistics:
- 1838 PDF objects out of 2073 (max. 8388607)
- 1675 compressed objects within 17 object streams
- 388 named destinations out of 1000 (max. 500000)
- 75069 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 2022 PDF objects out of 2073 (max. 8388607)
+ 1859 compressed objects within 19 object streams
+ 439 named destinations out of 1000 (max. 500000)
+ 75053 words of extra memory for PDF output out of 89155 (max. 10000000)
 

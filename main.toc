@@ -206,7 +206,7 @@
 \defcounter {refsection}{0}\relax 
 \etoc@startlocaltoc {12}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12.1}ZTF Multi-messenger Pipeline}{57}{section.12.1}% 
+\contentsline {section}{\numberline {12.1}ZTF Multi-Messenger Pipeline}{57}{section.12.1}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {12.2}Neutrino Follow-up}{58}{section.12.2}% 
 \defcounter {refsection}{0}\relax 
@@ -274,8 +274,4 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\nonumberline Bibliography}{71}{chapter*.66}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Notation}{73}{chapter*.67}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Terms}{75}{section*.68}% 
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Alphabetical Index}{77}{section*.70}% 
+\contentsline {chapter}{Alphabetical Index}{75}{section*.67}% 
