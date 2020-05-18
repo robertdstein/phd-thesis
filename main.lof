@@ -37,7 +37,23 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 12.1}{\ignorespaces ZTF lightcurve of SN2019pqh, with observations in g and r band. The arrival time of the neutrino on 2019 September 22 is marked with a dotted line, and the supernova is detected in the subsequent ToO obsersations.\relax }}{61}{figure.caption.51}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 12.2}{\ignorespaces Spectrum of SN2019pqh, taken on x. The prominent Balmer lines are highlighted in orange, from which a redshift of 0.134 is derived. A template-matching classification using SNID yields a match to a Type IIb supernova (SN1993J) 2 days before peak cite. \relax }}{61}{figure.caption.52}% 
+\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 13.1}{\ignorespaces Multi-wavelength lightcurve of AT2019dsg. Error bars represent 1$\sigma $ intervals. The upper panel shows the optical photometry from ZTF, alongside UV observations from \textit {Swift}-UVOT. The plateau luminosity is a factor of 10 brighter in UVW2 than the pre-disruption baseline of the host galaxy. The lower panel shows the integrated X-ray energy flux, from observations with \textit {Swift}-XRT and \textit {XMM-Newton}, in the energy range 0.3-10 keV. Arrows indicated 3$\sigma $ upper limits. The vertical dotted line illustrates the arrival of IC191001A.\relax }}{64}{figure.caption.53}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 13.2}{\ignorespaces X-ray count map from \textit {XMM-Newton} (50 days after discovery). The green circle indicates the source region, while the red circular region was used to measure the background. The best-fit position derived from optical observations is spatially-coincident with the center of the X-ray source region.\relax }}{66}{figure.caption.56}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 13.3}{\ignorespaces Soft X-ray spectrum of AT2019dsg measured by \textit {XMM-Newton}, fitted with an absorbed disk blackbody model. Error bars represent 1$\sigma $ intervals.\relax }}{67}{figure.caption.57}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 13.4}{\ignorespaces LAT counts map of the Region Of Interest (ROI) in the integrated search period G3, showing the IC191001A 90$\%$ localisation region in green. The neutrino best-fit position is marked with a green `$\times $'. Two gamma-ray sources are significantly detected ($\geq $ 5 $\sigma $) in the ROI but outside the neutrino uncertainty region as marked with white crosses. There is no excess consistent with the position of AT2019dsg. \relax }}{71}{figure.caption.61}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 13.5}{\ignorespaces LAT lightcurve in the 0.1-800 GeV energy range for the source \textit {Fermi}-J2113.8+1120 in the time interval G3, with evenly spaced binning of 28 days. Vertical error bars represent 1$\sigma $ intervals, horizontal bars denote bin width. 2$\sigma $ upper limits are shown for bins with TS$\leq $9. The orange dashed vertical line marks the arrival time of IC-191001A. Since this source lies outside the reported 90\% error region (see Figure~\ref {fig:fermi}), and given that the LAT lightcurve shows no obvious correlation with the neutrino arrival time, we conclude that it is unlikely to be associated with the neutrino.\relax }}{71}{figure.caption.62}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {\relax 13.6}{\ignorespaces The spectroscopic evolution of AT2019dsg, beginning with the publicly available classification spectrum taken with the NTT\cite {2019ATel12752....1N}, and further spectra from LDT, Lick, Keck and P200. The Balmer lines are highlighted in cyan, the HeII lines in gray, and the Bowen fluorescence lines (OIII at 3760\r A, NIII at 4100\r A~and 4640\r A) in black. Telluric lines are marked with +.\relax }}{72}{figure.caption.64}% 
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

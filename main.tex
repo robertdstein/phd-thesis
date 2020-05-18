@@ -48,7 +48,17 @@
 %\usepackage{showframe} % Uncomment to show boxes around the text area, margin, header and footer
 %\usepackage{showlabels} % Uncomment to output the content of \label commands to the document where they are used
 
-\newcommand{\ztf}{\href{https://github.com/robertdstein/ZTF_followup_pipeline/releases/tag/v1.0.0}{\emph{ZTF Follow-up Pipeline}}}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\hypersetup{
+	colorlinks   = true, %Colours links instead of ugly boxes
+}
+
+\newcommand{\ztf}{\href{https://github.com/robertdstein/AMPEL_followup_pipeline/releases/tag/v1.0.0}{\emph{AMPEL Follow-up Pipeline}}}
+\newcommand{\Msol}{\mbox{$M_{\odot}$}}
+\newcommand{\arcdeg}{\mbox{$^\circ$}}
+\newcommand{\arcsec}{$^{\prime\prime}$}
+\newcommand{\arcmin}{$^{\prime}$}
 
 \graphicspath{{images/}{./}{figures/}} % Paths in which to look for images
 
@@ -175,6 +185,8 @@
 	
 	The source code of this book is available at:\\\url{https://github.com/fmarotta/kaobook}
 	
+	THE CODE UseD TO PRODUCE PLOTS IN THis thesis can be found at...
+		
 	(You are welcome to contribute!)
 	
 	\medskip
@@ -270,6 +282,7 @@
 \input{chapters/neutrino_sources.tex}
 \input{chapters/realtime_analysis.tex}
 \input{chapters/ztf_followup_pipeline.tex}
+\input{chapters/bran.tex}
 \input{chapters/overflow.tex}
 
 \appendix % From here onwards, chapters are numbered with letters, as is the appendix convention

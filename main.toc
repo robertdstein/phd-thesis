@@ -190,7 +190,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\nonumberline IC190730A - The "PKS 1502+106 Neutrino"}{55}{section*.40}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\nonumberline IC190927A - The "SN2019xxx Neutrino"}{56}{section*.42}% 
+\contentsline {subsection}{\nonumberline IC190922B - The "SN2019pqh Neutrino"}{56}{section*.42}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\nonumberline IC191001A - The "Bran Stark Neutrino"}{56}{section*.43}% 
 \defcounter {refsection}{0}\relax 
@@ -202,76 +202,96 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\nonumberline OFU and GFU}{56}{section*.46}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {12}ZTF Follow-up Pipeline}{57}{chapter.12}% 
+\contentsline {chapter}{\numberline {12}Transient Follow-up with ZTF}{57}{chapter.12}% 
 \defcounter {refsection}{0}\relax 
 \etoc@startlocaltoc {12}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12.1}ZTF Multi-Messenger Pipeline}{57}{section.12.1}% 
+\contentsline {section}{\numberline {12.1}The AMPEL Follow-up Pipeline}{57}{section.12.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12.2}Neutrino Follow-up}{58}{section.12.2}% 
+\contentsline {section}{\numberline {12.2}Neutrino Follow-up}{59}{section.12.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {13}Overflow}{61}{chapter.13}% 
+\contentsline {subsection}{\nonumberline PKS 1502+106}{60}{section*.49}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\nonumberline SN2019pqh}{60}{section*.50}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {12.3}Gravitational Waves and Gamma-ray Bursts}{61}{section.12.3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {13}AT2019dsg and IC191001A}{63}{chapter.13}% 
 \defcounter {refsection}{0}\relax 
 \etoc@startlocaltoc {13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.1}Introduction}{61}{section.13.1}% 
+\contentsline {section}{\numberline {13.1}Discovery of AT2019dsg}{63}{section.13.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.2}Neutrino Theory}{62}{section.13.2}% 
+\contentsline {section}{\numberline {13.2}Observation of AT2019dsg}{64}{section.13.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.3}The Zwicky Transient Facility (ZTF)}{62}{section.13.3}% 
+\contentsline {subsection}{\nonumberline Optical/UV}{64}{section*.54}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.4}Event Selection}{62}{section.13.4}% 
+\contentsline {subsection}{\nonumberline X-ray}{65}{section*.55}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\nonumberline Event Reconstruction}{62}{section*.49}% 
+\contentsline {subsection}{\nonumberline Radio}{66}{section*.58}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\nonumberline Angular Errors}{62}{section*.50}% 
+\contentsline {subsection}{\nonumberline Gamma-ray}{69}{section*.59}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.5}Unbinned Likelihood Analysis Formalism}{62}{section.13.5}% 
+\contentsline {subsection}{\nonumberline Spectroscopy}{70}{section*.63}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.6}Results}{62}{section.13.6}% 
+\contentsline {section}{\numberline {13.3}Neutrino emission from AT2019dsg}{73}{section.13.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.7}Diffuse Astrophysical Neutrino Flux}{62}{section.13.7}% 
+\contentsline {section}{\numberline {13.4}Probability of Chance Coincidence}{75}{section.13.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.8}Neutrinos from Optical Transients}{62}{section.13.8}% 
+\contentsline {section}{\numberline {13.5}Implications of AT2019dsg}{76}{section.13.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\nonumberline The Plot}{62}{section*.51}% 
+\contentsline {chapter}{\numberline {14}Overflow}{77}{chapter.14}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.9}Realtime Multi-Messenger Analysis}{63}{section.13.9}% 
+\etoc@startlocaltoc {14}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\nonumberline The IceCube Realtime System}{63}{section*.52}% 
+\contentsline {section}{\numberline {14.1}Introduction}{77}{section.14.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\nonumberline Optical Follow-Up of Neutrinos}{63}{section*.53}% 
+\contentsline {section}{\numberline {14.2}Neutrino Theory}{78}{section.14.2}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\nonumberline Optical Follow-Up of Gravitational Waves}{63}{section*.54}% 
+\contentsline {section}{\numberline {14.3}The Zwicky Transient Facility (ZTF)}{78}{section.14.3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {13.10}Summary and Future Outlook}{63}{section.13.10}% 
+\contentsline {section}{\numberline {14.4}Event Selection}{78}{section.14.4}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{\nonumberline Appendix}{65}{part*.56}% 
+\contentsline {subsection}{\nonumberline Event Reconstruction}{78}{section*.65}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Heading on Level\xspace 0 (chapter)}{67}{appendix.A}% 
+\contentsline {subsection}{\nonumberline Angular Errors}{78}{section*.66}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Heading on Level\xspace 1 (section)}{67}{section.A.1}% 
+\contentsline {section}{\numberline {14.5}Unbinned Likelihood Analysis Formalism}{78}{section.14.5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\nonumberline Heading on Level\xspace 2 (subsection)}{67}{section*.57}% 
+\contentsline {section}{\numberline {14.6}Results}{78}{section.14.6}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Heading on Level\xspace 3 (subsubsection)}{67}{section*.58}% 
+\contentsline {section}{\numberline {14.7}Diffuse Astrophysical Neutrino Flux}{78}{section.14.7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {paragraph}{\nonumberline Heading on Level\xspace 4 (paragraph)}{68}{section*.59}% 
+\contentsline {section}{\numberline {14.8}Neutrinos from Optical Transients}{78}{section.14.8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}Lists}{68}{section.A.2}% 
+\contentsline {subsection}{\nonumberline The Plot}{78}{section*.67}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\nonumberline Example for list\xspace (itemize)}{68}{section*.60}% 
+\contentsline {section}{\numberline {14.9}Summary and Future Outlook}{79}{section.14.9}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Example for list\xspace (4*itemize)}{68}{section*.61}% 
+\contentsline {part}{\nonumberline Appendix}{81}{part*.69}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\nonumberline Example for list\xspace (enumerate)}{68}{section*.62}% 
+\contentsline {chapter}{\numberline {A}Heading on Level\xspace 0 (chapter)}{83}{appendix.A}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Example for list\xspace (4*enumerate)}{69}{section*.63}% 
+\contentsline {section}{\numberline {A.1}Heading on Level\xspace 1 (section)}{83}{section.A.1}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\nonumberline Example for list\xspace (description)}{69}{section*.64}% 
+\contentsline {subsection}{\nonumberline Heading on Level\xspace 2 (subsection)}{83}{section*.70}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\nonumberline Example for list\xspace (4*description)}{69}{section*.65}% 
+\contentsline {subsubsection}{\nonumberline Heading on Level\xspace 3 (subsubsection)}{83}{section*.71}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Bibliography}{71}{chapter*.66}% 
+\contentsline {paragraph}{\nonumberline Heading on Level\xspace 4 (paragraph)}{84}{section*.72}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Alphabetical Index}{75}{section*.67}% 
+\contentsline {section}{\numberline {A.2}Lists}{84}{section.A.2}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\nonumberline Example for list\xspace (itemize)}{84}{section*.73}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Example for list\xspace (4*itemize)}{84}{section*.74}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\nonumberline Example for list\xspace (enumerate)}{84}{section*.75}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Example for list\xspace (4*enumerate)}{85}{section*.76}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\nonumberline Example for list\xspace (description)}{85}{section*.77}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\nonumberline Example for list\xspace (4*description)}{85}{section*.78}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Alphabetical Index}{89}{section*.79}% 
