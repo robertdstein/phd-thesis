@@ -128,8 +128,8 @@
 %	BOOK INFORMATION
 %----------------------------------------------------------------------------------------
 
-\titlehead{The \texttt{kaobook} class}
-\subject{Use this document as a template}
+
+%\subject{Use this document as a template}
 
 \title[Multi-Messenger Observations of the Dynamic Universe]{Multi-Messenger Observations of the Dynamic Universe
 \subtitle{Searching for sources of astrophysical neutrinos and gravitational waves}
@@ -224,7 +224,7 @@
 %	PREFACE
 %----------------------------------------------------------------------------------------
 
-\input{chapters/preface.tex}
+\input{chapters/abstract.tex}
 
 %----------------------------------------------------------------------------------------
 %	TABLE OF CONTENTS & LIST OF FIGURES/TABLES
@@ -259,26 +259,9 @@
 
 \mainmatter % Denotes the start of the main document content, resets page numbering and uses arabic numbers
 
-\input{chapters/introduction.tex}
-
-\pagelayout{wide} % No margins
-\addpart{Class Options, Commands and Environments}
-\pagelayout{margin} % Restore margins
-
-\input{chapters/options.tex}
-\input{chapters/textnotes.tex}
-\input{chapters/figsntabs.tex}
-\input{chapters/references.tex}
-
-\pagelayout{wide} % No margins
-\addpart{Design and Additional Features}
-\pagelayout{margin} % Restore margins
-
-\input{chapters/layout.tex}
-\input{chapters/mathematics.tex}
-
 \input{chapters/icecube.tex}
 \input{chapters/event_selection.tex}
+\input{chapters/likelihood_analysis.tex}
 \input{chapters/neutrino_sources.tex}
 \input{chapters/realtime_analysis.tex}
 \input{chapters/ztf_followup_pipeline.tex}

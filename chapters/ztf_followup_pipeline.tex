@@ -2,7 +2,7 @@
 \setchapterpreamble[u]{\margintoc}
 \chapter{Transient Follow-up with ZTF}
 \labch{ztf_too}
-\begin{fquote}[Winston Churchill][Lady Windermere's Fan][18??]...lalala. 
+\begin{fquote}[Oscar Wilde][Lady Windermere's Fan][18??]We are all in the gutter, but some of us are looking at the stars
 \end{fquote}
 
 The motivation for all real-time analysis and prompt follow-up observations of external triggers is to obtain contemporaneous data. Put another way, these observations are designed to quickly identify time-dependent transient or variable activity which would be missed by untargeted survey operations.  In the case of GW and short GRB follow-up, searches are targeted towards identifying kilonovae (KNe), of which GW170817/AT2017gfo was a spectacular well-documented first example. These KNe are inherently fast-evolving transients which will by definition not be present before the extrenal trigger. For neutrinos, there are a proliferation of possible optical transients (e.g GRBs, TDEs, SNe) and variable objects (primarily blazars) which could be identified in an optical follow-up observations. In both cases, a handful of potentially interesting extragalactic objects will need to be selected against a vast background of spurious detections, and unrelated galactic or solar-system objects.
@@ -36,7 +36,7 @@ ZTF has since its inception had a dedicated program to identify sources of high-
 		\hline
 		IC190503A & 120.28 & +6.35 & 1.94& 1.37 & 36\%&\cite{blaufuss:gcn24378,2019ATel12730....1S}\\
 		IC190619A & 343.26 & +10.73 & 27.16& 21.57 & 55\%&\cite{blaufuss:gcn24910, 2019ATel12879....1S}\\
-		IC190730A & 225.79 & +10.47 & 5.41& 4.52 & 67\%&\cite{stein:gcn25225,2019ATel12974....1S}\\
+		IC190730A & 225.79 & +10.47 & 5.41& 4.52 & 67\%&\cite{stein:gcn25225, 2019ATel12967....1T, 2019ATel12974....1S}\\
 		IC190922B & 5.76 & -1.57 & 4.48 & 4.09 & 51\%&\cite{blaufuss:gcn25806,2019ATel13125....1S, stein:gcn25824}\\
 		\textbf{IC191001A} & \textbf{314.08} & \textbf{+12.94} & \textbf{25.53} & \textbf{20.56} & \textbf{59\%}& \textbf{\cite{stein:gcn25913,2019ATel13160....1S, stein:gcn25929}}\\
 		IC200107A & 148.18 & +35.46 & 7.62 & 6.22 & - &\cite{stein:gcn26655,stein:gcn26667}\\
@@ -82,15 +82,21 @@ ZTF has since its inception had a dedicated program to identify sources of high-
 	\label{tab:nu_non_observed}
 \end{table}
 
-Each neutrino localisation region can typically be covered by one or two ZTF observation fields. Multiple observations are scheduled for each field, with both $g$ and $r$ filters, and a separation of at least 15 minutes between images. These observations typically last for 300~s, with a typical limiting magnitude of $21.0^{m}$.  ToO observations are typically conducted on the first two nights following a neutrino alert, before swapping to serendipitous coverage as part of the public survey. We search ZTF data both preceding and following the arrival of the neutrino. Our coincidence criteria are that an object lie within the 90\% localisation region reported by Icecube in a GCN circular, and must have been detected at least once following the neutrino arrival time. These cuts typically yield $\sim$0.2 candidates per square degree of sky. Promising candidates are prioritised for spectroscopic classification, to confirm or rule out a possible association with a given neutrino. 
+Each neutrino localisation region can typically be covered by one or two ZTF observation fields. Multiple observations are scheduled for each field, with both $g$ and $r$ filters, and a separation of at least 15 minutes between images. These observations typically last for 300~s, with a typical limiting magnitude of $21.0^{m}$.  ToO observations are typically conducted on the first two nights following a neutrino alert, before swapping to serendipitous coverage as part of the public survey. We search ZTF data both preceding and following the arrival of the neutrino. Our coincidence criteria require that an object lie within the 90\% localisation region reported by IceCube in a GCN circular, and must have been detected at least once following the neutrino arrival time. These cuts typically yield $\sim$0.2 candidates per square degree of sky. Promising candidates are prioritised for spectroscopic classification, to confirm or rule out a possible association with a given neutrino. 
 
 A selection of highlighted  results are given below. A further candidate, AT2019dsg, is described in Chapter \ref{ch:bran}.
 
 \subsection{PKS 1502+106}
-As referenced in \ref{ch:realtime}
+As introduced in Chapter \ref{ch:realtime}, the neutrino IC190730A was reported in spatial coincidence with PKS 1502+106, a particularly bright Flat Spectrum Radio Quasar (FSRQ) \sidecite{2019ATel12967....1T}. The object was observed by ZTF as part of ToO observations, and the object DID was also identified by our follow-up pipeline as a candidate counterpart.  The blazar was repeatedly detected as part of the routine survey operations under the name \emph{ZTF18aaqnqzx}, with both positive and negative flux changes relative to survey reference images. The blazar lightcurve is shown in Figure \ref{fig:pks1502_ligtcurve}, with the neutrino arrival time marked in blue. Consistent with observations from other observatories across many wavelengths (Chapter \ref{ch:realtime}), there was no significant flaring observed for this source coincident with the neutrino. The blazar at this point was dimmer than survey reference images, with the neutrino arriving during a year-long fading. 
+
+\begin{figure}[!ht]
+	\centering \includegraphics{ZTF/pks1502_lightcurve}
+	\caption{ZTF lightcurve of blazar PKS 1502+106, with observations in g, r and i bands. The arrival time of the neutrino on 2019 July 30 is marked with a dotted line. The horizontal dashed lines indicate the magnitude of the source in reference images derived from the PanSTARRS survey.}
+	\label{fig:pks1502_ligtcurve}
+\end{figure}
 
 \subsection{SN2019pqh}
-As introduced in Chapter \ref{ch:realtime}, follow-up of IC190922B by ZTF identified a candidate supernova ZTF19abxtupj/AT2019pqh \sidecite{2019ATel13125....1S}. As outlined in chapter \ref{ch:sources}, neutrino emission has been predicted for core-collapse supernovae from either choked jets or interacting supernovae. SN2019pqh was not consistent with the former scenario, because it was detected prior to the neutrino. However, it was close to peak, as shown in the lightcurve in Figure \ref{fig:sn2019pqh_ligtcurve}. This was the first young supernova found in coincidence with a high-energy neutrino, which is interesting because CSM neutrino emission . 
+As introduced in Chapter \ref{ch:realtime}, follow-up of IC190922B by ZTF identified a candidate supernova ZTF19abxtupj/SN2019pqh \sidecite{2019ATel13125....1S}. As outlined in chapter \ref{ch:sources}, neutrino emission has been predicted for core-collapse supernovae from either choked jets or interacting supernovae. SN2019pqh was not consistent with the former scenario, because it was detected prior to the neutrino. However, it was close to peak, as shown in the lightcurve in Figure \ref{fig:sn2019pqh_ligtcurve}. This was the first young supernova found in coincidence with a high-energy neutrino, which is interesting because CSM neutrino emission . 
 
 \begin{figure}[!ht]
 	\centering \includegraphics{ZTF/sn2019pqh_lightcurve}
