@@ -37,9 +37,11 @@ While the simplest hypothesis test is a binary case is which one well-defined hy
 
 One method of quantifying agreement between a hypothesis and data is to calculate the \emph{likelihood}, $\mathcal{L}$, of observing our data given that hypothesis. For each hypothesis, we can construct probability density functions (PDFs) describing how we would expect data to be distributed for that case. We can then calculate the conditional probability, $\mathcal{L}(x | \mathcal{H})$, of observing our data $x$ given that hypothesis. A common test statistic, used for IceCube analyses, is the log likelihood ratio:
 
-\[ TS (\mathcal{H_{i}}) = - 2 \log \left( \frac{\mathcal{L}(x | \mathcal{H_{i}})}{\mathcal{L}(x | \mathcal{H_{0}})} \right)\]
+\begin{equation}
+TS (\mathcal{H_{i}}) = 2 \log \left( \frac{\mathcal{L}(x | \mathcal{H_{i}})}{\mathcal{L}(x | \mathcal{H_{0}})} \right)
+\end{equation}
 
-This definition is particularly convenient, because we can analyse the results using \emph{Wilk's Theorum} \sidecite{Wilks:1938dza}. Wilk's Theorum states that the negative log likelihood ratio for an ensemble of datasets will be distributed according to a $\chi^{2}$ distribution, with degrees of freedom equal to the number of independent parameters. Thus, for a hypothesis depending on a known number of independent parameters, we can convert any TS value to a \emph{p-value}. Even if the number of independent parameters is not known, it can be derived through fits to a sample of pseudodatasets, and then extrapolated to smaller p-values. In this way, a 5$\sigma$ threshold can be calculated without requiring $\sim$several million datasets to be tested.
+The primary motivation for this is the \emph{Neyman-Pearson Lemma} \sidecite{1933RSPTA.231..289N}, which states that the likelihood ratio test is the most powerful possible statistical test. This definition is also particularly convenient, because we can analyse the results using \emph{Wilk's Theorum} \sidecite{Wilks:1938dza}. Wilk's Theorum states that the log likelihood ratio for an ensemble of datasets will be distributed according to a $\chi^{2}$ distribution, with degrees of freedom equal to the number of independent parameters. Thus, for a hypothesis depending on a known number of independent parameters, we can convert any TS value to a \emph{p-value}. Even if the number of independent parameters is not known, it can be derived through fits to a sample of pseudodatasets, and then extrapolated to smaller p-values. In this way, a 5$\sigma$ threshold can be calculated without requiring $\sim$several million datasets to be tested.
 
 There is, however, a caveat to Wilk's Theorum. The full formulation only applies in the limit of large samples. In IceCube this condition is usually satisfied, but there are exceptions particularly for searches on short-timescales relevant for GRB or FRB searches, where the data transitions from a background-dominated one to a background-free regime. In such cases, p-values must be derived directly from pseudo-experiments. 
 
@@ -51,25 +53,80 @@ At the stage of defining hypotheses, IceCube-specific physics is added to the pu
 
 The simplification has a number of drawbacks, primarily that PDFs derived from data are necessarily coarser because the available statistics are limited. An alternative approach that for the sample of northern through-going muons tracks, in which there is negligible atmospheric muon background, is to use Monte-Carlo based modelling to construct a model for background. This ultimately introduces the risk of data-MC disagreement,  with uncertainties introduced for example with by atmospheric flux modelling. However, this is typically offset by the high-resolution PDFs which can be constructed using these much larger sample sizes.
 
-In either case, distributions are then constructed for the background model $\mathcal{B}$. It is typical in IceCube to consider event arrival direction, energy and arrival time as key observables to distinguish signal from background. These distributions form our null hypothesis.
+In either case, distributions are then constructed for the background model $\mathcal{B}$. It is typical in IceCube to consider event arrival direction, energy and arrival time as key observables to distinguish signal from background. These distributions form our null hypothesis. 
+
+In the following, data-based background PDFs are illustrated for the all-sky \emph{ps tracks version v003-p02} dataset \sidecite{2020PhRvL.124e1103A}.
+
+Distributions based on detector observables.
+
+\begin{equation}
+\mathcal{B} (\theta) = \mathcal{B}_{space} \times \mathcal{B}_{time}  \times {B}_{E}
+\end{equation}
 
 \subsection{Background Spatial PDF}
 
-Owing to IceCube's convenient location at the geographic south pole, detector coordinates are uniquely mapped to geometric coordinates. Thus, IceCube's zenith-dependent instrument response is translated into a declination-dependent one which does not change over time. From the background rate, a spatial PDF as a function of declination can be derived, as seen in Figure n.
+\begin{marginfigure}
+	\centering \includegraphics{llh/sindec}
+	\caption{Event rate as a function of $\sin(\delta)$.}
+	\label{fig:sindec}
+\end{marginfigure}
 
-Furthermore, IceCube's detector response is assumed, to first order, to be uniform in right ascension. More precisely, it is assumed that \emph{any variations due to azimuthal asymmetry are negligible}. The detector itself (see Chapter N) has 6 string axes which will be traced out over the course of each day. Thus, for typical data periods of many years, these azimuthal variations will indeed be negligible. However, particularly in cases which search for clustering over short time periods, this azimuthal asymmetry may have an impact. The degree of azimuthal asymmetry is clearly visible in Figure N, where events are binned by azimuth.
+Owing to IceCube's convenient location at the geographic south pole, detector coordinates are uniquely mapped to geometric coordinates. Thus, IceCube's zenith-dependent instrument response is translated into a declination-dependent one which does not change over time. From the background rate, a spatial PDF as a function of declination $ f(\delta)$ can be derived, as seen in Figure \ref{fig:sindec}.
+
+\begin{equation}
+	\mathcal{B} (\delta) = f(\delta)
+\end{equation}
+
+\begin{marginfigure}
+	\centering \includegraphics{llh/azimuth}
+	\caption{Declination-normalised event rate as a function of azimuth.}
+	\label{fig:azimuth}
+\end{marginfigure}
+
+Furthermore, IceCube's detector response is assumed, to first order, to be uniform in right ascension. 
+
+\begin{equation}
+\mathcal{B} (\theta) = \frac{1}{2\pi} 
+\end{equation}
+
+More precisely, it is assumed that \emph{any variations due to azimuthal asymmetry are negligible}. The detector itself (see Chapter N) has 6 string axes which will be traced out over the course of each day. Thus, for typical data periods of many years, these azimuthal variations will indeed be negligible. However, particularly in cases which search for clustering over short time periods, this azimuthal asymmetry may have an impact. The degree of azimuthal asymmetry in event rate is shown in Figure \ref{fig:azimuth}.  The six string axes are clearly visible with elevated event rates, reaching $\sim40\%$ variations for the southern hemisphere.
+
+\begin{equation}
+\mathcal{B} (\theta, \delta) = \frac{1}{2\pi} \times f(\delta)
+\end{equation}
 
 \subsection{Background Time PDF}
 
-The IceCube detector is characterised by extremely high uptime of >99\%, divided into runs separated by small downtime breaks. Even after processing to final-level event selections, typically consists of livetime at >90\%. The arrival time of background events in Icecube is typically \emph{assumed to be uniform during detector uptime}. This is again only approximately true, as evidenced by Figure N. The atmospheric background rates depend on atmospheric densities which are ultimately temperature-dependent, leading to seasonal variations and clearly-visible annual cycles. This variation is itself an area of scientific interest, being exploited to measure climate with neutrinos CITE. In any case, these effects are partially mitigated in data-based models by the standard method of shuffling measured neutrino arrival times rather than drawing them from PDF. Still, the arrival time anisotropy is a small one.
+The IceCube detector is characterised by extremely high uptime of >99\%, divided into runs separated by small downtime breaks. Even after processing to final-level event selections, typically consists of livetime at >90\%. The arrival time of background events in Icecube is typically \emph{assumed to be uniform during detector uptime}. This is again only approximately true, as evidenced by Figure \ref{fig:background_rate}.  Six peaks corresponding to winter in the northern hemisphere are clearly visible, corresponding to $\pm \sim5\%$ rate variations.
+
+The atmospheric background rates depend on atmospheric densities which are ultimately temperature-dependent, leading to seasonal variations and clearly-visible annual cycles. This variation is itself an area of scientific interest, being exploited to measure climate with neutrinos CITE. In any case, these effects are partially mitigated in data-based models by the standard method of shuffling measured neutrino arrival times rather than drawing them from PDF. Still, the arrival time anisotropy is a small one.
+
+\begin{equation}
+\mathcal{B}_{time} = \frac{1}{\textup{livetime}}
+\end{equation}
+
+\begin{figure}[!ht]
+	\centering \includegraphics{llh/background_rate}
+	\caption{Rolling average of event rate during period of detector uptime.}
+	\label{fig:background_rate}
+\end{figure}
 
 \subsection{Background Energy Proxy PDF}
 
- Still, accounting for this, it is assumed that the background energy distribution is equal to that found in data. or that it is equal to the 
- 
- astrophysical background
- 
- flux model
+
+\begin{marginfigure}
+	\centering \includegraphics{llh/dec_vs_energy}
+	\caption{Background energy proxy distribution, normalised in bins of $\sin(\delta)$.}
+	\label{fig:dec_vs_energy}
+\end{marginfigure}
+
+In most cases, neutrino energy would be a powerful discriminant between astrophysical signal and atmospheric background. However, in IceCube analysis must be conducted with the observable \emph{Energy Proxy}  ($E_{\textup{proxy}}$), which provides relatively poor energy resolution for through-going tracks (see Chapter N). The normalised energy proxy distribution as a function of $\sin(\delta)$ is given in Figure \ref{fig:dec_vs_energy}, with the median and central 90\% ranges marked by dotted lines. 
+
+It is clear that in the northern hemisphere, this distribution is essentially flat, reflecting the homogeneity of atmospheric neutrino backgrounds in this regime. However, the median energy proxy swiftly increases into the southern hemisphere, as more aggressive cuts are employed to remove the additional atmospheric muon background.
+
+\begin{equation}
+\mathcal{B}_{E} (\delta, E_{\textup{proxy}}) = f_{\delta}(E_{\textup{proxy}})
+\end{equation}
 
 \section{Signal Hypothesis}
 
@@ -85,7 +142,7 @@ In IceCube, it is common to test a hypotheses that depend on two parameters, $n_
 
 The standard spatial signal PDF is typically stated to be \emph{the assumption a Gaussian PSF centered on the position of a source}. This assumption has been tested extensively in x, and has been found not to describe the data well. Conceptually, even under the limit of a perfect muon track reconstruction, the unmeasurable kinematic angle between the incoming neutrino and outgoing muon will limit the resolution of any search.
 
-However, the performance of directional reconstructions is verified on MC events, and energy-dependent biases in uncertainty estimates are corrected in a process known as pull corrections (see Chapter). So, more precisely, the signal spatial PDF is \emph{assumed to follow the distribution found in baseline MC simulations}, and further \emph{it is assumed that this distribution can be approximated by a circular Gaussian PSF with a single energy-corrected uncertainty parameter}. The former assumption clearly requires that the impact of systematic uncertainties on MC simulation is negligible, but in fact it has been demonstrated that systematic uncertainties are particularly relevant for those high-energy events which are typically 'well-localised' with small estimated uncertainty. The latter assumption was demonstrated to only be valid for these same high-energy events, for which the kinematic angle is negligible. There is thus no regime where both approximations hold well simultaneously.
+However, the performance of directional reconstructions is verified on MC events, and energy-dependent biases in uncertainty estimates are corrected in a process known as pull corrections (see Chapter). So, more precisely, the signal spatial PDF is \emph{assumed to follow the distribution found in baseline MC simulations}, and further \emph{it is assumed that this distribution can be approximated by a circular Gaussian PSF with a single per-event energy-corrected uncertainty parameter}. The former assumption clearly requires that the impact of systematic uncertainties on MC simulation is negligible, but in fact it has been demonstrated that systematic uncertainties are particularly relevant for those high-energy events which are typically 'well-localised' with small estimated uncertainty. The latter assumption was demonstrated to only be valid for these same high-energy events, for which the kinematic angle is negligible. There is thus no regime where both approximations hold well simultaneously.
 
 Spatial prior.
 
@@ -103,6 +160,12 @@ The spectral index, $\gamma$ of the distribution is typically allowed to vary in
 
 The atmospheric neutrino energy spectrum $\sim E^{-3.7}$ seen in figure N is extremely steep relative to most predicted astrophysical neutrino spectra, so it should in principle be possible to significantly distinguish these with ease. Unfortunately, as outlined in Chapter N, the through-going track-like events typically used for neutrino astronomy have poor energy resolution due to partial containment. Thus much distinction is smeared out, with energy proxy values having a typical uncertainty of a full energy decade.
 
+\begin{figure}[!ht]
+	\centering \includegraphics{llh/MC_dec_E}
+	\caption{Rolling average of event rate during period of detector uptime.}
+	\label{fig:mc_dec_e}
+\end{figure}
+
 \section{Unbinned Likelihood Analysis}
 The mathematical formalism outlined above describes a generic approach to likelihood analysis with IceCube. While the approach can be used for a likelihood that is evaluated for discrete regions of parameter space (a \emph{Binned likelihood analysis}), it has long been customary for the likelhood to be evaulated in a continuous event-wise fashion (an \emph{Unbinned likelihood analysis}) citebraun. A likelihood is constructed, and evaluated for each jth individual event, with the overall likelihood given by the product of these N independent datapoints:
 
@@ -114,11 +177,23 @@ Ultimately this yields the standard \emph{Point Source Likelihood}:
 
 We are thus testing a continuum of hypotheses parameterised by $n_{s}$ and $\gamma$, where both $\mathcal{S}$ and $\mathcal{B}$ depend on event-specific observables $\theta_{j}$. These observables are the arrival time, energy proxy, arrival direction and estimated localisation uncertainty. We typically construct the negative log likelihood, and then derive best-fit parameters $\hat{n}_{s}$ and  $\hat{\gamma}$ by a process of maximum likelihood estimation. We take the combination of parameters which maximises the likelihood, and compare this to background expectations using Wilk's Theorum:
 
-\[ TS = - 2 \log \left( \frac{ \mathcal{L}(\hat{n}_{s}, \hat{\gamma}) }{\mathcal{L}(n_{s} = 0)} \right)\]
+\[ TS = 2 \log \left( \frac{ \mathcal{L}(\hat{n}_{s}, \hat{\gamma}) }{\mathcal{L}(n_{s} = 0)} \right)\]
 
 \section{Combining seasons}
 
 yeah, um, seasons
+
+\section{Sensitivity and Discovery Practice}
+
+ndof in practice
+
+\section{Flarestack in practice}
+
+show ns  bias for many many sources
+
+gamma interpolation
+mc no data
+data no mc
 
 \section{Fitting the relative source weights}
 
@@ -126,9 +201,7 @@ The direct implementation of a well-defined $\mathcal{S}$ for a stacking analysi
 
 \[ \mathcal{L}(n_{s}, \gamma) = \prod_{j}^{N} \left(\sum_{k} \left[ \frac{n_{s, k}}{N} \mathcal{S}_{k}(\theta_{j}, \gamma) \right]+ \frac{N - \sum_{k} \left[ n_{s, k} \right] }{N} \mathcal{B}(\theta_{j})  \right)\]
 
-This approach is commonly reffered to as \emph{fitting the weights} of each source, in contrast to the standard method of \emph{fixed source weights}. 
-
-This additional flexibility comes at the expense of additional independent fit parameters, and thus a higher TS threshold to achieve fixed significance. In the limit of many sources, each with sub-unity neutrino expectations, the number of degrees of freedom would exceed the number of expected signal events.
+This approach is commonly referred to as \emph{fitting the weights} of each source, in contrast to the standard method of \emph{fixed source weights}. Additional flexibility comes at the expense of more independent fit parameters, and thus a higher TS threshold to achieve fixed significance. In the limit of many sources, each with sub-unity neutrino expectations, the number of degrees of freedom would exceed the number of expected signal events. It is most useful for analysing a small number of sources, in which the relative neutrino distribution is not known, but for which 
 
 A more realistic intermediate approach, in which non-flat priors quantify our expectations in the possible neutrino emission variation between sources, would likely offer some additional improvement over both methods. 
 
@@ -138,20 +211,31 @@ lalala, use misc graphic
 \section{Shortcuts to likelihood minimisation}
 The evaulation of this likelihood is time-consuming, and the implementation of this process in \emph{\href{https://github.com/IceCubeOpenSource/flarestack}{Flarestack}} makes several additional simplifications to speed calculations. 
 
+cite alex, skylab
+
 The first is the recognition that the parameters which maximise the likelihood will also maximise the likelihood ratio, and thus the test statistic. Rather than evaluating two independent likelihoods, we can instead directly evaluate the test statistic:
 
-\[ TS = - 2 \log \left( \frac{ \mathcal{L}(\hat{n}_{s}, \hat{\gamma}) }{\mathcal{L}(n_{s} = 0)} \right) = -2 \log  \frac{\prod_{j}^{N} \left(\frac{n_{s}}{N} \mathcal{S}(\theta_{j}, \gamma) + \frac{N - n_{s}}{N} \mathcal{B}(\theta_{j})  \right)}{\prod_{j}^{N}\mathcal{B}(\theta_{j}) }\]
+\begin{equation}
+	TS = 2 \log \left( \frac{ \mathcal{L}(\hat{n}_{s}, \hat{\gamma}) }{\mathcal{L}(n_{s} = 0)} \right)
+\end{equation}
+\begin{equation}
+TS = 2 \log  \frac{\prod_{j}^{N} \left(\frac{n_{s}}{N} \mathcal{S}(\theta_{j}, \gamma) + \frac{N - n_{s}}{N} \mathcal{B}(\theta_{j})  \right)}{\prod_{j}^{N}\mathcal{B}(\theta_{j})}
+\end{equation}
 
 By dividing this through, we find: 
 
-\[ TS =  -2 \log \left(  \prod_{j}^{N} \left(\frac{n_{s}}{N} \frac{\mathcal{S}(\theta_{j}, \gamma)}{\mathcal{B}(\theta_{j}) } + 1 - \frac{n_{s}}{N} \right) \right)  = - 2 \sum_{j}^{N} \log \left(\frac{n_{s}}{N} \left[ \frac{\mathcal{S}(\theta_{j}, \gamma)}{\mathcal{B}(\theta_{j}) } - 1 \right] + 1 \right) \]
+\begin{equation}
+	TS =  2 \log \left(  \prod_{j}^{N} \left(\frac{n_{s}}{N} \left[\frac{\mathcal{S}(\theta_{j}, \gamma)}{\mathcal{B}(\theta_{j})} \right] + 1 - \frac{n_{s}}{N} \right) \right) 
+\end{equation}
+\begin{equation}
+	TS = 2 \sum_{j}^{N} \log \left(\frac{n_{s}}{N} \left[ \frac{\mathcal{S}(\theta_{j}, \gamma)}{\mathcal{B}(\theta_{j}) } - 1 \right] + 1 \right) 
+\label{eq:TS_reduced}
+\end{equation}
 
-This expression is faster to evaluate, because it bypasses the need to calculate both signal and background energy proxy PDFs explicitly,. Instead, we can precomputing the ratio of $\mathcal{S}$ to $\mathcal{B}$ for a variety of spectral indices, saving a per-event division calculation.
+Equation \ref{eq:TS_reduced}  is faster to evaluate, because it bypasses the need to calculate both signal and background energy proxy PDFs explicitly. Instead, we can precomputing the ratio $\frac{\mathcal{S}}{\mathcal{B}}$ for a variety of spectral indices, saving a per-event division calculation.
 
-An additional simplifying assumption is that neutrinos are typically localised to a resolution of $\sim$1 degree, so events which lie many degrees from a source have a negligible probability of being signal. For events lying more than 5 degrees away, and those within 5 degrees but with a spatial likelihood ratio less than x, the $\mathcal{S} \approx 0$ so that $TS \approx 0$. Using the formulation in equation N, we see we can simply neglect to evaluate the likelihood for these events, without altering the final sum. This box cut thus removes the overwhelming majority of events from the likelihood evaluation step, yielding vast speed improvements while having a negligible impact on the fitting process.
+An additional simplifying assumption is that neutrinos are typically localised to a resolution of $\sim$1 degree, so events which lie many degrees from a source have a negligible probability of being signal. For events lying more than 5 degrees away, and those within 5 degrees but with a spatial likelihood ratio less than x, we make the approximation that $\mathcal{S} \approx 0$ so then $TS \approx 0$. Using the formulation in Equation \ref{eq:TS_reduced} , we see we can simply neglect to evaluate the likelihood for these events, without altering the final sum. This box cut thus removes the overwhelming majority of events from the likelihood evaluation step, yielding vast speed improvements while having a negligible impact on the fitting process.
 \section{Trial correction}
 
 
 The trial factor corresponds to the number of independent hypotheses that were tested. It is a common misconception that the trial factor is particularly important for cases when two hypotheses are similar. In the limit that two hypotheses are so similar as to be essentially identical, then would be no need for a trial correction at all, since the test statistic for each would be identical. The trial factor should correct the degree to which hypotheses are capable of giving multiple independent TS values.
-
-Significance
