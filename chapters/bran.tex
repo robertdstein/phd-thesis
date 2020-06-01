@@ -130,7 +130,7 @@ AT2019dsg was first classified as a TDE by ePESSTO+ on on 2019 May 13\cite{2019A
 
 % Accounting for the large Eddington bias that arises from the Poisson-dominated emission of single high-energy neutrinos\cite{2019A&A...622L...9S}, the TDE should reasonably have sufficient flux to produce an expected number of high-energy neutrino alerts $N_{\nu} \sim$ 0.01-1. 
 
-Radio observations confirm that particle acceleration is indeed occurring, and that this continues without decline through to the detection of the neutrino at $\sim$180 days post-discovery. Given that neutrinos typically take a fraction $\eta_{p\nu} \sim 0.05$ of the parent proton energy, our accelerator must be capable of accelerating protons to at least 4 PeV. We evaluate the Hillas criterion\cite{1984ARA&A..22..425H} that the proton Larmor radius be less than the system size, to determine whether this is possible. We use  our estimates for conditions in the synchrotron zone at the time of neutrino detection, with $B \sim$ 0.07 G and $R \sim 7 \times 10^{16}$ cm for the near-contemporaneous radio epoch. Taking this as a baseline, we find a maximum proton energy of $\sim$160 PeV, far in excess of our requirements. The Hillas criterion can also be satisfied within the engine that powers the radio-emitting outflow because the product $BR$ is not expected to decrease at smaller radii (e.g. $B \propto R^{-1}$ for a toroidal configuration). 
+Radio observations confirm that particle acceleration is indeed occurring, and that this continues without decline through to the detection of the neutrino at $\sim$180 days post-discovery. Given that neutrinos typically take a fraction $\eta_{p\nu} \sim 0.05$ of the parent proton energy, our accelerator must be capable of accelerating protons to at least 4 PeV. We evaluate the Hillas criterion \sidecite{1984ARA&A..22..425H} that the proton Larmor radius be less than the system size, to determine whether this is possible. We use  our estimates for conditions in the synchrotron zone at the time of neutrino detection, with $B \sim$ 0.07 G and $R \sim 7 \times 10^{16}$ cm for the near-contemporaneous radio epoch. Taking this as a baseline, we find a maximum proton energy of $\sim$160 PeV, far in excess of our requirements. The Hillas criterion can also be satisfied within the engine that powers the radio-emitting outflow because the product $BR$ is not expected to decrease at smaller radii (e.g. $B \propto R^{-1}$ for a toroidal configuration). 
 
 The target for neutrino production can be either photons (p$\gamma$ interactions) or protons (pp interactions). For a photon target, neutrino production occurs above an energy determined by the mass of the $\Delta$ resonance, $m_{\Delta}$. For a thermal spectrum, of temperature $T$, we then find $\epsilon_{\nu} \sim \eta_{p\nu}[(m_{\Delta}^{2} - m_{p}^{2})/ 4 \epsilon_\gamma ] \approx 0.3 \times \left(T/10^{5} \textup{K} \right)^{-1} \textup{PeV}$. For the UV photosphere of the TDE, we find $\epsilon_\nu \sim$ 0.8 PeV, while for the compact X-ray source, we find $\epsilon_\nu \sim$ 0.05 PeV. Both of these values are compatible with the observed neutrino, for which there is a typical uncertainty of one energy decade\cite{2018Sci...361.1378I}, so either photon field could serve as a target. For the UV photosphere, we find that the mean free path for the parent proton of a PeV neutrino ($\sim2 \times 10^{13}$ cm, see SI) is much smaller than the photosphere radius, so the UV photosphere is indeed optically thick. At smaller radii, the X-rays would overtake the UV photons as dominant scattering targets. 
 
@@ -140,6 +140,50 @@ To obtain the expected neutrino flux from this source we have to estimate the en
 The outflow energy of $2 \times 10^{50}$~erg that we derived from the radio observations (Figure~\ref{fig:radio_spectrum}) represent a lower bound to the energy that is available for particle acceleration in a central engine.  Indeed, the total energy budget for a TDE is set by the mass of the disrupted star, with $E_{\textup{TDE}} \sim (1/2)\, 0.1 \, \Msol \, c^{2} \sim 10^{53}$ erg for a solar-mass star. We will assume 1\% of this total energy budget is carried by relativistic protons, $E_{\textup{p}} \sim 10^{51}$ erg. The total energy in muon neutrinos would then be $E_{\nu, \textup{tot}} = (1/8) E_{\textup{p}} \sim 10^{50}$ erg for efficient optically-thick pion production, after accounting for the pion decay yield and subsequent neutrino flavour oscillations. Convolving this implied energy $E_{\nu, \textup{tot}}$ with the effective area, $A_{\textup{eff}}$, of IceCube's high-energy neutrino alert selection\cite{2019ICRC...36.1021B}, we estimate the expected number of neutrino alerts. Approximating the sharply-peaked p$\gamma$ neutrino spectrum as a monoenergetic flux anywhere between  0.2 PeV $\lesssim \epsilon_\nu \lesssim 1$ PeV, we find $N_\nu = (E_{\nu, \textup{tot}}$ /$\epsilon_\nu)(A_{\textup{eff}}$ / 4$\pi D_{\textup{L}}^{2})  \sim 0.03$. Thus any optically-thick p$\gamma$ scenario would be sufficient to produce the neutrino under these assumptions. 
 
 In contrast to a peaked p$\gamma$ neutrino spectrum, for pp production the neutrinos would instead follow a power law. Many of these neutrinos would then fall below the threshold of IceCube's alert selection. The associated gamma rays would however fall within the sensitive range of gamma-ray telescopes, so this scenario could be securely identified through a joint neutrino-gamma ray signal. While no gamma-ray emission was measured using the \textit{Fermi}-LAT telescope for AT2019dsg (see SI), gamma-ray Cherenkov telescopes may be sensitive to the expected gamma-ray signal, and the corresponding low-energy (TeV) neutrino emission could confirm a hadronic origin. Conversely, the high optical depth of the UV photosphere would absorb any gamma rays accompanying p$\gamma$ neutrino emission\cite{2016PhRvD..93h3005W}. Some contribution from gamma-dark sources is required to explain the large astrophysical neutrino flux\cite{2016PhRvL.116g1101M}.
+
+The Hillas criterion\cite{1984ARA&A..22..425H} for a system of magnetic field strength $B$ and physical radius $R$ can be expressed as\cite{1984ARA&A..22..425H}:
+
+\begin{equation}
+\frac{E_{\textup{max}}}{\textup{PeV}} \approx
+1600 \times \frac{B}{\textup{Gauss}} \times \frac{R}{10^{16} \textup{cm}} \times
+\beta Z
+\end{equation}
+where $Z$ is the particle charge, $\beta \sim 0.2$ is the outflow velocity in units of c and $E$ is the maximum charged-particle energy. In order for particle acceleration to occur, the timescale required for particle acceleration must be shorter than the associated particle cooling timescale. Previous work has found this condition can be satisfied in TDEs for relevant energies\cite{2017ApJ...838....3S, 2017PhRvD..95l3001L}, although a detailed calculation is beyond the scope of this work.
+
+%\subsection{Target Density}
+These accelerated protons then need sufficient target density. For a photon target, with p$\gamma$ pion production via the $\Delta$ resonance, we expect that neutrino production will occur above a threshold:
+
+\begin{equation}
+E_{\gamma}E_{p} \sim \Gamma ^{2} 0.16 \, \textup{GeV}^{2}
+\end{equation} With this constraint, we can derive the necessary photon energies required for a target to produce IC191001A. Taking the reconstructed neutrino energy of $\sim$0.2 PeV directly, we find a threshold photon target of $E_{\gamma} > $40 eV. However, these reconstructed neutrino energies typically have upper bounds an order of magnitude or more above the central estimate\cite{2018Sci...361.1378I}, so the true neutrino energy could be substantially higher. For example, with a true neutrino energy of $\sim$1 PeV, we would instead require photons $E_{\gamma} > $8 eV for pion production.
+
+During pion production roughly half of the energy will be lost through the neutrino-less $\pi^{0}$ channel\cite{2010ApJ...721..630H}, while for the charged pion channel energy is shared roughly equally among the decay products 
+
+%$\pi^{\pm} \rightarrow e^{\pm} + \overset{\brobor}{\nu_{e}} + \overset{-}{\nu_{\mu}} + \nu_{\mu}$\cite{Waxman:1998yy}
+
+. Thus $\sim$3/8 of the pion energy is transferred to neutrinos, with a 1:2:0 flavour composition at source. However, across the cosmological baseline travelled, neutrino oscillations will lead to a mixed 1:1:1 composition on Earth. The IceCube realtime event selection is dominated by muon neutrinos, a channel which will carry no more than $\sim$1/8 of the pionic energy. Thus we find:
+
+\begin{equation}
+E_{\nu} \approx f_{\pi} \frac{E_{p}}{8}
+\end{equation} where $f_{\pi} \leq1$ is the conversion efficiency of proton energy to pion energy. We can derive the mean free path, $\lambda$, for a proton:
+
+\begin{equation}
+\lambda = \frac{1}{\sigma_{p\gamma} n_{\gamma}}
+\end{equation} with cross section $\sigma_{p\gamma} \sim 5 \times 10^{-28}$ cm$^{2}$ and photon number density $n_{\gamma}$. For a blackbody of temperature $T_{BB} \sim 10^{4.6}$ K, the mean free path for the parent proton of a 1 PeV neutrino is $\lambda \sim 2 \times 10^{13}$ cm. Accounting for the fact that each proton interaction will lead to a typical energy reduction of 20\%, we then find:
+
+\begin{equation}
+f_{\pi}(x) = 1 - e^{\left( \frac{-0.2x}{\lambda} \right)}
+\end{equation} for path $x$. Equating $x$ with the radius of the UV photosphere $x \approx 10^{14.6}$cm, we then find that each proton or neutron will typically undergo $\sim$ 10 interactions, which would represent a high efficiency $f_{\pi} \sim 0.9$. We caution that this estimate is only approximate, and that detailed numerical simulations are required to accurately calculate the pion production efficiency\cite{2010ApJ...721..630H}.
+
+We then calculate the effective area for a single high-energy neutrino, under the assumption of a mono-energetic neutrino spectrum which approximates the expectation for p$\gamma$ production. The effective area for IceCube varies from 50-200 m$^{2}$ for a 0.2-10 PeV neutrino energy. Below 1 PeV, this corresponds to a roughly-constant threshold of $6 \times 10^{-4}$ erg cm$^{-2}$ for an expectation of one neutrino alert. Given the redshift of AT2019dsg, we find a required total energy in neutrinos $E_{\nu} \approx 4 \times 10^{51}$ erg to produce a single neutrino alert. 
+%With the assumed baryon loading ratio and beaming fraction, 
+We can thus express the expected number of detected neutrinos as:
+
+\begin{equation}
+N_\nu \approx  0.03 \times \frac{E_{\nu}}{10^{50} \textup{erg}}
+\end{equation} 
+
+This expectation would also be valid for any power-law distribution in the same energy range.
 
 
 \section{Probability of Chance Coincidence}

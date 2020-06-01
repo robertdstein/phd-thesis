@@ -83,7 +83,7 @@ Owing to IceCube's convenient location at the geographic south pole, detector co
 	\label{fig:azimuth}
 \end{marginfigure}
 
-Furthermore, IceCube's detector response is assumed, to first order, to be uniform in right ascension. 
+Furthermore, IceCube's detector response is assumed, to first order, to be uniform in right ascension.
 
 \begin{equation}
 \mathcal{B} (\theta) = \frac{1}{2\pi} 
@@ -95,21 +95,8 @@ More precisely, it is assumed that \emph{any variations due to azimuthal asymmet
 \mathcal{B} (\theta, \delta) = \frac{1}{2\pi} \times f(\delta)
 \end{equation}
 
-\subsection{Background Time PDF}
 
-The IceCube detector is characterised by extremely high uptime of >99\%, divided into runs separated by small downtime breaks. Even after processing to final-level event selections, typically consists of livetime at >90\%. The arrival time of background events in Icecube is typically \emph{assumed to be uniform during detector uptime}. This is again only approximately true, as evidenced by Figure \ref{fig:background_rate}.  Six peaks corresponding to winter in the northern hemisphere are clearly visible, corresponding to $\pm \sim5\%$ rate variations.
-
-The atmospheric background rates depend on atmospheric densities which are ultimately temperature-dependent, leading to seasonal variations and clearly-visible annual cycles. This variation is itself an area of scientific interest, being exploited to measure climate with neutrinos CITE. In any case, these effects are partially mitigated in data-based models by the standard method of shuffling measured neutrino arrival times rather than drawing them from PDF. Still, the arrival time anisotropy is a small one.
-
-\begin{equation}
-\mathcal{B}_{time} = \frac{1}{\textup{livetime}}
-\end{equation}
-
-\begin{figure}[!ht]
-	\centering \includegraphics{llh/background_rate}
-	\caption{Rolling average of event rate during period of detector uptime.}
-	\label{fig:background_rate}
-\end{figure}
+Additionally, the impact of \emph{ice anistropy} can be seen from an event rate deficit at and below the horizon, aligned with the axes of maximal charge deficit at $\sim 120$ and $\sim 300$ degrees \sidecite{2019ICRC...36..854C}.
 
 \subsection{Background Energy Proxy PDF}
 
@@ -128,15 +115,39 @@ It is clear that in the northern hemisphere, this distribution is essentially fl
 \mathcal{B}_{E} (\delta, E_{\textup{proxy}}) = f_{\delta}(E_{\textup{proxy}})
 \end{equation}
 
+\subsection{Background Time PDF}
+
+The IceCube detector is characterised by extremely high uptime of >99\%, divided into runs separated by small downtime breaks. Even after processing to final-level event selections, typically consists of livetime at >90\%. The arrival time of background events in Icecube is typically \emph{assumed to be uniform during detector uptime}. This is again only approximately true, as evidenced by Figure \ref{fig:background_rate}.  Six peaks corresponding to winter in the northern hemisphere are clearly visible, corresponding to $\pm \sim5\%$ rate variations.
+
+The atmospheric background rates depend on atmospheric densities which are ultimately temperature-dependent, leading to seasonal variations and clearly-visible annual cycles. This variation is itself an area of scientific interest, being exploited to measure climate with neutrinos CITE. In any case, these effects are partially mitigated in data-based models by the standard method of shuffling measured neutrino arrival times rather than drawing them from PDF. Still, the arrival time anisotropy is a small one.
+
+\begin{equation}
+\mathcal{B}_{time} \approx \frac{1}{\textup{livetime}}
+\end{equation}
+
+\begin{figure}[!ht]
+	\centering \includegraphics{llh/background_rate}
+	\caption{Rolling average of final-level event rate during period of detector uptime.}
+	\label{fig:background_rate}
+\end{figure}
+
 \section{Signal Hypothesis}
 
 In recognition of the background-dominated regime, signal hypotheses in IceCube are a composite of the null hypothesis with a small number of additional signal-like neutrinos ($n_{s}$). It is assumed that \emph{the total number of neutrino events is essentially fixed by background}, so that N = $n_{s} + n_{b}$. In this case, we define our signal hypothesis as the normalised sum of a background PDF $\mathcal{B}$ and signal PDF $\mathcal{S}$:
 
-\[ \mathcal{H}= \frac{n_{s}}{N} \mathcal{S} + \frac{N - n_{s}}{N} \mathcal{B}  \]
+\begin{equation}
+\mathcal{H}= \frac{n_{s}}{N} \mathcal{S} + \frac{N - n_{s}}{N} \mathcal{B} 
+\end{equation}
 
 The signal PDF $\mathcal{S}$ typically describes a single source, or a normalised ensemble of multiple sources. The latter case is known as a \emph{Stacking Analysis}. As for the background, the signal PDF is a product of energy temporal and spatial PDFs
 
 In IceCube, it is common to test a hypotheses that depend on two parameters, $n_{s}$ and $\gamma$. 
+
+\begin{figure}[!ht]
+	\centering \includegraphics{llh/effective_area}
+	\caption{Effective area as a function of neutrino energy and declination.}
+	\label{fig:effective_area}
+\end{figure}
 
 \subsection{Signal Spatial PDF}
 
@@ -148,21 +159,35 @@ Spatial prior.
 
 Energy-dependent
 
+It is clear in the left panels of Figure \ref{fig:azimuth_mc} that azimuthal asymmetry is increasingly visible for soft spectra in the northern hemisphere, and approximately  resembles the pattern seen in Figure \ref{fig:azimuth}. However, for both the southern sky and a hard E$^{-1}$ spectrum, there is no such asymmetry. As can be clearly seen in \ref{fig:mc_dec_e}, these corresponds to regimes where the signal is dominated by high-energy events. In general, \emph{the effective area at lower energies is azimuth-dependent, while at higher energies it is approximately uniform}. In any case, as can be seen in the right-hand panels of Figure \ref{fig:azimuth_mc}, the relative discriminating power of azimuth is in all cases substantially less than energy proxy.
+
+\begin{figure}[!ht]
+	\centering \includegraphics{llh/azimuth_mc}
+	\caption{Declination-normalised MC rate as a function of azimuth.}
+	\label{fig:azimuth_mc}
+\end{figure}
+
 \subsection{Signal Time PDF}
 
 One common assumption for the signal time PDF is a uniform time PDF over a fixed period of livetime. This can be for the entire duration of a dataset, corresponding to a steady neutrino source. This case is typically referred to as a \emph{time-independent analysis}, because it cancels out exactly the assumed background time PDF, yielding a likelihood that does not depend on time. In contrast, transients are typically studied with a \emph{time-dependent analysis} where the signal is assumed to occur over a shorter period than the full data-taking duration. More complex temporal PDFs are possible, such as for periodic sources or models involving exponential-decay-like neutrinos lightcurves.
 
 \subsection{Signal Energy Proxy PDF}
 
-The energy PDF is most commonly \emph{assumed to be an unbroken power extending over the entire energy range of sensitivity for the IceCub detector}, namely from 100 GeV to 10 PeV. This energy spectrum is then convolved with the detector response function through use of weighted MC simulation, yielding an expectated distribution of energy proxy values. Similar to the signal spatial PDF, \emph{it is thus assumed that the baseline MC accurately describes the expected energy proxy distribution}. That is... reasonable?
+The energy PDF is most commonly \emph{assumed to be an unbroken power extending over the entire energy range of sensitivity for the IceCub detector}, namely from 100 GeV to 10 PeV. This energy spectrum is then convolved with the detector response function through use of weighted MC simulation, yielding an expectated distribution of energy proxy values. Similar to the signal spatial PDF, \emph{it is thus assumed that the baseline MC accurately describes the expected energy proxy distribution}. 
 
-The spectral index, $\gamma$ of the distribution is typically allowed to vary in some range, serving as a parameter which can be fit through a process of maximum likelihood estimation. In other circumstances, a fixed energy PDF is assumed, yielding a fixed energy proxy PDF.
+The spectral index, $\gamma$, of the distribution is typically allowed to vary in some range, serving as a parameter which can be fit through a process of maximum likelihood estimation. In other circumstances, a fixed energy PDF is assumed, yielding a fixed energy proxy PDF. An illustration of the expected signal distribution, derived from MC for a range of spectral indices, is illustrated in the left panels Figure \ref{fig:mc_dec_e}.
 
-The atmospheric neutrino energy spectrum $\sim E^{-3.7}$ seen in figure N is extremely steep relative to most predicted astrophysical neutrino spectra, so it should in principle be possible to significantly distinguish these with ease. Unfortunately, as outlined in Chapter N, the through-going track-like events typically used for neutrino astronomy have poor energy resolution due to partial containment. Thus much distinction is smeared out, with energy proxy values having a typical uncertainty of a full energy decade.
+It is clear that hard spectra result in events with energies substantially above those expected in background, but for softer spectra the distribution narrows and is much more similar to that in Figure \ref{fig:dec_vs_energy}. 
+
+Earth absorption.
+
+Anisotropy!!!
+
+DOMs point down.
 
 \begin{figure}[!ht]
 	\centering \includegraphics{llh/MC_dec_E}
-	\caption{Rolling average of event rate during period of detector uptime.}
+	\caption{Energy proxy distribution as a function of $\sin(\delta)$, for various signal hypotheses.}
 	\label{fig:mc_dec_e}
 \end{figure}
 
@@ -207,6 +232,12 @@ A more realistic intermediate approach, in which non-flat priors quantify our ex
 
 \section{Penalty Factors}
 lalala, use misc graphic
+
+\begin{figure}[!ht]
+	\centering \includegraphics{results/flare_vs_box_disc}
+	\caption{The $5\sigma$ Discovery Potential for AT2018cow, in both total fluence and isotropic-equivalent energy, as a function of flare length. The analysis tests flares within a pre-defined 130 day window. For flares much shorter than the search window, significantly less fluence is required to make a discovery with the cluster-search than for a time-integrated analysis.}
+	\label{fig:DiscTime}
+\end{figure}
 
 \section{Shortcuts to likelihood minimisation}
 The evaulation of this likelihood is time-consuming, and the implementation of this process in \emph{\href{https://github.com/IceCubeOpenSource/flarestack}{Flarestack}} makes several additional simplifications to speed calculations. 
