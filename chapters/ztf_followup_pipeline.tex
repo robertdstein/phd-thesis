@@ -38,13 +38,16 @@ ZTF has since its inception had a dedicated program to identify sources of high-
 		IC190619A & 343.26 & +10.73 & 27.16& 21.57 & 55\%&\cite{blaufuss:gcn24910, 2019ATel12879....1S}\\
 		IC190730A & 225.79 & +10.47 & 5.41& 4.52 & 67\%&\cite{stein:gcn25225, 2019ATel12967....1T, 2019ATel12974....1S}\\
 		IC190922B & 5.76 & -1.57 & 4.48 & 4.09 & 51\%&\cite{blaufuss:gcn25806,2019ATel13125....1S, stein:gcn25824}\\
-		\textbf{IC191001A} & \textbf{314.08} & \textbf{+12.94} & \textbf{25.53} & \textbf{20.56} & \textbf{59\%}& \textbf{\cite{stein:gcn25913,2019ATel13160....1S, stein:gcn25929}}\\
-		IC200107A & 148.18 & +35.46 & 7.62 & 6.22 & - &\cite{stein:gcn26655,stein:gcn26667}\\
+		IC191001A & 314.08 & +12.94 & 25.53 & 20.56 & 59\%& \cite{stein:gcn25913,2019ATel13160....1S, stein:gcn25929}\\
+		IC200107A\footnote{This event was reported without a signalness estimate} & 148.18 & +35.46 & 7.62 & 6.22 & - &\cite{stein:gcn26655,stein:gcn26667}\\
 		IC200109A & 164.49 & +11.87 & 22.52 & 20.06 & 77\%&\cite{stein:gcn26696,reusch:gcn26747}\\
 		IC200117A & 116.24 & +29.14 & 2.86 &  2.66 & 38\%&\cite{lagunas:gcn26802,reusch:gcn26813, reusch:gcn26816}\\
+		IC200512A\footnote{This event occurred at low galactic latitude, and thus our observations were not sensitive to extragalactic objects.}&295.18&+15.79&9.77&9.67&32\%&\cite{IC200512A}\\
+		IC200530A&255.37&+26.61&25.28&22.75&59\%&\cite{IC200530A}\\
+		IC200620A&162.11&+11.95&1.73&1.34&32\%&\cite{IC200620A, ztf_IC200620A}\\
 		\hline
 	\end{tabular}
-	\caption{Summary of the eight neutrino alerts followed up by ZTF, with IC191001A highlighted in bold. The 90\% area column indicates the region of sky observed at least twice by ZTF, within the reported 90\% localisation, and accounting for chip gaps. The \textit{signalness} describes the probability that each neutrino is of astrophysical origin, rather than arising from atmospheric backgrounds. One alert, IC200107A, was reported without a signalness estimate.}
+	\caption{Summary of the eleven neutrino alerts followed up by ZTF. The 90\% area column indicates the region of sky observed at least twice by ZTF, within the reported 90\% localisation, and accounting for chip gaps. The \textit{signalness} describes the probability that each neutrino is of astrophysical origin, rather than arising from atmospheric backgrounds.}
 	\label{tab:nu_alerts}
 \end{table*}
 
@@ -61,7 +64,7 @@ ZTF has since its inception had a dedicated program to identify sources of high-
 		& IC190712A\cite{IC190712A}, IC190819A\cite{IC190819A},\\
 		& IC191119A\cite{IC191119A}, IC200227A\cite{IC200227A}\\
 		&\\
-		\textbf{Low Altitude} & IC191215A\cite{IC191215A}\\
+		\textbf{Low Altitude} & IC191215A\cite{IC191215A}, IC200615A\cite{IC200615A}\\
 		&\\
 		\textbf{Southern Sky} & IC190331A\cite{IC190331A}, IC190504A\cite{IC190504A}\\
 		&\\
@@ -70,6 +73,9 @@ ZTF has since its inception had a dedicated program to identify sources of high-
 		IC190221A\cite{IC190221A}, IC190629A\cite{IC190629A}, \\
 		&IC190922A\cite{IC190922A}, IC191122A\cite{IC191122A}, \\
 		&IC191204A\cite{IC191204A}, IC191231A\cite{IC191231A}\\
+		&IC200410A\cite{IC200410A}, IC200421A\cite{IC200421A}\\
+		& IC200425A\cite{IC200425A}, IC200523A\cite{IC200523A}\\
+		&IC200614A\cite{IC200614A}\\
 		&\\
 		\hline
 		\textbf{Bad Weather} & IC200120A\cite{IC200120A,IC200120A_2}\\
@@ -145,3 +151,29 @@ In contrast to neutrinos, follow-up of GW and GRB triggers is more akin to searc
 The third observing run of the LIGO/VIRGO (O3) extended from X to y, and for this period ZTF has followed-up LVc GW triggers. In this period, there were BNs candidates and Y BBH candidates.
 
 There have been some predictions of EM signatures for BBH events...
+
+\begin{table*}
+	\centering
+	\begin{tabular}{||c c c c c c c c c c||} 
+		\hline
+		\textbf{Name} & \textbf{P$_{\textup{t}}$} & \textbf{Area} & \textbf{Distance} & \textbf{Class} & \textbf{P$_{\textup{1}}$} & \textbf{P$_{\textup{2}}$} & \textbf{Time Lag} & \textbf{Depth} & \textbf{E(B$-$V)}\\
+		&&(sq. deg.)&(Mpc)&&&&(hr)&&\\
+		\hline
+		GW190425 &  1\% & 7461  & 156 $\pm$ 41& BNS & 24.13\%  & 23.90\%  & 0.003& 21.5 & 0.03\\
+		S190426c & 58\% & 1131  & 377 $\pm$ 100 & NSBH & 52.33\%  & 51.57\% & 13.06& 21.5 & 0.34\\
+		S190814bv & 1\% & 23  & 267 $\pm$ 52 & NSBH & 88.57 \%  &  78.37\%  & 0.00 & 21.0 & 0.02\\ % check this
+		S190901ap & 14\% & 14753  & 241 $\pm$ 79  & BNS & 56.94\% & 49.39\%  & 3.61& 21.0 & 0.03\\
+		S190910d & 2\% & 2482 & 632 $\pm$ 186  & NSBH & 32.99\% & 31.17\%& 1.51& 20.3 & 0.04\\
+		S190910h & 39\% & 24264 & 230 $\pm$ 88 & BNS & 33.26\%  & 28.92\% & 0.015& 20.4 & 0.08\\
+		S190923y & 32\% & 2107  & 438 $\pm$ 133& NSBH & 38.99\%  & 19.22\% & 13.73& 20.1 & 0.09\\
+		S190930t & 26\% & 24220  & 108 $\pm$ 38 & NSBH & 50.63\% & 43.42\% & 11.91& 21.1 & 0.05\\
+		S191205ah & 7\% & 6378  & 385 $\pm$ 164  & NSBH & 5.68\% & 4.85\% & 10.66& 17.9 & 0.04\\
+		S191213g & 23\% & 4480 & 201 $\pm$ 81  & BNS & 27.50\%  & 25.10\% & 0.013& 20.4 & 0.30\\
+		S200105ae & 97\%& 7373  & 283 $\pm$ 74  & NSBH & 52.39\% & 43.99\%  & 9.96 & 20.2 & 0.05\\
+		S200115j & 1\% & 765 & 340 $\pm$ 79 & NSBH & 22.21\% & 15.76\%  & 0.24 & 20.8 & 0.13\\
+		S200213t & 37\% & 2326  & 201 $\pm$ 80& BNS & 72.17\% & 70.48\%  & 0.40 & 21.2 & 0.19\\
+		\hline
+	\end{tabular}
+	\caption{Summary of ZTF follow-up of 13 gravitational wave events in O3. We list the GW False Alarm Rate (FAR) and in parantheses, the probability that the event is terrestrial (P$_{\textup{t}}$). We list the total size of the GW localization region, the GW median distance and the most probable GW classification. We report the integrated probability within the 90\% contour of the LALinference skymap, covered by triggered and serendipitous ZTF searches during the first three days after merger observed at least once (P$_{\textup{1}}$), and probability observed at least twice (P$_{\textup{2}}$). In parentheses, we include the coverage based on the BAYESTAR skymap. For some events, only BAYESTAR skymaps were made available. All estimates correct for chip gaps and processing failures. We also report the time lag between merger time and start of ZTF observations (hours), the median depth (AB mag), and the median line-of-sight extinction.}
+	\label{tab:gw_alerts}
+\end{table*}

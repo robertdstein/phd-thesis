@@ -1,17 +1,24 @@
 \setchapterimage[6.5cm]{Grid_FullView_Logo}
 \setchapterpreamble[u]{\margintoc}
-\chapter{Likelihood Analysis in IceCube}
+\chapter{Statistical Analysis in IceCube}
 \labch{llh}
 \begin{fquote}[Isaac Asimov][Lady Windermere's Fan][18??] A hypothesis may be simply defined as a guess. A scientific hypothesis is an intelligent guess. 
 \end{fquote}
-Neutrino Astronomy with IceCube is rather distinct from more mature branches of astronomy, because we have much less power to distinguish astrophysical signal from background. This regime is to some extent fixed by the raw event rate, in which irreducible atmospheric backgrounds are overwhelmingly dominant over astrophysical neutrinos except at the highest energies. However, it is exacerbated by the limited angular resolution of the detector, where each IceCube event covers a relatively-large area of the sky. Further, owing to the limited effective area of IceCube, there are insufficient numbers of signal-like neutrinos to form cleanly-identifiable clusters. Fundamentally, there is almost no signature in data for which a background origin can be discounted.
 
-It is thus not difficult to find interesting things that are correlated with neutrino arrival directions or times, such as weekends or star signs, because any individual hypothesis will have a small probability to be correlated with  neutrinos by chance. The sum of these many small probabilities can become a large probability, and unless we are careful to correct for this look-elsewhere effect, many spurious correlations will be found. To shield against this, anisotropies in neutrino data are studied through \emph{blind analysis}, in which methods are first developed using simulated datasets. Once an analysis method and hypothesis has been finalised, and the procedure for determining the significance of a result has been fixed, the analysis can then be repeated on real data.
+As a field, Neutrino Astronomy is still very much in its infancy. While most branches of astronomy are focussed on characterising the properties of astrophysical objects, neutrino astronomy primarily seeks to just identify such objects in the first place. Given the characteristic signal-to-noise of neutrino detectors, determined by their limited resolution and event rate with an enormous atmospheric background, a significant fraction of the anisotropies in data will be due simply to background fluctuations.
+
+Neutrino astronomy is thus predominantly a process of statistical analysis, seeking both to identify correlations and to evaluate whether these are coincidental or physical. To perform this analysis with IceCube, we have access to three key observables:
+
+\begin{itemize}
+	\item \textbf{Reconstructed direction} (see Chapter N) and non-trivial uncertainty 
+	\item \textbf{Event arrival time} with nanosecond precision and trivial uncertainty
+	\item \textbf{Event energy proxy}, which can be derived using several methods 
+\end{itemize}
 
 A software designed to perform unbinned likelihood analysis, \emph{\href{https://github.com/IceCubeOpenSource/flarestack}{Flarestack}}, was developed by the author to study correlations in IceCube data \sidecite{flarestack}.
 
 \section{Hypothesis Testing}
-Statistical hypothesis testing begins with the definition of a particular hypothesis to test, $\mathcal{H_{1}}$, and a null hypothesis, $\mathcal{H_{0}}$, that would be expected in the absence of any correlation. Ultimately, we wish to determine which hypothesis better describes our data. Hypothesis testing begins from the default position that the null hypothesis describes the data, and evaluates whether this description can be disproven. We define a test statistic (TS) to quantify the how well data is described, and define a threshold at which we would be confident in reaching a conclusion. If our test statistic exceeds this threshold, we \emph{reject the null hypothesis}. This means we are confident that the null hypothesis does not describes our data. It does not necessarily follow that our signal hypothesis is correct, we can only say that it better describes our data than the null hypothesis. Conversely, if the TS does not exceed the threshold,  we \emph{do not reject the null hypothesis}. In this case, we are not confident that the null hypothesis does not describe our data. This does not mean that the signal hypothesis is wrong, but rather that we cannot be sure the null hypothesis is wrong. 
+Neutrino Astronomy with IceCube uses a \emph{Frequentist} approach to statistical inference, and in particular uses the method of \emph{statistical hypothesis testing} to assess correlations. Statistical hypothesis testing begins with the definition of a particular hypothesis to test, $\mathcal{H_{1}}$, and a null hypothesis, $\mathcal{H_{0}}$, that would be expected in the absence of any correlation. Ultimately, we wish to determine which hypothesis better describes our data. Hypothesis testing starts from the default position that the null hypothesis describes the data, and evaluates whether this description can be disproven. We define a test statistic (TS) to quantify the how well data is described, and define a threshold at which we would be confident in reaching a conclusion. If our test statistic exceeds this threshold, we \emph{reject the null hypothesis}. This means we are confident that the null hypothesis does not describes our data. It does not necessarily follow that our signal hypothesis is correct, we can only say that it better describes our data than the null hypothesis. Conversely, if the TS does not exceed the threshold,  we \emph{do not reject the null hypothesis}. In this case, we are not confident that the null hypothesis does not describe our data. This does not mean that the signal hypothesis is wrong, but rather that we cannot be sure the null hypothesis is wrong. 
 
 \begin{margintable}
 	\caption[]{Hypothesis Testing}
@@ -28,8 +35,6 @@ Statistical hypothesis testing begins with the definition of a particular hypoth
 \end{margintable}
 
 As illustrated in Table \ref{tab:hypothesis}, there are two things that can go wrong with a hypothesis test. Type 1 error, or a false positive, occurs when we reject the null hypothesis although it is true. Type 2 error, or a false negative, occurs when we do not reject the null hypothesis even though it is false. By construction, every test must balance the risk of Type 1 and Type 2 errors, and both cannot be eliminated simultaneously. We typically construct our test by fixing a threshold for acceptable rate of Type 1 error. This Type I error rate is quantified by a \emph{p-value}, defined as the probability of observing a result under the null hypothesis that is at least as significant as the one found. One common p-value threshold is 0.05, i.e only accepting results with a probability <5\% to arise under the null hypothesis. The p-vaue can also be converted to a \emph{significance}, equal to the number of standard devations required for a one-sided Gaussian distribution to yield that p-value. A typical threshold for a discovery is $5 \sigma$, corresponding to a p-value of less than $3 \times 10^{-7}$.
-
-In IceCube, null hypothesis rejection is a continuous rather than discrete process. The degree of rejection is parameterised by an informal sliding verbal scale from \emph{hints} ( $\gtrsim 2 \sigma$), through \emph{evidence} ($\gtrsim2.5 \sigma$) and \emph{compelling evidence} ($\gtrsim3 \sigma$), to \emph{discovery} ($\gtrsim5 \sigma$). At discovery, the null hypothesis is considered fully rejected.
 
 While the simplest hypothesis test is a binary case is which one well-defined hypothesis $\mathcal{H_{1}}$ is compared to the null hypothesis, the procedure is often generalised to cover multiple hypotheses, $\mathcal{H_{i}}$, which can be either discrete or continuous. We pick the hypothesis with the smallest p-value, and compare that to our null hypothesis. It is at this point that the look-elsewhere effect from must be accounted for, through use of a trial correction. 
 
@@ -53,15 +58,15 @@ At the stage of defining hypotheses, IceCube-specific physics is added to the pu
 
 The simplification has a number of drawbacks, primarily that PDFs derived from data are necessarily coarser because the available statistics are limited. An alternative approach that for the sample of northern through-going muons tracks, in which there is negligible atmospheric muon background, is to use Monte-Carlo based modelling to construct a model for background. This ultimately introduces the risk of data-MC disagreement,  with uncertainties introduced for example with by atmospheric flux modelling. However, this is typically offset by the high-resolution PDFs which can be constructed using these much larger sample sizes.
 
-In either case, distributions are then constructed for the background model $\mathcal{B}$. It is typical in IceCube to consider event arrival direction, energy and arrival time as key observables to distinguish signal from background. These distributions form our null hypothesis. 
+In either case, distributions are then constructed for the background model $\mathcal{B}$. 
 
-In the following, data-based background PDFs are illustrated for the all-sky \emph{ps tracks version v003-p02} dataset \sidecite{2020PhRvL.124e1103A}.
-
-Distributions based on detector observables.
+It is typical in IceCube to consider reconstructed event arrival direction, energy proxy and arrival time as key observables to distinguish signal from background. These distributions form our null hypothesis. 
 
 \begin{equation}
-\mathcal{B} (\theta) = \mathcal{B}_{space} \times \mathcal{B}_{time}  \times {B}_{E}
+\mathcal{B} (x) = \mathcal{B}_{space} \times \mathcal{B}_{time}  \times {B}_{E}
 \end{equation}
+
+In the following, data-based background PDFs are illustrated for the all-sky \emph{ps tracks version v003-p02} dataset \sidecite{2020PhRvL.124e1103A}.
 
 \subsection{Background Spatial PDF}
 
@@ -89,10 +94,10 @@ Furthermore, IceCube's detector response is assumed, to first order, to be unifo
 \mathcal{B} (\theta) = \frac{1}{2\pi} 
 \end{equation}
 
-More precisely, it is assumed that \emph{any variations due to azimuthal asymmetry are negligible}. The detector itself (see Chapter N) has 6 string axes which will be traced out over the course of each day. Thus, for typical data periods of many years, these azimuthal variations will indeed be negligible. However, particularly in cases which search for clustering over short time periods, this azimuthal asymmetry may have an impact. The degree of azimuthal asymmetry in event rate is shown in Figure \ref{fig:azimuth}.  The six string axes are clearly visible with elevated event rates, reaching $\sim40\%$ variations for the southern hemisphere.
+More precisely, it is assumed that \emph{any variations due to azimuthal asymmetry are negligible}. The detector itself (see Chapter \ref{ch:icecube}) has 6 string axes which will be traced out over the course of each day. Thus, for typical data periods of many years, these azimuthal variations will indeed be negligible. However, particularly in cases which search for clustering over short time periods, this azimuthal asymmetry may have an impact. The degree of azimuthal asymmetry in event rate is shown in Figure \ref{fig:azimuth}.  The six string axes are clearly visible with elevated event rates, reaching $\sim40\%$ variations for the southern hemisphere.
 
 \begin{equation}
-\mathcal{B} (\theta, \delta) = \frac{1}{2\pi} \times f(\delta)
+\mathcal{B}_{space} (\theta, \delta) = \frac{1}{2\pi} \times f(\delta)
 \end{equation}
 
 
@@ -109,17 +114,20 @@ Additionally, the impact of \emph{ice anistropy} can be seen from an event rate 
 
 In most cases, neutrino energy would be a powerful discriminant between astrophysical signal and atmospheric background. However, in IceCube analysis must be conducted with the observable \emph{Energy Proxy}  ($E_{\textup{proxy}}$), which provides relatively poor energy resolution for through-going tracks (see Chapter N). The normalised energy proxy distribution as a function of $\sin(\delta)$ is given in Figure \ref{fig:dec_vs_energy}, with the median and central 90\% ranges marked by dotted lines. 
 
-It is clear that in the northern hemisphere, this distribution is essentially flat, reflecting the homogeneity of atmospheric neutrino backgrounds in this regime. However, the median energy proxy swiftly increases into the southern hemisphere, as more aggressive cuts are employed to remove the additional atmospheric muon background.
+It is clear that in the northern hemisphere, this distribution is essentially flat, reflecting the homogeneity of atmospheric neutrino backgrounds in this regime. However, the median energy proxy swiftly increases into the southern hemisphere, as more aggressive cuts are employed to remove the additional atmospheric muon background. The final turnover at the pole reflects the impact of the IceTop surface detector, which can be used to veto muon bundles from vertically-inclined showers. 
+
+Background Energy PDFs are constructed from the normalised enegy proxy distribution at a given declination:
 
 \begin{equation}
 \mathcal{B}_{E} (\delta, E_{\textup{proxy}}) = f_{\delta}(E_{\textup{proxy}})
+\label{eq:b_energy}
 \end{equation}
 
 \subsection{Background Time PDF}
 
-The IceCube detector is characterised by extremely high uptime of >99\%, divided into runs separated by small downtime breaks. Even after processing to final-level event selections, typically consists of livetime at >90\%. The arrival time of background events in Icecube is typically \emph{assumed to be uniform during detector uptime}. This is again only approximately true, as evidenced by Figure \ref{fig:background_rate}.  Six peaks corresponding to winter in the northern hemisphere are clearly visible, corresponding to $\pm \sim5\%$ rate variations.
+The IceCube detector is characterised by extremely high uptime of >99\%, divided into runs separated by small downtime breaks. Even after processing to final-level event selections, samples typically consists of livetime at >90\%. The arrival time of background events in Icecube is typically \emph{assumed to be uniform during detector uptime}. This is again only approximately true, as evidenced by Figure \ref{fig:background_rate}.  Six peaks corresponding to winter in the northern hemisphere are clearly visible, corresponding to $\pm \sim5\%$ rate variations.
 
-The atmospheric background rates depend on atmospheric densities which are ultimately temperature-dependent, leading to seasonal variations and clearly-visible annual cycles. This variation is itself an area of scientific interest, being exploited to measure climate with neutrinos CITE. In any case, these effects are partially mitigated in data-based models by the standard method of shuffling measured neutrino arrival times rather than drawing them from PDF. Still, the arrival time anisotropy is a small one.
+The atmospheric background rates depend on atmospheric densities which are ultimately temperature-dependent, leading to seasonal variations and clearly-visible annual cycles. This variation is itself an area of scientific interest, being exploited to measure climate with neutrinos CITE. These effects are partially mitigated in data-based models by the standard method of shuffling measured neutrino arrival times rather than drawing them from PDF. In any case, the arrival time anisotropy is a small one.
 
 \begin{equation}
 \mathcal{B}_{time} \approx \frac{1}{\textup{livetime}}
@@ -139,7 +147,7 @@ In recognition of the background-dominated regime, signal hypotheses in IceCube 
 \mathcal{H}= \frac{n_{s}}{N} \mathcal{S} + \frac{N - n_{s}}{N} \mathcal{B} 
 \end{equation}
 
-The signal PDF $\mathcal{S}$ typically describes a single source, or a normalised ensemble of multiple sources. The latter case is known as a \emph{Stacking Analysis}. As for the background, the signal PDF is a product of energy temporal and spatial PDFs
+The signal PDF $\mathcal{S}$ typically describes a single source, or a normalised ensemble of multiple sources. The latter case is known as a \emph{Stacking Analysis}. Much like the background, the signal PDF is a product of energym temporal and spatial PDFs
 
 In IceCube, it is common to test a hypotheses that depend on two parameters, $n_{s}$ and $\gamma$. 
 
@@ -267,6 +275,10 @@ Equation \ref{eq:TS_reduced}  is faster to evaluate, because it bypasses the nee
 
 An additional simplifying assumption is that neutrinos are typically localised to a resolution of $\sim$1 degree, so events which lie many degrees from a source have a negligible probability of being signal. For events lying more than 5 degrees away, and those within 5 degrees but with a spatial likelihood ratio less than x, we make the approximation that $\mathcal{S} \approx 0$ so then $TS \approx 0$. Using the formulation in Equation \ref{eq:TS_reduced} , we see we can simply neglect to evaluate the likelihood for these events, without altering the final sum. This box cut thus removes the overwhelming majority of events from the likelihood evaluation step, yielding vast speed improvements while having a negligible impact on the fitting process.
 \section{Trial correction}
+
+Neutrino Astronomy with IceCube is rather distinct from more mature branches of astronomy, because we have much less power to distinguish astrophysical signal from background. This regime is to some extent fixed by the raw event rate, in which irreducible atmospheric backgrounds are overwhelmingly dominant over astrophysical neutrinos except at the highest energies. However, it is exacerbated by the limited angular resolution of the detector, where each IceCube event covers a relatively-large area of the sky. Further, owing to the limited effective area of IceCube, there are insufficient numbers of signal-like neutrinos to form cleanly-identifiable clusters. Fundamentally, there is almost no signature in data for which a background origin can be discounted.
+
+It is thus not difficult to find interesting things that are correlated with neutrino arrival directions or times, such as weekends or star signs, because any individual hypothesis will have a small probability to be correlated with  neutrinos by chance. The sum of these many small probabilities can become a large probability, and unless we are careful to correct for this look-elsewhere effect, many spurious correlations will be found. To shield against this, anisotropies in neutrino data are studied through \emph{blind analysis}, in which methods are first developed using simulated datasets. Once an analysis method and hypothesis has been finalised, and the procedure for determining the significance of a result has been fixed, the analysis can then be repeated on real data.
 
 
 The trial factor corresponds to the number of independent hypotheses that were tested. It is a common misconception that the trial factor is particularly important for cases when two hypotheses are similar. In the limit that two hypotheses are so similar as to be essentially identical, then would be no need for a trial correction at all, since the test statistic for each would be identical. The trial factor should correct the degree to which hypotheses are capable of giving multiple independent TS values.
