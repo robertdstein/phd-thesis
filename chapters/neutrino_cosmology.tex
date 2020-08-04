@@ -13,34 +13,96 @@ As part of this thesis, a software framework was developed to analytically calcu
 
 Populations of astrophysical transients are characterised by their \emph{local rate} (how often they occur in the local universe), and their source evolution (how does their rate change as a function of redshift). Rates are typically estimated from unbiased surveys, such as the ZTF Bright Transient Survey. Since many astrophysical transients outlined in Chapter \ref{ch:sources} are ultimately related to stages of stellar evolution, they tend to be strongly correlated to the \emph{Star Formation Rate} (SFR), the rate at which stars are formed at a given redshift.
 
-The SFR can be directly inferred using multi-wavelength surveys of galaxies \sidecite{sfr_madau_14}, exploiting the characteristic spectral ratios to quantify stellar contributions in each galaxy. Alternatively, the SFR rate can be indirectly derived using observed rates of core-collapse supernovae identified in surveys \sidecite{sfr_strolger_15}. These two rates are illustrated in Figure N, and broadly agree. The SFR peaks at z$\approx$1 because of REASONS, and declines thereafter. It has a \emph{positive evolution}, i.e it increases with increasing redshift. 
+The SFR can be directly inferred using multi-wavelength surveys of galaxies \sidecite{sfr_madau_14}, exploiting the characteristic spectral ratios to quantify stellar contributions in each galaxy. Alternatively, the SFR rate can be indirectly derived using observed rates of core-collapse supernovae identified in surveys \sidecite{sfr_strolger_15}. The Core-Collapse Supernova (CCSN) Rate is then directly proportional to the SRF, related by a constant of proportionality $k_{cc}$. These two CCSN rates are illustrated in Figure \ref{fig:rhoz}, and broadly agree. The SFR peaks at z$\approx$1 because of REASONS, and declines thereafter. It initially has a \emph{positive evolution}, i.e it increases with increasing redshift. 
 
-An alternative driver of evolution is the rate of supermassive black holes (SMBHs), which are connected with many other sources such as blazars, radio galaxies and TDEs. In contrast to the SFR, massive SMBHs are thought to be formed through mergers of smaller SMBHs. The rate of massive SMBHs has a tendency to increase over time, so is larger in the local universe than at higher redshifts. In contrast to the SFR, the SMBH rate this has a \emph{negative source evolution}. Of particular relavance to this thesis is the rate of TDEs, which have been proposed theoretically to follow this negative SMBH rate, as illustrated in Figure N \sidecite{Sun:2015bda}. Caution must be taken for this rate, since TDEs are primarily detected in the local universe, so the high-z rates are broadly unconstrained observationally.
+An alternative driver of evolution is the rate of supermassive black holes (SMBHs), which are connected with many other sources such as blazars, radio galaxies and TDEs. In contrast to the SFR, massive SMBHs are thought to be formed through mergers of smaller SMBHs. The rate of massive SMBHs has a tendency to increase over time, so is larger in the local universe than at higher redshifts. In contrast to the SFR, the SMBH rate this has a \emph{negative source evolution}. Of particular relevance to this thesis is the rate of TDEs, which have been proposed theoretically to follow this negative SMBH rate, as illustrated in Figure \ref{fig:rhoz} \sidecite{Sun:2015bda}. Caution must be taken for this rate, since TDEs are primarily detected in the local universe, so the high-z rates are broadly unconstrained observationally.
 
-While the limits presented above constrain the contribution of those catalogues tested, we ultimately wish to constrain neutrino emission for the TDE population as a whole. If we \emph{assume that catalogue sources are representative of the broader population}, we can extrapolate from our per-source standard candle limits in Figure \ref{fig:cat_upper_limit} to the population flux. We seek to constrain the flux of two populations, namely jetted and non-jetted TDEs. For the latter case, we rely on the results of the golden TDE catalogue, since the extrapolation \emph{implicitly requires that the catalogues are not contaminated by misclassified objects}.
+\begin{marginfigure}
+	\centering \includegraphics{nu_cosmology/rhoz}
+	\caption{Various transient rates as a function of redshift.}
+	\label{fig:rhoz}
+\end{marginfigure}
 
-We must multiply the energy-per-source by the rate of TDEs as a function of redshift, yielding an energy-per-redshift-shell. We can then scale with the luminosity distance to derive the flux-per-shell at Earth. By numerically integrating the flux contributed by shells of increasing redshift up to a horizon of z=8, we thus calculate the cumulative flux expected for each population. This method thus accounts for TDEs that were not detected by other surveys, and were therefore not incorporated into our catalogue. 
+For any transient rate $\rho (z)$ as a function of redshift, we can calculate the rate of transients per redshift shell. The rate is given per unit time, but the impact of time dilation at higher redshifts suppresses the rate by a factor (1+z). 
 
-There a number of subtleties to this method. The rate is given per unit time, but the impact of time dilation at higher redshifts suppresses the rate by a factor (1+z). Furthermore, in much the same way as for photons, neutrinos from distant shells will be "red-shifted" to lower energies. At Earth, for energy $E_{\textup{obs}}$, we will observe neutrinos that were emitted at $E_{\textup{em}} = (1+z) E_{\textup{obs}}$. Thus, for a power law of E$^{-\gamma}$, the flux at $E_{\textup{obs}}$ will be suppressed by a factor of $(1+z) ^{\gamma}$. Both effects are generally small for the sources in the catalogue, because it primarily probes the local universe, but must be accounted for when extrapolating.
+\begin{equation}
+R(z) = \rho(z) \times \frac{dV}{dz} \frac{1}{1+z}
+\end{equation}
 
-To perform this calculation, we use per-source limits for the most recent IceCube global fit of the astrophysical neutrino flux, with a best-fit spectrum of $E^{-2.50}$. For non-jetted TDEs, we assume a central local rate of $8 \times 10^{-7}$ Mpc$^{-3}$ year$^{-1}$ \sidecite{2018ApJ...852...72V}, a source evolution derived by \cite{Sun:2015bda}, and constrain the contribution of TDEs to be less than 26\% of the total. For jetted TDEs, under the assumption that they follow the same underlying source evolution as non-jetted TDEs with a central rate of $3 \times 10^{-11}$ Mpc$^{-3}$ year$^{-1}$ \sidecite{Sun:2015bda}, we find that they must contribute less than 1\% of the total.  These constraints are illustrated in Figure \ref{fig:DiffuseFlux}.
+These are illustrated in Figure \ref{fig:rz}. The comoving volume of a redshift shell is derived using the \emph{astropy} package. We can then calculate the transient rate in the universe:
 
-As the contribution from a population is directly proportional to the local population rate, the shaded bands indicate the uncertainty in our limits arising from rate estimates. For TDEs, these rates are the dominant source of uncertainty in neutrino flux. It will require systematic evaluation of observed TDE rates to enable more precise limits on neutrino emission. Any refined rate estimate can be used to linearly rescale these limits. Propagating through the current local rate uncertainty, we constrain non-jetted TDEs to be less than 13-39\%, and jetted TDEs to be less than 0.n-1.n\% of the total. With a more precise future measurement of the local TDE rate, these values can be linearly rescaled to provide more accurate limits.
+\begin{equation}
+R_{all} = \int_{0}^{\infty} R(z) dz
+\end{equation}
 
-Such limits also critically depend on the source evolution of TDEs as a function of redshift, but this is essentially unconstrained observationally because TDEs detections are overwhelmingly confined to the local universe (z $\lesssim$ 0.3). Estimates are made primarily based on theoretical predictions derived from the rate of SuperMassive Black Holes (SMBHs)?? \cite{Sun:2015bda}. If we instead consider a source evolution similar to the Star Formation Rate (SFR), as derived by CLASH-CANDELs, we would find limits of x and y \% respectively. For such a scenario, the contribution of unresolved TDEs is so large that the measured flux itself provides a stricter constraint than the catalogue test?
+\begin{marginfigure}
+	\centering \includegraphics{nu_cosmology/rz}
+	\caption{Various transient rates as a function of redshift.}
+	\label{fig:rz}
+\end{marginfigure}
 
-\section{Comparing Rate Evolutions}
+We can also consider the neutrino flux per source. We typically assume that sources emit a neutrino spectrum that is an unbroken power law with spectral index $\gamma$:
+
+\begin{equation}
+\frac{dN}{dE} = \phi_{0} \times E^{-\gamma}
+\end{equation}
+
+In a static universe, for an object located at a luminosity distance $D_{L}$, we would then measure at Earth:
+
+\begin{equation}
+\frac{dN}{dE} = \frac{\phi_{0}}{4 \pi D_{L}^{2}} \times E^{-\gamma}
+\label{eq:flux_static}
+\end{equation}
+
+However, this spectrum will be further modified due to redshifting. At Earth, for energy $E_{\textup{obs}}$, we will observe neutrinos that were emitted at $E_{\textup{em}} = (1+z) E_{\textup{obs}}$. Thus, for a power law of E$^{-\gamma}$, the flux at $E_{\textup{obs}}$ will be suppressed by a factor of $(1+z) ^{\gamma}$. Assuming that this flux is detected between a fixed energy range (typically 100 GeV to 10 PeV for IceCube), but that the intrinsic spectrum continues sufficiently far beyond 10 PeV, we would then find a modified version of Equation \ref{eq:flux_static}:
+
+\begin{equation}
+\frac{dN}{dE} = \frac{\phi_{0}}{4 \pi D_{L}^{2}} \times E^{-\gamma}  \times (1+z)^{-\gamma}
+\label{eq:flux_redshift}
+\end{equation}
+
+\begin{itemize}
+	\item (1+z)$^{-1}$ to scale transient rate
+	\item (1+z) to scale transient duration
+	\item (1+z)$^{-1}$ to scale "per-unit-time" emission due to time dilation
+	\item (1+z)$^{-\gamma}$ due to redshifting energy in power law
+\end{itemize}
+
+\begin{marginfigure}
+	\centering \includegraphics{nu_cosmology/dnde}
+	\caption{Contributed flux at earth as a function of redshift.}
+	\label{fig:dnde}
+\end{marginfigure}
+
+Figure \ref{fig:dnde} shows the contributed diffuse flux at Earth as a function of redshift, assuming each transient contributes $10^{50}$ erg in a power law from 1GeV to 10 PeV. Ultimately, the diffuse flux measured by IceCube will be the integral of this rate: 
+
+\begin{equation}
+\frac{dN}{dE} = \int_{0}^{\infty} \phi(z) dz
+\label{eq:nu_flux_tot}
+\end{equation}
+
+\begin{marginfigure}
+	\centering \includegraphics{nu_cosmology/diffuse_flux}
+	\caption{Cumulative flux at earth as a function of redshift.}
+	\label{fig:diffuse_flux}
+\end{marginfigure}
+
+These cumulative neutrino fluxes are shown in Figure \ref{fig:diffuse_flux}. 
+
+\section{Comparing Source Classes}
+
+The impact of differing the spectral index is illustrated in Figure \ref{fig:CDF_gamma}, using the TDE rate. Given that high-z transients are already suppressed, the overall impact is relatively minor. However, as is clear in both Figure \ref{fig:dnde} and \ref{fig:CDF_rate}, the source evolution heavily impacts the relative contribution of nearby sources to the diffuse flux. A survey complete up to z=0.25 would already account for 60\% of all TDE neutrino emission, whereas it would contain just 20-25\% of CCSN neutrino emission. An alternative interpretation of Figure \ref{fig:CDF_rate} is that the CDF gives the probability to detect a counterpart as a function of redshift for an astrophysical neutrino from each source class.
 
 \begin{marginfigure}
 	\centering \includegraphics{nu_cosmology/flux_gamma}
-	\caption{Cumulative flux as a function of spectral index.}
+	\caption{CDF as a function of spectral index for TDEs.}
 	\label{fig:CDF_gamma}
 \end{marginfigure}
 
 
 \begin{marginfigure}
 	\centering \includegraphics{nu_cosmology/diffuse_flux_rates}
-	\caption{Cumulative flux as a function of source evolution.}
+	\caption{CDF as a function of source evolution.}
 	\label{fig:CDF_rate}
 \end{marginfigure}
 
@@ -59,6 +121,26 @@ To approximately quantify the impact of this effect, we can consider the general
 We consider a neutrino with typical properties for those issued as IceCube realtime alerts. We assume it has a \emph{signalness} of 50\%, i.e that it has a 50\% probability to be of astrophysical origin rather than from atmospheric backgrounds. Such alerts are typically reported with a median angular error of $\sim$1 degree. Any source class will then have a cumulative expectation of 0.5 $\times f_{\textup{tot}}$, where $f_{\textup{tot}}$ is the fraction of the total diffuse astrophysical neutrino flux contributed by that source class. 
 		
 We consider a number of source classes, listed in Table N. We calculate their expected background rate by considering their sky rate, given as a product of their local rate, integrated to a typical telescope horizon, and multiplied by a typical telescope detection efficiency. For each source, we also multiply the appropriate search window for neutrino emission, yielding a final background density for any point on the sky. Multiplying this by the neutrino localisation area gives us the ultimate background rate per follow-up. We also consider the expected signal per search, given as the neutrino population expectation multiplied by the fraction of flux which is produced by sources accessible to telescopes.  These are illustrated in Figure \ref{fig:nsig_nbkg} for a variety of source classes.
+
+\begin{table*}[]
+	\centering
+	\begin{tabular}{||c c c c c c c|} 
+	\hline
+	Source & Max redshift & Length & Search Area & Detection Efficiency & Local Rate & Evolution \\
+	& [z] & [yr] & [sq. deg.] & [\%] & [Mpc$^{-3}$ yr$^{-1}$] & \\
+	\hline
+	TDE (Non-jetted) & 0.15 & 0.10 & 3.14 & 100.00 & 8e-07 & \\
+	TDE (Jetted) & 0.50 & 0.50 & 3.14 & 100.00 & 3e-11 & \\
+	SN IIP & 0.05 & 0.30 & 3.14 & 100.00 & 5.3e-05 & \\
+	SN Ic & 0.05 & 0.03 & 3.14 & 100.00 & 1.8e-05 & \\
+	SN IIn & 0.08 & 0.30 & 3.14 & 100.00 & 6.5e-06 & \\
+	FBOT & 0.25 & 0.30 & 3.14 & 100.00 & 1e-07 & \\
+	GRB & 1.00 & 0.00 & 314.16 & 100.00 & 4.2e-10 & \\
+	\hline
+	\end{tabular}
+	\caption{Summary of assumptions on source classes.}
+	\label{tab:source_properties}
+\end{table*}{}
 
 \begin{figure}[!ht]
 	\centering \includegraphics{nu_cosmology/nsig_nbkg}
