@@ -5,28 +5,34 @@
 \begin{fquote}[ Kurt Vonnegut][The Design of Experiments][1935]The universe is a big place, perhaps the biggest.
 \end{fquote}
 
-Often, the strictest limits on the contribution of a given source class comes not from direct likelihood analysis, but rather from much simpler cosmological arguments. IceCube measures a diffuse astrophysical neutrino flux, setting a limit on the cumulative contribution that can come from a given population. This information can be illustrated by a \emph{Kowalski Plot}, encompassing the product of a local rate and a mean neutrino luminosity per source. 
+Often, the strictest limits on the contribution of a given source class comes not from direct likelihood analysis, but rather from much simpler cosmological arguments. IceCube measures a diffuse astrophysical neutrino flux, setting a limit on the cumulative contribution that can come from a given population. This information can be illustrated by a \emph{Kowalski Plot}, encompassing the product of a local rate and a mean neutrino luminosity per source (see Chapter \ref{ch:sources}). 
 
 As part of this thesis, a software framework was developed to analytically calculate neutrino emission from cosmological populations. This is integrated into the \emph{\href{https://github.com/IceCubeOpenSource/flarestack}{Flarestack}} python package, written by the author \sidecite{flarestack}.
 
-\section{Calculating a diffuse neutrino flux}
+\section{Cosmological Source Rates}
 
 Populations of astrophysical transients are characterised by their \emph{local rate} (how often they occur in the local universe), and their source evolution (how does their rate change as a function of redshift). Rates are typically estimated from unbiased surveys, such as the ZTF Bright Transient Survey. Since many astrophysical transients outlined in Chapter \ref{ch:sources} are ultimately related to stages of stellar evolution, they tend to be strongly correlated to the \emph{Star Formation Rate} (SFR), the rate at which stars are formed at a given redshift.
 
-The SFR can be directly inferred using multi-wavelength surveys of galaxies \sidecite{sfr_madau_14}, exploiting the characteristic spectral ratios to quantify stellar contributions in each galaxy. Alternatively, the SFR rate can be indirectly derived using observed rates of core-collapse supernovae identified in surveys \sidecite{sfr_strolger_15}. The Core-Collapse Supernova (CCSN) Rate is then directly proportional to the SRF, related by a constant of proportionality $k_{cc}$. These two CCSN rates are illustrated in Figure \ref{fig:rhoz}, and broadly agree. The SFR peaks at z$\approx$1 because of REASONS, and declines thereafter. It initially has a \emph{positive evolution}, i.e it increases with increasing redshift. 
+The SFR can be directly inferred using multi-wavelength surveys of galaxies \sidecite{sfr_madau_14}, exploiting the characteristic spectral ratios to quantify stellar contributions in each galaxy. Alternatively, the SFR rate can be indirectly derived using observed rates of core-collapse supernovae identified in surveys \sidecite{sfr_strolger_15}. The Core-Collapse Supernova (CCSN) Rate is then directly proportional to the SRF, related by a constant of proportionality $k_{cc}$. These two CCSN rate estimates are illustrated in Figure \ref{fig:rhoz}, and broadly agree.
+\begin{marginfigure}
+	\centering \includegraphics{nu_cosmology/rhoz}
+	\caption{Various transient rate densities as a function of redshift.}
+	\label{fig:rhoz}
+\end{marginfigure}
+The SFR peaks at z$\approx$1 because of REASONS, and declines thereafter. It initially has a \emph{positive evolution}, i.e it increases with increasing redshift. 
 
 An alternative driver of evolution is the rate of supermassive black holes (SMBHs), which are connected with many other sources such as blazars, radio galaxies and TDEs. In contrast to the SFR, massive SMBHs are thought to be formed through mergers of smaller SMBHs. The rate of massive SMBHs has a tendency to increase over time, so is larger in the local universe than at higher redshifts. In contrast to the SFR, the SMBH rate this has a \emph{negative source evolution}. Of particular relevance to this thesis is the rate of TDEs, which have been proposed theoretically to follow this negative SMBH rate, as illustrated in Figure \ref{fig:rhoz} \sidecite{Sun:2015bda}. Caution must be taken for this rate, since TDEs are primarily detected in the local universe, so the high-z rates are broadly unconstrained observationally.
 
+With any chosen source rate and neutrino spectrum, we can calculate the corresponding \emph{cumulative neutrino flux} arising from that population \cite{Strotjohann2020Search}. For a transient rate density $\rho (z)$ as a function of redshift, we can calculate the rate of transients per redshift shell. The rate is given per unit time, but the impact of time dilation at higher redshifts suppresses the rate by a factor (1+z). 
+
 \begin{marginfigure}
-	\centering \includegraphics{nu_cosmology/rhoz}
+	\centering \includegraphics{nu_cosmology/rz}
 	\caption{Various transient rates as a function of redshift.}
-	\label{fig:rhoz}
+	\label{fig:rz}
 \end{marginfigure}
 
-For any transient rate $\rho (z)$ as a function of redshift, we can calculate the rate of transients per redshift shell. The rate is given per unit time, but the impact of time dilation at higher redshifts suppresses the rate by a factor (1+z). 
-
 \begin{equation}
-R(z) = \rho(z) \times \frac{dV}{dz} \frac{1}{1+z}
+R(z) = \rho(z) \times \frac{dV}{dz} \times \frac{1}{1+z}
 \end{equation}
 
 These are illustrated in Figure \ref{fig:rz}. The comoving volume of a redshift shell is derived using the \emph{astropy} package. We can then calculate the transient rate in the universe:
@@ -35,38 +41,104 @@ These are illustrated in Figure \ref{fig:rz}. The comoving volume of a redshift 
 R_{all} = \int_{0}^{\infty} R(z) dz
 \end{equation}
 
-\begin{marginfigure}
-	\centering \includegraphics{nu_cosmology/rz}
-	\caption{Various transient rates as a function of redshift.}
-	\label{fig:rz}
-\end{marginfigure}
+\section{Differential flux and K-corrections}
 
-We can also consider the neutrino flux per source. We typically assume that sources emit a neutrino spectrum that is an unbroken power law with spectral index $\gamma$:
+We can calculate the differential neutrino flux of an object with exactly the same procedure as is used for astronomy \sidecite{hogg_cosmology_99}. The luminosity distance of an object is, by construction, defined such that:
 
 \begin{equation}
-\frac{dN}{dE} = \phi_{0} \times E^{-\gamma}
+D_{L} = \sqrt{\frac{L}{4 \pi S}}
 \end{equation}
 
-In a static universe, for an object located at a luminosity distance $D_{L}$, we would then measure at Earth:
+where L is the integrated luminosity (the \emph{bolometric luminosity}) and S is the integrated energy flux. Thus, for any object, we then find that the integrated energy flux is simply given by:
 
 \begin{equation}
-\frac{dN}{dE} = \frac{\phi_{0}}{4 \pi D_{L}^{2}} \times E^{-\gamma}
-\label{eq:flux_static}
+S = \frac{L}{4 \pi D_{L}^{2}}
+\label{eq:def_s}
 \end{equation}
 
-However, this spectrum will be further modified due to redshifting. At Earth, for energy $E_{\textup{obs}}$, we will observe neutrinos that were emitted at $E_{\textup{em}} = (1+z) E_{\textup{obs}}$. Thus, for a power law of E$^{-\gamma}$, the flux at $E_{\textup{obs}}$ will be suppressed by a factor of $(1+z) ^{\gamma}$. Assuming that this flux is detected between a fixed energy range (typically 100 GeV to 10 PeV for IceCube), but that the intrinsic spectrum continues sufficiently far beyond 10 PeV, we would then find a modified version of Equation \ref{eq:flux_static}:
+However, telescopes/detectors are only sensitive in specific energy ranges, so it is often more important to know the flux at a given energy. This quantity, known as the \emph{differential energy flux}, is defined as:
 
 \begin{equation}
-\frac{dN}{dE} = \frac{\phi_{0}}{4 \pi D_{L}^{2}} \times E^{-\gamma}  \times (1+z)^{-\gamma}
-\label{eq:flux_redshift}
+S_{E} \equiv \frac{dS(E)}{dE}
 \end{equation}
 
-\begin{itemize}
-	\item (1+z)$^{-1}$ to scale transient rate
-	\item (1+z) to scale transient duration
-	\item (1+z)$^{-1}$ to scale "per-unit-time" emission due to time dilation
-	\item (1+z)$^{-\gamma}$ due to redshifting energy in power law
-\end{itemize}
+Similarly we define the \emph{differential luminosity} (or \emph{specific luminosity}):
+
+\begin{equation}
+L_{E} \equiv \frac{dL(E)}{dE}
+\end{equation}
+
+It is here that cosmological effects become important. We often understand well the emission properties $ L_{E'}$ of a source in its local frame. However, the expansion of the universe leads to a process of \emph{redshifting}, so that E', the energy of emitted particles, is not the same as E, the energy at which the particle observed:
+
+\begin{equation}
+E' = (1+z) E
+\label{eq:redshift}
+\end{equation}
+
+For sources with identical intrinsic spectra, $L'(E')$, their corresponding observed spectra will thus depend on the redshift of the object. Expectations for observed spectra need to be adjusted accordingly, in a process known as \emph{k-correction}. By construction, we see from Equation \ref{eq:def_s} that:
+
+\begin{equation}
+\int S_{E} dE = \frac{1}{4 \pi D_{L}^{2}} \int L_{E'} dE'
+\end{equation}
+
+It then follows that:
+
+\begin{equation}
+\frac{dE'}{dE} = (1+z)
+\end{equation}
+
+\begin{equation}
+ S_{E} dE = \frac{1}{4 \pi D_{L}^{2}}  L_{E'} \frac{dE'}{dE}  dE
+\end{equation}
+
+\begin{equation}
+S_{E} = \frac{1}{4 \pi D_{L}^{2}} L_{E'} \times (1+z)
+\label{eq:kcorrection}
+\end{equation}
+
+Equation \ref{eq:kcorrection} is the generic definition of the k-correction, and is valid for both photon and neutrino astronomy. However,  it is often common to consider the special case where source spectra are power laws with some spectral index, $\gamma$:
+
+\begin{equation}
+\frac{dN'}{dE'} = \phi_{0} \times E'^{-\gamma}
+\label{eq:def_pl}
+\end{equation}
+
+\begin{equation}
+L_{E'} = \phi_{0} \times E'^{1-\gamma}
+\label{eq:def_le}
+\end{equation}
+
+We can thus simplify the k-correction even further using Equations \ref{eq:def_le} and \ref{eq:redshift}:
+
+\begin{equation}
+L_{E'} = \phi_{0} \times  (E(1+z))^{1-\gamma} = L_{E} \times (1+z)^{1-\gamma}
+\end{equation}
+
+\begin{equation}
+S_{E} = \frac{1}{4 \pi D_{L}^{2}} \times \phi_{0} \times E^{1 - \gamma} \times (1+z) ^{2-\gamma}
+\end{equation}
+
+If we instead wish to consider \emph{differential particle flux}, then by analogy:
+
+\begin{equation}
+L_{N'} = \frac{dN'}{dE'} = \phi_{0} \times E'^{-\gamma}
+\end{equation}
+
+\begin{equation}
+L_{N'} = \phi_{0} \times E'^{-\gamma} \times (1+z)^{-\gamma}
+\end{equation}
+
+\begin{equation}
+S_{N} = \frac{1}{4 \pi D_{L}^{2}} L_{N} \times (1+z) ^{1-\gamma}
+\end{equation}
+
+\begin{equation}
+S_{N} = \frac{S_{E}}{E} = \frac{S_{E} (1+z)}{E'} 
+\end{equation}
+
+\begin{equation}
+S_{N} = \frac{1}{4 \pi D_{L}^{2}} \times \phi_{0} \times E'^{-\gamma}\times (1+z) ^{3-\gamma}
+\end{equation}
 
 \begin{marginfigure}
 	\centering \includegraphics{nu_cosmology/dnde}
@@ -74,7 +146,165 @@ However, this spectrum will be further modified due to redshifting. At Earth, fo
 	\label{fig:dnde}
 \end{marginfigure}
 
-Figure \ref{fig:dnde} shows the contributed diffuse flux at Earth as a function of redshift, assuming each transient contributes $10^{50}$ erg in a power law from 1GeV to 10 PeV. Ultimately, the diffuse flux measured by IceCube will be the integral of this rate: 
+We first consider the istropic emission of a fixed number of particles, N, by a source. In that case, the particle count per unit area on Earth will ultimately depend only on the comoving distance to that object, $D_{c}$:
+
+\begin{equation}
+\frac{dN}{dA} = \frac{N}{4 \pi D_{C}^{2}}
+\label{eq:particle_per_area}
+\end{equation}
+
+If we instead wish to consider the particle flux, we must differentiate this quantity with respect to time:
+
+\begin{equation}
+\frac{dN}{dAdt} = \frac{dN}{dt} \times \frac{1}{4 \pi D_{C}^{2}}
+\label{eq:particle_flux}
+\end{equation}
+
+At this point, cosmological effects start to become important. In the following, we denote quantites in the source frame with x', while those at Earth are given as x. It is clear that the number of particles itself must be invariant to the frame, i.e N' = N. However, there is in general a process of \emph{cosmic time dilation}, where the passage of time at the source location, t', is slowed when observed at Earth, t:
+
+\begin{equation}
+t = (1+z)t'
+\label{eq:t}
+\end{equation}
+
+\begin{equation}
+\frac{dt'}{dt} = \frac{1}{1+z}
+\label{eq:dt}
+\end{equation}
+
+Often, we only know the emission rate of particles in the source frame, $\frac{dN}{dt'}$, in which case we replace Equation \ref{eq:particle_flux} with:
+
+\begin{equation}
+\frac{dN}{dAdt} = \frac{1}{1+z} \times \frac{1}{4 \pi D_{C}^{2}} \times \frac{dN}{dt'}
+\end{equation}
+
+It is often more relevant to consider the luminosity of a source, where the intrinsic source luminosity is defined as:
+
+\begin{equation}
+L' \equiv \frac{d}{dt'} \left( \int E' dN \right) = \frac{d}{dt'} \left( \int E' \frac{dN}{dE'} dE' \right)
+\end{equation}
+
+However, a second cosmological effect must here be accounted for. The expansion of the universe leads to a process of \emph{redshifting}, so that E', the energy of emitted particles, is not the same as E, the energy at which the particle observed:
+
+\begin{equation}
+E = \frac{E'}{1+z}
+\label{eq:redshift}
+\end{equation}
+
+\begin{equation}
+\frac{dE}{dE'} = \frac{1}{1+z}
+\label{eq:de}
+\end{equation}
+
+We will thus observe a redshifted luminosity L as a consequence of the redshifting of each individual particle energy E:
+
+\begin{equation}
+L \equiv \frac{d}{dt} \left( \int E dN \right) = \frac{1}{1+z} \times \frac{d}{dt'} \left( \int E dN \right)
+\end{equation}
+
+\begin{equation}
+L = \frac{1}{1+z} \times \frac{d}{dt'} \left( \int E \frac{dN}{dE'} dE' \right)
+\end{equation}
+
+\begin{equation}
+L = \frac{1}{(1+z)^{2}} \times \frac{d}{dt'} \left( \int E' \frac{dN}{dE'} dE' \right) = \frac{L'}{(1+z)^{2}}
+\end{equation}
+
+Ultimately, the energy flux on Earth, S, will then be given by:
+
+\begin{equation}
+S \equiv \frac{dE}{dAdt} =  \frac{1}{(1+z)^{2}} \times \frac{L'}{4 \pi D_{C}^{2}}
+\label{eq:energy_flux}
+\end{equation}
+
+Given the importance of luminosity and energy flux in astronomy, it is conventional to define a new distance measure known as \emph{luminosity distance}, $D_{L}$:
+
+\begin{equation}
+D_{L} \equiv \sqrt\frac{L'}{4 \pi S} = D_{C}(1+z)
+\end{equation}
+
+In this case, Equation \ref{eq:energy_flux} is reduced to:
+
+\begin{equation}
+S = \frac{L'}{4 \pi D_{L}^{2}}
+\end{equation}
+
+However, telescopes/detectors are only sensitive in specific energy ranges, so it is often more important to know the flux at a given energy. This quantity, known as the \emph{differential energy flux}, is defined as:
+
+\begin{equation}
+S_{E} \equiv \frac{dS(E)}{dE}
+\end{equation}
+
+To calculate the differential flux, we must consider the energy spectrum of the source. The differential energy flux will be given to the product of particle count rate per unit energy at Earth, multiplied the energy-per-particle:
+
+\begin{equation}
+S_{E} = E \times \frac{dN(E)}{dEdAdt}
+\end{equation}
+
+To conserve particle number despite the impact of redshifting, the observed count rate per unit energy at E, must be equal to the emission rate of particles at energy E':
+
+\begin{equation}
+\frac{dN(E)}{dE}= \frac{dN'(E')}{dE}
+\end{equation}
+
+Through substitution of Equation \ref{eq:de}:
+
+\begin{equation}
+\frac{dN(E)}{dE}= \frac{1}{1+z} \times \frac{dN'(E')}{dE'}
+\end{equation}
+
+\begin{equation}
+S_{E} = \frac{d}{dAdt} \left( E \frac{dN(E)}{dE} \right)= \frac{1}{1+z} \times \frac{d}{dAdt} \left( E' \frac{dN(E)}{dE} \right)
+\end{equation}
+
+\begin{equation}
+S_{E} = \frac{1}{(1+z)^{2}} \times \frac{1}{4 \pi D_{C}^{2}} \times \frac{d}{dt} \left( E' \frac{dN'(E')}{dE'} \right)
+\end{equation}
+
+\begin{equation}
+S_{E} = \frac{1}{(1+z)^{3}} \times \frac{1}{4 \pi D_{C}^{2}} \times \frac{d}{dt'} \left( E' \frac{dN'(E')}{dE'} \right)
+\end{equation}
+
+\begin{equation}
+S_{E} = \frac{1}{1+z} \times \frac{1}{4 \pi D_{L}^{2}} \times \frac{d}{dt'} \left( E' \frac{dN'(E')}{dE'} \right)
+\end{equation}
+
+For convenience, we define the \emph{differential luminosity} (or \emph{specific luminosity}):
+
+\begin{equation}
+L'_{E'} \equiv \frac{d}{dt'} \left( E' \frac{dN'(E')}{dE'} \right) = \frac{dL'}{dE'}
+\end{equation}
+
+We then see that ultimately:
+
+\begin{equation}
+S_{E} = (1+z) \times \frac{L'_{E'}}{4 \pi D_{L}^{2}}
+\label{eq:kcorrection}
+\end{equation}
+
+The above Equation \ref{eq:kcorrection} is the definition of a \emph{k-correction}, a widely-used formula by which the intrinsic source properties of an object can be converted to the expected differential energy flux. This is a generic definition, and is valid for both photon and neutrino astronomy. It is often common to consider the special case where source spectra are power laws with some spectral index, $\gamma$:
+
+\begin{equation}
+\frac{dN'(E')}{dE'dt'} = \phi_{0} \times E'^{-\gamma}
+\label{eq:def_pl}
+\end{equation}
+
+\begin{equation}
+L_{E'} = \phi_{0} \times E'^{1-\gamma}
+\label{eq:def_le}
+\end{equation}
+
+We can thus simplify the k-correction even further using Equations \ref{eq:def_le} and \ref{eq:redshift}:
+
+\begin{equation}
+L'_{E'} = \phi_{0} \times  (E(1+z))^{1-\gamma} = L'_{E} \times (1+z)^{1-\gamma}
+\end{equation}
+
+\begin{equation}
+S'_{E} = \frac{1}{4 \pi D_{L}^{2}} \times \phi_{0} \times E^{1 - \gamma} \times (1+z) ^{2-\gamma}
+\end{equation}
+
+Figure \ref{fig:dnde} shows the contributed diffuse flux at Earth as a function of redshift, assuming each transient contributes $10^{50}$ erg in a power law from 1 GeV to 10 PeV. Ultimately, the diffuse flux measured by IceCube will be the integral of this rate: 
 
 \begin{equation}
 \frac{dN}{dE} = \int_{0}^{\infty} \phi(z) dz

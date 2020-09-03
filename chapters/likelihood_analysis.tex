@@ -359,17 +359,33 @@ SENSITIVITY/ACROSS SKY!!!!
 
 The simple source hypothesis outlined in Equation \ref{eq:sig_hypo_single} describes a single source, but can easily be expanded to include an ensemble of sources, known as a \emph{Stacking Analysis}. For a multi-source hypothesis, the relative contribution of each source must be accounted for.
 
-In most cases, it is \emph{assumed that all sources share the same intrinsic neutrino spectrum}. In this case, for a neutrino spectrum of normalisation $\phi_{0}$, the number of neutrinos expected for each kth source can be calculated:
+In most cases, it is \emph{assumed that all sources share the same intrinsic neutrino spectrum}. A further assumption must be made on the fraction of catalogue flux, f$_{k}$, that each kth source will contribute. One common assumption is \emph{equal weights}, so that each of M sources contributes equally:
 
 \begin{equation}
-n_{k} (\gamma) = \phi_{0} \int \mathcal{S}_{\textup{time, k}}(t) dt \int A_{eff}(\delta_{k}, E_{\nu}) \times E_{\nu}^{-\gamma} dE_{\nu}
+f_{k} = \frac{1}{M}
+\end{equation}
+
+Alternatively, another common assumption is \emph{standard candles}, where the intrinsic luminosity of each source is equal. For each kth source at lumiosity distance D$_{L,k}$
+
+ \begin{equation}
+ f_{k} = \frac{1/D_{L,k}^{2}}{\sum^{M}_{k=1}(1/D_{L,k}^{2})}
+ \end{equation}
+
+In any case, we can then calculate the expected number of signal neutrinos, n$_{k}$, for each source:
+
+\begin{equation}
+\phi_{k} = \phi_{0} \times f_{k}
+\end{equation}
+
+\begin{equation}
+n_{k} (\gamma) = \phi_{0} f_{k} \int \mathcal{S}_{\textup{time, k}}(t) dt \int A_{eff}(\delta_{k}, E_{\nu}) \times E_{\nu}^{-\gamma} dE_{\nu}
 \label{eq:n_k}
 \end{equation}
 
 Using Equation \ref{eq:n_k}, we can then define the fractional source weight, $w_{k}$, of each kth source:
 
 \begin{equation}
-w_{k}(\gamma)  = \frac{n_{k}(\gamma) }{\sum^{M}_{k=1} n_{k}(\gamma) } = \frac{\int \mathcal{S}_{\textup{time, k}}(t) dt \int A_{eff}(\delta_{k}, E_{\nu}) \times E_{\nu}^{-\gamma} dE_{\nu}}{\sum^{M}_{k=1} \left( \int \mathcal{S}_{\textup{time, k}}(t) dt \int A_{eff}(\delta_{k}, E_{\nu}) \times E_{\nu}^{-\gamma} dE_{\nu} \right)}
+w_{k}(\gamma)  = \frac{n_{k}(\gamma) }{\sum^{M}_{k=1} n_{k}(\gamma) } = \frac{f_{k} \int \mathcal{S}_{\textup{time, k}}(t) dt \int A_{eff}(\delta_{k}, E_{\nu}) \times E_{\nu}^{-\gamma} dE_{\nu}}{\sum^{M}_{k=1} \left( f_{k} \int \mathcal{S}_{\textup{time, k}}(t) dt \int A_{eff}(\delta_{k}, E_{\nu}) \times E_{\nu}^{-\gamma} dE_{\nu} \right)}
 \end{equation}
 
 Unlike for Equation \ref{eq:n_k}, $w_{k}$ does not ultimately depend on the flux normalisation $\phi_{0}$. For fixed spectral index, the relative contribution of different sources is independent of the number of neutrinos. Using these source weights, we can then define our normalised Signal model:
